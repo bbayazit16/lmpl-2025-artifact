@@ -100,7 +100,7 @@ gpt-4o-mini
 gpt-4o
 o4-mini-medium
 deepseek/deepseek-prover-v2
-deepseek/deepseek-r1-0528
+deepseek/deepseek-r1-0528:free
 ```
 
 and more are listed in `main.py`. By default, omitting `--models` runs the experiment for all models.

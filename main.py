@@ -19,7 +19,9 @@ MODELS: list[LLM] = [
     DefaultLLM('gpt-4o'),
     OpenAIReasoning('o4-mini', 'medium'),
     DefaultLLM('deepseek/deepseek-prover-v2'),
-    DefaultLLM('deepseek/deepseek-r1-0528'),
+    DefaultLLM('deepseek/deepseek-r1-0528:free'),
+
+    # DefaultLLM('deepseek/deepseek-r1-0528'),
 
     # OpenAIReasoning('o4-mini', 'low'),
     # OpenAIReasoning('o4-mini', 'high'),
