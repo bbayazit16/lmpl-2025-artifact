@@ -6,7 +6,7 @@ This repository contains the source code and the results for the experiment cond
 
 To inspect the results directly, see the `results` folder. Each file contains the ablation, the theorem / lemma name, the file it is contained in, the result, and the error. Under `results/<project logs>/stats` directory, you can find the specific tactic used by each model for each ablation, and in the file `original_proof_stats.csv`, you can find the tactic statistics of the original proofs.
 
-Inside `logs.zip`, you can find the full logs of the experiment, including the generated objects and the LLM responses.
+Inside `logs.zip`, you can find the full logs of the experiment, including the generated objects and the LLM responses. Note that log folder names may contain the temperature, but that is ignored if the model does not support the parameter.
 
 ## Setup
 
