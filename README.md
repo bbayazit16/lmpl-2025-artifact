@@ -141,7 +141,7 @@ Barış Bayazıt, Yao Li, and Xujie Si. 2025. A Case Study on the Effectiveness 
 
 We thank all the anonymous reviewers of LMPL 2025 for their thoughtful and constructive comments on this paper and their suggestions for potential future directions for this work. We thank Yiming Lin for his feedback on a draft of this paper.
 
-This work was supported by the University of Toronto Department of Computer Science Research Award. This work has also benefited from the Microsoft Accelerate Foundation Models Research (AFMR) grant program.
+This work was partially supported by the University of Toronto Department of Computer Science Research Award. This work has also partially benefited from the Microsoft Accelerate Foundation Models Research (AFMR) grant program.
 
 # License
 
