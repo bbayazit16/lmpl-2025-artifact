@@ -384,7 +384,6 @@ def admitted(llm_response: str) -> bool:
     """Return true if the LLM has used any 'tricks' to avoid proving the goal."""
     parts = llm_response.split()
     if any(k in parts for k in ('Admitted.', 'Admitted', 'Admit', 'Obligation.', 'Obligation')):
-        print('sus proof:', llm_response)
         return True
 
     return False
