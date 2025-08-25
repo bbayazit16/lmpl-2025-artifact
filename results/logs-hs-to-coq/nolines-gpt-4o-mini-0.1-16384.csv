@@ -1,0 +1,188 @@
+name,file,result,error_type,error
+Eq_eq_bool,GHC/Base.v,False,feedback,The term reflect is not unfoldable
+iterates_In,GHC/Enum.v,False,feedback,Not an inductive product.
+Foldable_length_cons,Data/Foldable.v,False,feedback,The LHS of Zlength_cons     (Zlength (_ :: _)) does not match any subterm of the goal
+flat_map_nil,GHC/Base.v,True,,
+flat_map_unpack_cons_f,GHC/List.v,True,,
+Foldable_foldl'_cons,Data/Foldable.v,False,feedback,The reference foldl'__cons was not found in the current environment.
+instance_MonoidLaws_list,GHC/Base.v,False,feedback,The LHS of flat_map_cons_id     (flat_map (cons^~ nil) _) does not match any subterm of the goal
+enumFromTo_Int_iterates',GHC/Enum.v,False,feedback,The LHS of eftInt_aux_iterates     (eftInt_aux _ _ _) does not match any subterm of the goal
+eftInt_aux_unroll,GHC/Enum.v,False,feedback,Expects a disjunctive pattern with 0 branches.
+eq_replace_r,GHC/Base.v,False,feedback,H is used in hypothesis _the_hidden_goal_.
+N_popcount_Nsucc_double,Data/Bits/Popcount.v,False,feedback,The reference Pos_popcount_Nsucc_double was not found in the current environment.
+EqExact_Data_Either_Either,Data/Either.v,False,feedback,"Unable to satisfy the following constraints: In environment: a : Type b : Type H : Eq_ a H0 : EqLaws a H1 : EqExact a H2 : Eq_ b H3 : EqLaws b H4 : EqExact b a0, a1 : a  ?H0 : ""EqLaws (Either a b)""  ?EqExact : ""EqExact (Either a b)"""
+Pos_popcount_pow2,Data/Bits/Popcount.v,False,feedback,Expects a disjunctive pattern with 3 branches.
+Foldable_any_app,Data/Foldable.v,False,feedback,The reference foldMap__list_foldMap was not found in the current environment.
+Eq_eq_Word,GHC/Base.v,False,feedback,Cannot apply lemma reflect_iff
+unzip_zip,GHC/List.v,False,feedback,"Found no subterm matching ""([], [])"" in the current goal."
+iterates'_In,GHC/Enum.v,False,feedback,Not an inductive product.
+Foldable_length_nil,Data/Foldable.v,True,,
+lines_def,Data/OldList.v,False,feedback,"In environment s : String Hnull : List.null s = true Unable to unify ""nil"" with  ""Wf.Fix_sub String (Wf.MR lt (fun recarg : String => length recarg))     OldList.lines_obligation_2 (fun _ : String => list String)     (fun (recarg : String)        (lines' : {recarg' : String | length recarg' < length recarg} ->                  list String) =>      if List.null recarg      then nil      else       (let        '(h, t) as anonymous' :=         (let          '(l, s') as anonymous' :=           List.break (fun arg_4__ : Char => arg_4__ == newline) recarg           return             (anonymous' =              List.break (fun arg_4__ : Char => arg_4__ == newline) recarg ->              list Char * list (list Char)) in           fun             Heq_anonymous : (l, s') =                             List.break                               (fun arg_4__ : Char => arg_4__ == newline)                               recarg =>           (l,           match s' as s'' return (s'' = s' -> list (list Char)) with           | nil => fun _ : nil = s' => nil           | wildcard' :: s'' =>               fun Heq_s' : wildcard' :: s'' = s' =>               lines'                 (exist                    (fun recarg' : String => length recarg' < length recarg)                    s''                    (OldList.lines_obligation_1 recarg l s' Heq_anonymous                       wildcard' s'' Heq_s'))           end eq_refl)) eq_refl         return           (anonymous' =            (let             '(l, s') as anonymous'0 :=              List.break (fun arg_4__ : Char => arg_4__ == newline) recarg              return                (anonymous'0 =                 List.break (fun arg_4__ : Char => arg_4__ == newline) recarg ->                 list Char * list (list Char)) in              fun                Heq_anonymous : (l, s') =                                List.break                                  (fun arg_4__ : Char => arg_4__ == newline)                                  recarg =>              (l,              match s' as s'' return (s'' = s' -> list (list Char)) with              | nil => fun _ : nil = s' => nil              | wildcard' :: s'' =>                  fun Heq_s' : wildcard' :: s'' = s' =>                  lines'                    (exist                       (fun recarg' : String => length recarg' < length recarg)                       s''                       (OldList.lines_obligation_1 recarg l s' Heq_anonymous                          wildcard' s'' Heq_s'))              end eq_refl)) eq_refl -> list (list Char)) in         fun           _ : (h, t) =               (let                '(l, s') as anonymous' :=                 List.break (fun arg_4__ : Char => arg_4__ == newline) recarg                 return                   (anonymous' =                    List.break (fun arg_4__ : Char => arg_4__ == newline)                      recarg -> list Char * list (list Char)) in                 fun                   Heq_anonymous : (l, s') =                                   List.break                                     (fun arg_4__ : Char => arg_4__ == newline)                                     recarg =>                 (l,                 match s' as s'' return (s'' = s' -> list (list Char)) with                 | nil => fun _ : nil = s' => nil                 | wildcard' :: s'' =>                     fun Heq_s' : wildcard' :: s'' = s' =>                     lines'                       (exist                          (fun recarg' : String =>                           length recarg' < length recarg) s''                          (OldList.lines_obligation_1 recarg l s'                             Heq_anonymous wildcard' s'' Heq_s'))                 end eq_refl)) eq_refl => h :: t) eq_refl) s""."
+eq_replace_l,GHC/Base.v,False,feedback,Applied theorem does not have enough premises.
+hs_coq_foldl'_list,Data/Foldable.v,False,feedback,"The LHS of IH     (Foldable__list (forall b a : Type, (b -> a -> b) -> b -> list a -> b)        (foldl'__ list) B A f _ l) does not match any subterm of the goal"
+instance_MonadLaws_Data_Either_Either,Data/Either.v,False,feedback,a is already used.
+eftInt_aux_pf,../base/GHC/Enum.v,False,feedback,"In environment y, x : Int Hle : (x <= y)%Z Hneq : x <> y Unable to unify ""(?M1814 ?= ?M1816)%Z = Lt"" with  ""(x + 1 ?= y)%Z = Gt -> False""."
+parametric_eq_sym,GHC/Base.v,False,feedback,"Unable to apply lemma of type ""symmetric _==_"" on hypothesis of type  ""is_true (x == y)""."
+foldr_initial,GHC/Base.v,True,,
+instance_SemigroupLaws_option,GHC/Base.v,False,feedback,The LHS of semigroup_assoc     ((_ <<>> (_ <<>> _)) == ((_ <<>> _) <<>> _)) does not match any subterm of the goal
+Build_EqLaws_reflect,GHC/Base.v,False,feedback,The reference reflect_eq was not found in the current environment.
+N_popcount_diff,Data/Bits/Popcount.v,False,feedback,"Found no subterm matching ""N_popcount (Pos.Ndouble ?M1703)"" in the current goal."
+In_zip_swap,GHC/List.v,False,feedback,"In environment A : Type B : Type x : A y : B a : A as' : list A b : B bs : list B H1 : (a, b) = (x, y) IH : In (x, y) (zip as' (b :: bs)) -> In (y, x) (zip (b :: bs) as') Unable to unify ""(y, x)"" with ""(b, a)""."
+Eq_Symmetric,GHC/Base.v,False,feedback,"Unable to apply lemma of type ""symmetric _==_"" on hypothesis of type ""a""."
+List_foldl_foldr,GHC/List.v,False,feedback,"Found no subterm matching ""fold_left f xs' x"" in the current goal."
+instance_SemigroupLaws_unit,GHC/Base.v,True,,
+dropWhile_cons_prop,../base/Data/OldList.v,False,feedback,"Found no subterm matching ""c :: s'"" in the current goal."
+iterates'_length,GHC/Enum.v,False,feedback,The LHS of IH     (length (iterates' n f z)) does not match any subterm of the goal
+hs_coq_reverse,GHC/List.v,False,feedback,"Found no subterm matching ""reverse xs'"" in the current goal."
+instance_ApplicativeLaws_Data_Either_Either,Data/Either.v,False,feedback,Cannot coerce instance_FunctorLaws_Data_Either_Either to an evaluable reference.
+fst_pair,Data/Tuple.v,True,,
+hs_coq_foldl_list',Data/Foldable.v,False,feedback,No such goal.
+instance_FunctorLaws_identity,Data/Functor/Identity.v,True,,
+iter_plus_nat,GHC/Enum.v,False,feedback,The LHS of Nat.add_0_r     (_ + 0)%nat does not match any subterm of the goal
+Foldable_foldr_cons,Data/Foldable.v,False,feedback,"In environment a : Type b : Type f : a -> b -> b s : b x : a xs : list a The term ""x :: xs"" has type ""list a"" while it is expected to have type  ""Type -> Type""."
+lines_cons,Data/OldList.v,False,feedback,"Found no subterm matching ""List.null (c :: s)"" in the current goal."
+Foldable_foldl'_app,Data/Foldable.v,False,feedback,The LHS of List_foldl_foldr     (fold_left _ _ _) does not match any subterm of the goal
+flat_map_cons_id,GHC/Base.v,True,,
+Eq_eq_Int,GHC/Base.v,False,feedback,The term reflect is not unfoldable
+mapAccumL_cons,Data/Traversable.v,False,feedback,The reference Traversable.mapAccumL_traverse was not found in the current environment.
+Eq_Equivalence,GHC/Base.v,False,feedback,No product even after head-reduction.
+break_length,../base/Data/OldList.v,False,feedback,"Found no subterm matching ""(w, s'')"" in the current goal."
+Neq_sym,GHC/Base.v,False,feedback,The LHS of negbK     (~~ ~~ _) does not match any subterm of the goal
+mapAccumL_nil,Data/Traversable.v,False,feedback,The LHS of foldr_nil     (foldr _ _ nil) does not match any subterm of the goal
+Eq_m,GHC/Base.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+EqExact_Proxy,Data/Proxy.v,False,feedback,The reference Reflect_eq was not found in the current environment.
+Neq_atrans,GHC/Base.v,False,feedback,Cannot apply lemma negbT
+reverse_unit,GHC/List.v,False,feedback,"Found no subterm matching ""reverse (xs ++ [a])"" in the current goal."
+hs_coq_partition,Data/OldList.v,False,feedback,"Found no subterm matching ""p x"" in the current goal."
+Eq_Reflexive,GHC/Base.v,True,,
+reverse_append,GHC/List.v,False,feedback,"Found no subterm matching ""?M2055 ++ []"" in the current goal."
+N_popcount_1_pow2,Data/Bits/Popcount.v,False,feedback,The reference N.pow_nat was not found in the current environment.
+iterates_length,GHC/Enum.v,True,,
+Pop_popcount_diff,Data/Bits/Popcount.v,False,feedback,"Found no subterm matching ""N.succ (N_popcount ?M1690)"" in the current goal."
+elem_eq,Data/Foldable.v,False,feedback,The reference Foldable.any_cons was not found in the current environment.
+length_zip,GHC/List.v,False,feedback,"Found no subterm matching ""Datatypes.length []"" in the current goal."
+In_zip_fst,GHC/List.v,False,feedback,The reference z was not found in the current environment.
+instance_ApplicativeLaws_option,GHC/Base.v,False,feedback,"In environment a : Type v : option a Unable to unify ""v"" with ""pure id <*> v""."
+N_popcount_pow2,Data/Bits/Popcount.v,False,feedback,The reference N.pow_eq_1 was not found in the current environment.
+snd_unzip_map,GHC/List.v,False,feedback,"Found no subterm matching ""let (_, y) :=                              Base.foldr                                (fun (arg_0__ : b * c)                                   (arg_1__ : list b * list c) =>                                 let (a, b0) := arg_0__ in                                 let (as_, bs) := arg_1__ in                                 (a :: as_, b0 :: bs))                                 ([], []) (map (fun x : a => (f x, g x)) xs') in                            y"" in the current goal."
+words_cons,Data/OldList.v,False,feedback,"Found no subterm matching ""List.dropWhile Unicode.isSpace (c :: s)"" in the current goal."
+dropWhile_cons_length,../base/Data/OldList.v,False,feedback,"Found no subterm matching ""c :: s'"" in the current goal."
+words_nil,Data/OldList.v,False,feedback,The reference GHC.List.dropWhile_nil was not found in the current environment.
+forM_map,Data/Traversable.v,False,feedback,The reference GHC.Base.flip_involutive was not found in the current environment.
+flat_map_app,GHC/Base.v,False,feedback,The LHS of app_nil_r     (_ ++ nil) does not match any subterm of the goal
+parametric_eq_trans,GHC/Base.v,False,feedback,Cannot coerce EqLaws to an evaluable reference.
+safeSubN_sub,../base/GHC/Num.v,False,feedback,"Found no subterm matching ""(?n <? ?n0)%N = true"" in the current goal."
+EqExact_pair,GHC/Base.v,False,feedback,"No assumption in (reflect ((a1, b1) = (a2, b2)) ((a1, b1) == (a2, b2)))"
+hs_coq_map,GHC/Base.v,True,,
+map_id,GHC/Base.v,True,,
+instance_SemigroupLaws_list,GHC/Base.v,False,feedback,The LHS of app_assoc     (_ ++ _ ++ _) does not match any subterm of the goal
+instance_MonadLaws_option,GHC/Base.v,False,feedback,The reference m was not found in the current environment.
+iterates'_ext,GHC/Enum.v,False,feedback,The LHS of IH     (iterates' n' f1 z) does not match any subterm of the goal
+Neq_neq,GHC/Base.v,False,feedback,No assumption in (reflect (x <> y) (~~ false))
+unzip_equal_length,GHC/List.v,False,feedback,Nothing to inject.
+elem_nil,Data/Foldable.v,False,feedback,The reference foldMap__nil was not found in the current environment.
+instance_ApplicativeLaws_identity,Data/Functor/Identity.v,False,feedback,The reference v was not found in the current environment.
+hs_coq_length_list',Data/Foldable.v,True,,
+instance_SemigroupLaws_comparison,GHC/Base.v,False,feedback,Wrong bullet -: No more subgoals.
+EqExact_comparison,GHC/Base.v,False,feedback,can't decompose a quantified equality
+simpl_list_nil_eq,GHC/Base.v,True,,
+Foldable_foldl'_nil,Data/Foldable.v,True,,
+Foldable_elem_proper,Data/Foldable.v,False,feedback,Not an inductive product.
+simpl_option_some_eq,GHC/Base.v,False,feedback,H is already used.
+hs_coq_foldr_list',Data/Foldable.v,False,feedback,The LHS of hs_coq_foldr_base     Base.foldr does not match any subterm of the goal
+instance_MonoidLaws_comparison,GHC/Base.v,False,feedback,The reference Monoid__comparison_mempty was not found in the current environment.
+instance_ApplicativeLaws_list,GHC/Base.v,False,feedback,The reference pure_id was not found in the current environment.
+flat_map_concat_map,GHC/Base.v,False,feedback,The LHS of concat_map     (map _ (concat _)) does not match any subterm of the goal
+map_snd_zip,GHC/List.v,False,feedback,"Found no subterm matching ""Datatypes.length []"" in the current goal."
+iter_plus_N,GHC/Enum.v,False,feedback,The LHS of N.add_0_r     (_ + 0)%N does not match any subterm of the goal
+EqLaws_Data_Either_Either,Data/Either.v,False,add_err,"Syntax error: 'as' or 'in' or '|' or ',' or ')' expected after [constr:operconstr level 200] (in [constr:operconstr])."
+instance_MonoidLaws_unit,GHC/Base.v,True,,
+Eq_Transitive,GHC/Base.v,False,feedback,"Unable to apply lemma of type ""transitive _==_"" on hypothesis of type ""a""."
+EqLaws_Int,GHC/Base.v,False,feedback,"In environment x, y : Int Unable to unify  ""((?M2085 =? ?M2086)%Z = true -> ?M2085 = ?M2086) /\   (?M2085 = ?M2086 -> (?M2085 =? ?M2086)%Z = true)"" with ""(x == y) = (y == x)""."
+Neq_irrefl,GHC/Base.v,False,feedback,H is already used.
+take_drop,GHC/List.v,False,feedback,"In environment a : Set n : Z Unable to unify  ""((if (n <=? 0)%Z then [] else []) ++ (if (n <=? 0)%Z then [] else [])) ++   []"" with ""[]""."
+Foldable_foldl_nil,Data/Foldable.v,False,feedback,The reference foldl__nil was not found in the current environment.
+Foldable_foldr_nil,Data/Foldable.v,True,,
+hs_coq_lenAcc,GHC/List.v,False,feedback,"Found no subterm matching ""Zlength []"" in the current goal."
+fmfm,GHC/Base.v,False,feedback,The LHS of flat_map_nil     (flat_map (fun=> nil) _) does not match any subterm of the goal
+hs_coq_foldr_base,GHC/Base.v,False,feedback,The reference functional_extensionality was not found in the current environment.
+instance_FunctorLaws_list,GHC/Base.v,False,feedback,The LHS of map_id     (map id _) does not match any subterm of the goal
+hs_coq_tuple_fst,Data/Tuple.v,True,,
+instance_FunctorLaws_Data_Either_Either,Data/Either.v,False,feedback,The reference y was not found in the current environment.
+eftInt_In,GHC/Enum.v,False,feedback,The LHS of eftInt_aux_In     (In _ (eftInt_aux _ _ _)) does not match any subterm of the goal
+EqExact_list,GHC/Base.v,False,feedback,Cannot coerce reflect to an evaluable reference.
+Foldable_any_cons,Data/Foldable.v,False,feedback,The reference foldMap__list_foldMap was not found in the current environment.
+Foldable_foldr_app,Data/Foldable.v,False,feedback,The LHS of app_nil_r     (_ ++ nil) does not match any subterm of the goal
+foldr_nil,GHC/Base.v,True,,
+map_map,GHC/Base.v,False,feedback,a is already used.
+instance_MonadLaws_identity,Data/Functor/Identity.v,True,,
+Foldable_any_nil,Data/Foldable.v,False,feedback,The reference foldMap__list_foldMap was not found in the current environment.
+simpl_option_none_eq,GHC/Base.v,True,,
+instance_MonadLaws_list,GHC/Base.v,False,feedback,The reference H was not found in the current environment.
+reverse_nil,GHC/List.v,True,,
+zip_unzip_map,GHC/List.v,False,feedback,"Found no subterm matching ""(fix                             zip (a b : Type) (arg_0__ : list a)                                 (arg_1__ : list b) {struct arg_0__} :                               list (a * b) :=                               match arg_0__ with                               | [] => []                               | a0 :: as_ =>                                   match arg_1__ with                                   | [] => []                                   | b0 :: bs => (a0, b0) :: zip a b as_ bs                                   end                               end) a c                              (fst                                 (Base.foldr                                    (fun (arg_0__ : a * b)                                       (arg_1__ : list a * list b) =>                                     let (a0, b0) := arg_0__ in                                     let (as_, bs) := arg_1__ in                                     (a0 :: as_, b0 :: bs))                                     ([], []) xs'))                              (Base.map f                                 (snd                                    (Base.foldr                                       (fun (arg_0__ : a * b)                                          (arg_1__ : list a * list b) =>                                        let (a0, b0) := arg_0__ in                                        let (as_, bs) := arg_1__ in                                        (a0 :: as_, b0 :: bs))                                        ([], []) xs')))"" in the current goal."
+EqLaws_pair,GHC/Base.v,False,feedback,No product even after head-reduction.
+EqExact_unit,GHC/Base.v,True,,
+EqExact_Word,GHC/Base.v,False,feedback,Cannot coerce reflect to an evaluable reference.
+length_app,GHC/List.v,False,feedback,"Found no subterm matching ""(?M2054 + 0)%Z"" in the current goal."
+Foldable_foldl_app,Data/Foldable.v,False,feedback,The reference List.fold_left_nil was not found in the current environment.
+hs_coq_list_length,GHC/List.v,False,feedback,"Found no subterm matching ""lenAcc ?M2071 (?M2072 + ?M2073)%Z"" in the current goal."
+iterates_map,GHC/Enum.v,False,feedback,The LHS of seq_shift     (List.map S (seq _ _)) does not match any subterm of the goal
+N_popcount_Ndouble,Data/Bits/Popcount.v,False,feedback,The reference Pos_popcount_double was not found in the current environment.
+EqExact_bool,GHC/Base.v,True,,
+iterates'_map,GHC/Enum.v,False,feedback,The reference Nat.iter_zero was not found in the current environment.
+Neq_inv,GHC/Base.v,False,feedback,"In environment t : Type H : Eq_ t H0 : EqLaws t x, y : t Unable to unify ""~~ ~~ (x /= y)"" with ""x /= y""."
+map_cong,GHC/Base.v,False,feedback,a is already used.
+EqLaws_list,GHC/Base.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+hs_coq_foldr_list,Data/Foldable.v,False,feedback,"The LHS of IH     (Foldable__list (forall a b : Type, (a -> b -> b) -> b -> list a -> b)        (foldr__ list) A B f z ys) does not match any subterm of the goal"
+EqLaws_comparison,GHC/Base.v,False,feedback,Cannot coerce Eq___Dict to an evaluable reference.
+iterates_iterates',GHC/Enum.v,False,feedback,The LHS of IH     (iterates n' f z) does not match any subterm of the goal
+simpl_list_cons_eq,GHC/Base.v,False,feedback,No applicable tactic.
+flat_map_cons_f,GHC/Base.v,True,,
+EqLaws_Word,GHC/Base.v,False,feedback,The LHS of N.eqb_refl     (_ =? _)%N does not match any subterm of the goal
+In_zip_map,GHC/List.v,True,,
+EqLaws_bool,GHC/Base.v,False,add_err,Syntax error: 'first' or 'last' or [tactic:binder_tactic] or [tactic:tactic_expr] or [tactic_then_locality] expected after ';' (in [tactic:tactic_expr]).
+hs_coq_foldl_list,Data/Foldable.v,False,feedback,"The LHS of IH     (Foldable__list (forall b a : Type, (b -> a -> b) -> b -> list a -> b)        (foldl__ list) B A f _ l) does not match any subterm of the goal"
+reverse_involutive,GHC/List.v,False,feedback,"Found no subterm matching ""reverse (reverse xs)"" in the current goal."
+map_append,GHC/Base.v,False,feedback,a is already used.
+EqLaws_option,GHC/Base.v,False,feedback,No product even after head-reduction.
+EqLaws_unit,GHC/Base.v,True,,
+concat_map,GHC/Base.v,False,feedback,The LHS of IH     (map f (concat t)) does not match any subterm of the goal
+length_cons,GHC/List.v,False,feedback,"Found no subterm matching ""lenAcc ?M2049 ?M2050"" in the current goal."
+foldr_id,GHC/Base.v,True,,
+instance_FunctorLaws_option,GHC/Base.v,True,,
+flat_map_map,GHC/Base.v,False,feedback,"In environment a : Type b : Type c : Type f : b -> list c g : a -> b u : list a Unable to unify ""flat_map (f ∘ g) u"" with ""concat (map (f ∘ g) u)""."
+Foldable_elem_app,Data/Foldable.v,False,feedback,The LHS of orb_true_r     (_ || true) does not match any subterm of the goal
+EqExact_Down,Data/Ord.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+iter_plus_Z,GHC/Enum.v,False,feedback,The LHS of Z.add_0_r     (_ + 0)%Z does not match any subterm of the goal
+iterates_ext,GHC/Enum.v,False,feedback,"Unable to find an instance for the variable f2. Rule's type: (forall (A : Type) (n : nat) (f1 f2 : A -> A) (z : A),  f1 =1 f2 -> iterates' n f1 z = iterates' n f2 z)"
+length_nil,GHC/List.v,True,,
+enumFromTo_Int_In,GHC/Enum.v,False,feedback,Not an inductive product.
+eftInt_iterates',GHC/Enum.v,False,feedback,The LHS of eftInt_aux_unroll     (eftInt_aux _ _ _) does not match any subterm of the goal
+In_zip,GHC/List.v,False,feedback,No primitive equality found.
+instance_MonoidLaws_option,GHC/Base.v,False,feedback,"In environment a : Type H : Semigroup a H0 : Monoid a H1 : Semigroup a H2 : Eq_ a H3 : EqLaws a H4 : SemigroupLaws a H5 : Eq_ a H6 : EqLaws a H7 : MonoidLaws a a0 : a Unable to unify ""true"" with  ""Monoid__option (option a -> option a -> option a)      (mappend__ (option a)) (Monoid__option (option a) (mempty__ (option a)))     (Some a0) == Some a0""."
+eftInt_aux_In,GHC/Enum.v,False,feedback,The LHS of eftInt_aux_iterates     (eftInt_aux _ _ _) does not match any subterm of the goal
+snd_unzip,GHC/List.v,False,feedback,"Found no subterm matching ""snd                              (Base.foldr                                 (fun (arg_0__ : a * b)                                    (arg_1__ : list a * list b) =>                                  let (a0, b0) := arg_0__ in                                  let (as_, bs) := arg_1__ in                                  (a0 :: as_, b0 :: bs))                                  ([], []) xs')"" in the current goal."
+N_double_succ,Data/Bits/Popcount.v,False,feedback,"Found no subterm matching ""N.succ (?M1683 + ?M1684)"" in the current goal."
+Pos_popcount_1_Is_power,Data/Bits/Popcount.v,False,feedback,"Found no subterm matching ""Pos.succ                              ((fix Pos_popcount (p : positive) : positive :=                                  match p with                                  | (p0~1)%positive =>                                      Pos.succ (Pos_popcount p0)                                  | (p0~0)%positive => Pos_popcount p0                                  | 1%positive => 1%positive                                  end) p)"" in the current goal."
+hs_coq_tuple_snd,Data/Tuple.v,True,,
+In_zip_snd,GHC/List.v,False,feedback,The reference z was not found in the current environment.
+snd_pair,Data/Tuple.v,False,feedback,y is already used.
+Foldable_foldr_map,Data/Foldable.v,True,,
+Foldable_foldl_cons,Data/Foldable.v,False,feedback,The reference t was not found in the current environment.
+hs_coq_lenAcc_add,GHC/List.v,False,feedback,"Found no subterm matching ""lenAcc xs (acc1 + acc2)%Z"" in the current goal."
+N_popcount_double,Data/Bits/Popcount.v,False,feedback,The reference Pos_popcount_double was not found in the current environment.
+EqLaws_Down,Data/Ord.v,False,feedback,The reference x was not found in the current environment.
+EqLaws_Proxy,Data/Proxy.v,False,feedback,The reference x was not found in the current environment.
+elem_cons,Data/Foldable.v,False,feedback,The LHS of Foldable_any_cons     (any _ (_ :: _)) does not match any subterm of the goal
+flat_map_cong,GHC/Base.v,False,feedback,"In environment a : Type b : Type f, g : a -> list b xs : list a H : f =1 g Unable to unify ""map ?M2002 ?M2004 = map ?M2003 ?M2004"" with  ""concat (map f xs) = concat (map g xs)""."
+hs_coq_filter,GHC/List.v,True,,
+foldr_single,GHC/Base.v,True,,
+hs_coq_foldl_base,GHC/Base.v,False,feedback,The LHS of IH     (foldl f z l') does not match any subterm of the goal
+EqExact_Int,GHC/Base.v,False,feedback,Cannot coerce reflect to an evaluable reference.
+Eq_is_true_m,GHC/Base.v,False,feedback,"Unable to apply lemma of type ""a"" on hypothesis of type ""is_true (y == x0)""."
+forM_cong,Data/Traversable.v,False,feedback,Not an inductive product.
+hs_coq_length_list,Data/Foldable.v,True,,
+EqExact_option,GHC/Base.v,False,feedback,No assumption in (reflect (Some a0 = Some a1) (Some a0 == Some a1))
+Eq_reflI,GHC/Base.v,False,feedback,H is already used.
+eftInt_aux_iterates,GHC/Enum.v,False,feedback,The reference Z.to_nat_eq was not found in the current environment.

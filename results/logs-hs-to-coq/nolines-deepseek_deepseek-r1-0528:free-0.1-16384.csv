@@ -1,0 +1,188 @@
+name,file,result,error_type,error
+Eq_eq_bool,GHC/Base.v,True,,
+iterates_In,GHC/Enum.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+Foldable_length_cons,Data/Foldable.v,False,feedback,The LHS of hs_coq_lenAcc     (List.lenAcc _ _) does not match any subterm of the goal
+flat_map_nil,GHC/Base.v,True,,
+flat_map_unpack_cons_f,GHC/List.v,True,,
+Foldable_foldl'_cons,Data/Foldable.v,True,,
+instance_MonoidLaws_list,GHC/Base.v,False,feedback,The reference Monoid__list_mappend was not found in the current environment.
+enumFromTo_Int_iterates',GHC/Enum.v,True,,
+eftInt_aux_unroll,GHC/Enum.v,False,feedback,The reference Z2Nat_inj was not found in the current environment.
+eq_replace_r,GHC/Base.v,False,feedback,Tactic failure: Incorrect number of goals (expected 1 tactic).
+N_popcount_Nsucc_double,Data/Bits/Popcount.v,True,,
+EqExact_Data_Either_Either,Data/Either.v,False,feedback,"In environment a : Type b : Type H : Eq_ a H0 : EqLaws a H1 : EqExact a H2 : Eq_ b H3 : EqLaws b H4 : EqExact b a1, a2 : a e : a1 = a2 Unable to unify ""reflect ?M2111 false"" with  ""reflect (Left a1 = Left a2) (Left a1 == Left a2)""."
+Pos_popcount_pow2,Data/Bits/Popcount.v,False,feedback,"In environment n : positive IHn : Pos_popcount (2 ^ n) = 1%positive Unable to unify ""1%positive"" with ""Pos_popcount (2 ^ n~1)""."
+Foldable_any_app,Data/Foldable.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+Eq_eq_Word,GHC/Base.v,False,feedback,congruence failed.
+unzip_zip,GHC/List.v,False,feedback,"In environment A : Type B : Type a : A b : B l' : list (A * B) la' : list A lb' : list B EQ : unzip l' = (la', lb') H : (a :: la', b :: lb') = (a :: la', b :: lb') IHl' : (la', lb') = (a :: la', b :: lb') -> l' = zip (a :: la') (b :: lb') The term ""la'"" has type ""list A"" while it is expected to have type  ""(la', lb') = (a :: la', b :: lb')""."
+iterates'_In,GHC/Enum.v,False,feedback,Not an inductive goal with 1 constructor.
+Foldable_length_nil,Data/Foldable.v,True,,
+lines_def,Data/OldList.v,False,feedback,The reference lines_equation was not found in the current environment.
+eq_replace_l,GHC/Base.v,False,feedback,not a rewritable relation: (EqLaws a) in rule H0
+hs_coq_foldl'_list,Data/Foldable.v,False,feedback,"The LHS of IH     (Foldable__list (forall b a : Type, (b -> a -> b) -> b -> list a -> b)        (foldl'__ list) B A f _ xs) does not match any subterm of the goal"
+instance_MonadLaws_Data_Either_Either,Data/Either.v,False,feedback,a is already used.
+eftInt_aux_pf,../base/GHC/Enum.v,True,,
+parametric_eq_sym,GHC/Base.v,False,feedback,"In environment a : Type H : Eq_ a H0 : EqLaws a Unable to unify ""(H0 == ?M2028) = (?M2028 == H0)"" with  ""forall x y : a,   (fun x0 y0 : a => is_true (x0 == y0)) x y ->   (fun x0 y0 : a => is_true (x0 == y0)) y x""."
+foldr_initial,GHC/Base.v,True,,
+instance_SemigroupLaws_option,GHC/Base.v,False,feedback,a is already used.
+Build_EqLaws_reflect,GHC/Base.v,False,feedback,"In environment t : Type H : Eq_ t X : forall x y : t, reflect (x = y) (x == y) H0 : forall x y : t, (x == y) = ~~ (x /= y) Unable to unify ""(?M2078 == ?M2079) = ~~ (?M2078 /= ?M2079)"" with  ""forall x : t, x == x""."
+N_popcount_diff,Data/Bits/Popcount.v,True,,
+In_zip_swap,GHC/List.v,True,,
+Eq_Symmetric,GHC/Base.v,False,feedback,"In environment a : Type H : Eq_ a x : EqLaws a y : a The term ""y"" has type ""a"" while it is expected to have type ""EqLaws a""."
+List_foldl_foldr,GHC/List.v,False,feedback,"Found no subterm matching ""fold_left f xs x"" in the current goal."
+instance_SemigroupLaws_unit,GHC/Base.v,True,,
+dropWhile_cons_prop,../base/Data/OldList.v,False,feedback,The reference dropWhile_cons_prop was not found in the current environment.
+iterates'_length,GHC/Enum.v,True,,
+hs_coq_reverse,GHC/List.v,False,feedback,xs is already used.
+instance_ApplicativeLaws_Data_Either_Either,Data/Either.v,True,,
+fst_pair,Data/Tuple.v,True,,
+hs_coq_foldl_list',Data/Foldable.v,True,,
+instance_FunctorLaws_identity,Data/Functor/Identity.v,True,,
+iter_plus_nat,GHC/Enum.v,True,,
+Foldable_foldr_cons,Data/Foldable.v,True,,
+lines_cons,Data/OldList.v,False,feedback,"Found no subterm matching ""lines ?M1694"" in the current goal."
+Foldable_foldl'_app,Data/Foldable.v,False,feedback,The LHS of IH     (foldl' f s (xs ++ vs2)) does not match any subterm of the goal
+flat_map_cons_id,GHC/Base.v,True,,
+Eq_eq_Int,GHC/Base.v,False,feedback,"In environment x, y : Int Unable to unify  ""((?M2072 =? ?M2073)%Z = true -> ?M2072 = ?M2073) /\   (?M2072 = ?M2073 -> (?M2072 =? ?M2073)%Z = true)"" with ""reflect ?P (x == y)""."
+mapAccumL_cons,Data/Traversable.v,False,feedback,The reference Traversable__list_traverse was not found in the current environment.
+Eq_Equivalence,GHC/Base.v,True,,
+break_length,../base/Data/OldList.v,False,feedback,The reference break was not found in the current environment.
+Neq_sym,GHC/Base.v,True,,
+mapAccumL_nil,Data/Traversable.v,True,,
+Eq_m,GHC/Base.v,False,feedback,Not an inductive product.
+EqExact_Proxy,Data/Proxy.v,False,feedback,No product even after head-reduction.
+Neq_atrans,GHC/Base.v,False,feedback,H already used
+reverse_unit,GHC/List.v,False,feedback,"In environment A : Type l : list ?M2056 a : ?M2056 Unable to unify ""rev (l ++ [a]) = a :: rev l"" with  ""reverse (l ++ [a]) = a :: reverse l""."
+hs_coq_partition,Data/OldList.v,False,feedback,"In environment A : Type p : A -> bool x : A xs, g, d : list A IH : OldList.partition p xs = (g, d) Unable to unify ""(x :: g, d)"" with ""select p x (g, d)""."
+Eq_Reflexive,GHC/Base.v,False,feedback,Applied theorem does not have enough premises.
+reverse_append,GHC/List.v,False,feedback,"Found no subterm matching ""?M2071 ++ ?M2072 ++ ?M2073"" in the current goal."
+N_popcount_1_pow2,Data/Bits/Popcount.v,False,feedback,The reference N.pos_inj was not found in the current environment.
+iterates_length,GHC/Enum.v,True,,
+Pop_popcount_diff,Data/Bits/Popcount.v,False,feedback,(in proof Pop_popcount_diff): Attempt to save an incomplete proof
+elem_eq,Data/Foldable.v,False,feedback,Expects a disjunctive pattern with 1 branch or a conjunctive pattern made of 4 patterns.
+length_zip,GHC/List.v,False,feedback,"In environment a : Type b : Type x : a xs : list a y : b ys : list b H : Datatypes.length (x :: xs) = Datatypes.length (y :: ys) IH : Datatypes.length xs = Datatypes.length (y :: ys) ->      Datatypes.length xs = Datatypes.length (zip xs (y :: ys)) Unable to unify ""Datatypes.length (zip (x :: xs) (y :: ys))"" with  ""Datatypes.length (x :: xs)""."
+In_zip_fst,GHC/List.v,False,feedback,"Unable to apply lemma of type  ""In (x, y) (zip xs' (y' :: ys')) ->   exists z : C, In (x, z) (zip xs' (z' :: zs'))"" on hypothesis of type  ""In (x, y) (zip xs' ys')""."
+instance_ApplicativeLaws_option,GHC/Base.v,False,feedback,No such goal. Focus next goal with bullet -.
+N_popcount_pow2,Data/Bits/Popcount.v,False,feedback,(in proof N_popcount_pow2): Attempt to save an incomplete proof
+snd_unzip_map,GHC/List.v,False,feedback,"Found no subterm matching ""snd (l, r)"" in the current goal."
+words_cons,Data/OldList.v,False,feedback,"In environment c : Char s : list Char Hc : Unicode.isSpace c = true Unable to unify  ""match List.dropWhile Unicode.isSpace s with   | nil => nil   | c :: l =>       let '(w, s'') := List.break Unicode.isSpace (c :: l) in w :: words s''   end"" with  ""match     (if Unicode.isSpace c then List.dropWhile Unicode.isSpace s else c :: s)   with   | nil => nil   | c :: l =>       let       '(w, s'') :=        if Unicode.isSpace c        then (nil, c :: l)        else let '(ys, zs) := List.break Unicode.isSpace l in (c :: ys, zs) in        w :: words s''   end""."
+dropWhile_cons_length,../base/Data/OldList.v,False,feedback,Omega can't solve this system
+words_nil,Data/OldList.v,True,,
+forM_map,Data/Traversable.v,False,feedback,The LHS of IH     (forM (map _ xs) _) does not match any subterm of the goal
+flat_map_app,GHC/Base.v,True,,
+parametric_eq_trans,GHC/Base.v,False,feedback,"In environment a : Type H : Eq_ a H_refl : reflexive (T:=a) _==_ H_sym : symmetric (T:=a) _==_ H_trans : transitive (T:=a) _==_ H_inv : forall x y : a, (x == y) = ~~ (x /= y) The term ""H_trans"" has type ""transitive (T:=a) _==_"" while it is expected to have type ""Transitive (fun x y : a => x == y)"" (cannot unify ""is_true (y == x)"" and ""is_true (x == y)"")."
+safeSubN_sub,../base/GHC/Num.v,True,,
+EqExact_pair,GHC/Base.v,False,feedback,H is already used.
+hs_coq_map,GHC/Base.v,True,,
+map_id,GHC/Base.v,True,,
+instance_SemigroupLaws_list,GHC/Base.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+instance_MonadLaws_option,GHC/Base.v,True,,
+iterates'_ext,GHC/Enum.v,False,feedback,No applicable tactic.
+Neq_neq,GHC/Base.v,False,feedback,H already used
+unzip_equal_length,GHC/List.v,False,feedback,"In environment A : Type B : Type a : A b : B l' : list (A * B) as' : list A bs' : list B EQ : unzip l' = (as', bs') H : (a :: as', b :: bs') = (a :: as', b :: bs') IHl' : (as', bs') = (a :: as', b :: bs') ->        Datatypes.length (a :: as') = Datatypes.length (b :: bs') Unable to unify ""Datatypes.length (a :: as') = Datatypes.length (b :: bs')"" with ""Datatypes.length as' = Datatypes.length bs'""."
+elem_nil,Data/Foldable.v,False,feedback,The reference foldMap_nil was not found in the current environment.
+instance_ApplicativeLaws_identity,Data/Functor/Identity.v,False,feedback,The reference u was not found in the current environment.
+hs_coq_length_list',Data/Foldable.v,False,feedback,The reference Foldable__list_length was not found in the current environment.
+instance_SemigroupLaws_comparison,GHC/Base.v,False,feedback,"In environment x, y, z : comparison Unable to unify ""true"" with ""(x <<>> (y <<>> z)) == ((x <<>> y) <<>> z)""."
+EqExact_comparison,GHC/Base.v,True,,
+simpl_list_nil_eq,GHC/Base.v,True,,
+Foldable_foldl'_nil,Data/Foldable.v,True,,
+Foldable_elem_proper,Data/Foldable.v,False,feedback,not a rewritable relation: (list a) in rule Hxsys
+simpl_option_some_eq,GHC/Base.v,True,,
+hs_coq_foldr_list',Data/Foldable.v,True,,
+instance_MonoidLaws_comparison,GHC/Base.v,False,feedback,The reference Monoid__comparison_mappend was not found in the current environment.
+instance_ApplicativeLaws_list,GHC/Base.v,False,feedback,The LHS of flat_map_cons_f     (flat_map (fun x : _ => _ x :: nil) _) does not match any subterm of the goal
+flat_map_concat_map,GHC/Base.v,True,,
+map_snd_zip,GHC/List.v,True,,
+iter_plus_N,GHC/Enum.v,False,feedback,The LHS of N.add_succ_l     (N.succ _ + _)%N does not match any subterm of the goal
+EqLaws_Data_Either_Either,Data/Either.v,False,feedback,The reference x was not found in the current environment.
+instance_MonoidLaws_unit,GHC/Base.v,True,,
+Eq_Transitive,GHC/Base.v,False,feedback,"In environment a : Type H : Eq_ a H0 : EqLaws a x, y, z : a H1 : x == y H2 : y == z Unable to unify ""true"" with ""x == z""."
+EqLaws_Int,GHC/Base.v,False,feedback,The reference x was not found in the current environment.
+Neq_irrefl,GHC/Base.v,True,,
+take_drop,GHC/List.v,True,,
+Foldable_foldl_nil,Data/Foldable.v,False,feedback,The reference g__0__ was not found in the current environment.
+Foldable_foldr_nil,Data/Foldable.v,True,,
+hs_coq_lenAcc,GHC/List.v,False,feedback,A is already used.
+fmfm,GHC/Base.v,False,add_err,Syntax error: 'rec' or 'fun' or 'eta' or '==>' or '||' or '&&' or '\/' or '/\' or 'preim' or 'predC' or 'predD' or 'predU' or 'predI' or 'mem' or 'rel' or 'qualify' or 'pred' or 'predType' 'of' expected after '[' (in [constr:operconstr]).
+hs_coq_foldr_base,GHC/Base.v,False,feedback,A is already used.
+instance_FunctorLaws_list,GHC/Base.v,True,,
+hs_coq_tuple_fst,Data/Tuple.v,True,,
+instance_FunctorLaws_Data_Either_Either,Data/Either.v,True,,
+eftInt_In,GHC/Enum.v,False,feedback,"In environment from, to, a : Int n : ~ (from > to)%Z H : from = a \/     In a       (match          Z.eq_dec from to as anonymous'          return (anonymous' = Z.eq_dec from to -> list Int)        with        | left wildcard' => fun=> nil        | right neq =>            fun=> Wf.Fix_F_sub {y : Int & {x : Int & (x <= y)%Z}}                    (Wf.MR lt                       (fun recarg : {y : Int & {x : Int & (x <= y)%Z}} =>                        Z.to_nat (projT1 recarg - projT1 (projT2 recarg))))                    (fun=> list Int)                    (fun (recarg : {y : Int & {x : Int & (x <= y)%Z}})                       (eftInt_aux' : {recarg'                                      : {y : Int & {x : Int & (x <= y)%Z}} |                                      Z.to_nat                                        (projT1 recarg' -                                         projT1 (projT2 recarg')) <                                      Z.to_nat                                        (projT1 recarg -                                         projT1 (projT2 recarg))} ->                                       list Int) =>                     projT1 (projT2 recarg)                     :: match                          Z.eq_dec (projT1 (projT2 recarg)) (projT1 recarg) as                          anonymous'                          return                            (anonymous' =                             Z.eq_dec (projT1 (projT2 recarg)) (projT1 recarg) ->                             list Int)                        with                        | left wildcard' => fun=> nil                        | right neq0 =>                            fun=> eftInt_aux'                                    (exist                                       (fun                                          recarg' :                                            {y : Int &                                            {x : Int & (x <= y)%Z}} =>                                        Z.to_nat                                          (projT1 recarg' -                                           projT1 (projT2 recarg')) <                                        Z.to_nat                                          (projT1 recarg -                                           projT1 (projT2 recarg)))                                       (existT                                          (fun y : Int =>                                           {x : Int & (x <= y)%Z})                                          (projT1 recarg)                                          (existT (Z.le^~ (projT1 recarg))                                             (projT1 (projT2 recarg) + 1)%Z                                             (eftInt_aux_pf (y:=                                                projT1 recarg)                                                (x:=                                                projT1 (projT2 recarg))                                                (projT2 (projT2 recarg)) neq0)))                                       (Enum.eftInt_aux_func_obligation_1                                          (y:=projT1 recarg)                                          (x:=projT1 (projT2 recarg))                                          (projT2 (projT2 recarg)) neq0))                        end                          (erefl                             (Z.eq_dec (projT1 (projT2 recarg))                                (projT1 recarg))))                    (existT (fun y : Int => {x : Int & (x <= y)%Z}) to                       (existT (Z.le^~ to) (from + 1)%Z                          (eftInt_aux_pf (y:=to) (x:=from)                             (Znot_gt_le from to n) neq)))                    (Acc_rect                       (fun mm : nat =>                        forall a : {y : Int & {x : Int & (x <= y)%Z}},                        Z.to_nat (projT1 a - projT1 (projT2 a)) = mm ->                        Acc                          (Wf.MR lt                             (fun recarg : {y : Int & {x : Int & (x <= y)%Z}}                              =>                              Z.to_nat                                (projT1 recarg - projT1 (projT2 recarg)))) a)                       (fun x : nat =>                        fun=> (fun                                 (X0 : forall y : nat,                                       y < x ->                                       forall                                         a : {y0 : Int &                                             {x0 : Int & (x0 <= y0)%Z}},                                       Z.to_nat (projT1 a - projT1 (projT2 a)) =                                       y ->                                       Acc                                         (Wf.MR lt                                            (fun                                               recarg :                                                 {y0 : Int &                                                {x0 : Int & (x0 <= y0)%Z}} =>                                             Z.to_nat                                               (projT1 recarg -                                                projT1 (projT2 recarg)))) a)                                 (a : {y : Int & {x0 : Int & (x0 <= y)%Z}})                                 (H0 : Z.to_nat (projT1 a - projT1 (projT2 a)) =                                       x) =>                               Acc_intro a                                 (fun                                    (y : {y : Int & {x0 : Int & (x0 <= y)%Z}})                                    (H1 : Wf.MR lt                                            (fun                                               recarg :                                                 {y0 : Int &                                                {x0 : Int & (x0 <= y0)%Z}} =>                                             Z.to_nat                                               (projT1 recarg -                                                projT1 (projT2 recarg))) y a)                                  =>                                  X0 (Z.to_nat (projT1 y - projT1 (projT2 y)))                                    (eq_ind                                       (Z.to_nat                                          (projT1 a - projT1 (projT2 a)))                                       [eta lt                                              (Z.to_nat                                                 (projT1 y - projT1 (projT2 y)))]                                       H1 x H0) y                                    (erefl                                       (Z.to_nat                                          (projT1 y - projT1 (projT2 y)))))))                       (nat_ind                          (fun n : nat =>                           forall a : nat, a < n -> Acc (ltof nat ssrfun.id) a)                          (fun (a : nat) (H : a < 0) =>                           False_ind (Acc (ltof nat ssrfun.id) a)                             (Nat.nlt_0_r a H))                          (fun (n : nat)                             (IHn : forall a : nat,                                    a < n -> Acc (ltof nat ssrfun.id) a)                             (a : nat) (Ha : a < S n) =>                           Acc_intro a                             (fun (b : nat) (Hb : b < a) =>                              IHn b                                (Nat.lt_le_trans b a n Hb (lt_n_Sm_le a n Ha))))                          (Z.to_nat (to - from)) (Z.to_nat (to - (from + 1)))                          (Nat.lt_le_trans (Z.to_nat (to - (from + 1)))                             (Z.to_nat (to - from))                              (Z.to_nat (to - from))                             (Enum.eftInt_aux_func_obligation_1 (y:=to)                                (x:=from) (Znot_gt_le from to n) neq)                             (lt_n_Sm_le (Z.to_nat (to - from))                                (Z.to_nat (to - from))                                (le_n (S (Z.to_nat (to - from)))))))                       (existT (fun y : Int => {x : Int & (x <= y)%Z}) to                          (existT (Z.le^~ to) (from + 1)%Z                             (eftInt_aux_pf (y:=to) (x:=from)                                (Znot_gt_le from to n) neq)))                       (erefl (Z.to_nat (to - (from + 1)))))        end (erefl (Z.eq_dec from to))) Unable to unify  ""(In ?M1619 (eftInt_aux ?M1616 ?M1617 ?M1618) ->    (?M1617 <= ?M1619 <= ?M1616)%Z) /\   ((?M1617 <= ?M1619 <= ?M1616)%Z ->    In ?M1619 (eftInt_aux ?M1616 ?M1617 ?M1618))"" with ""(from <= a <= to)%Z""."
+EqExact_list,GHC/Base.v,False,feedback,No applicable tactic.
+Foldable_any_cons,Data/Foldable.v,False,feedback,The reference Foldable__list_foldMap was not found in the current environment.
+Foldable_foldr_app,Data/Foldable.v,False,feedback,The LHS of hs_coq_foldr_base     Base.foldr does not match any subterm of the goal
+foldr_nil,GHC/Base.v,True,,
+map_map,GHC/Base.v,True,,
+instance_MonadLaws_identity,Data/Functor/Identity.v,True,,
+Foldable_any_nil,Data/Foldable.v,False,feedback,The reference Foldable__list_foldMap was not found in the current environment.
+simpl_option_none_eq,GHC/Base.v,True,,
+instance_MonadLaws_list,GHC/Base.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+reverse_nil,GHC/List.v,True,,
+zip_unzip_map,GHC/List.v,False,feedback,"Found no subterm matching ""zip (fst (unzip xs)) (Base.map f (snd (unzip xs)))"" in the current goal."
+EqLaws_pair,GHC/Base.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+EqExact_unit,GHC/Base.v,False,feedback,No product even after head-reduction.
+EqExact_Word,GHC/Base.v,True,,
+length_app,GHC/List.v,False,feedback,"Found no subterm matching ""(0 + ?M2054)%Z"" in the current goal."
+Foldable_foldl_app,Data/Foldable.v,False,feedback,The LHS of IH     (foldl f s (vs1 ++ vs2)) does not match any subterm of the goal
+hs_coq_list_length,GHC/List.v,False,feedback,"Found no subterm matching ""lenAcc l 0%Z"" in the current goal."
+iterates_map,GHC/Enum.v,True,,
+N_popcount_Ndouble,Data/Bits/Popcount.v,True,,
+EqExact_bool,GHC/Base.v,True,,
+iterates'_map,GHC/Enum.v,False,feedback,"In environment A : Type f : A -> A z : A start, n : nat f0 : A -> A z0 : A Unable to unify  ""List.map (fun k : nat => Nat.iter (start + k) f0 z0) (seq 0 n)"" with ""iterates' n f0 (Nat.iter start f0 z0)""."
+Neq_inv,GHC/Base.v,False,feedback,The RHS of Eq_inv     (~~ (_ /= _)) does not match any subterm of the goal
+map_cong,GHC/Base.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+EqLaws_list,GHC/Base.v,False,feedback,The reference x was not found in the current environment.
+hs_coq_foldr_list,Data/Foldable.v,False,feedback,The LHS of IH     (foldr f z xs) does not match any subterm of the goal
+EqLaws_comparison,GHC/Base.v,True,,
+iterates_iterates',GHC/Enum.v,False,feedback,The LHS of IH     (iterates n f z) does not match any subterm of the goal
+simpl_list_cons_eq,GHC/Base.v,True,,
+flat_map_cons_f,GHC/Base.v,True,,
+EqLaws_Word,GHC/Base.v,False,feedback,The reference Hz was not found in the current environment.
+In_zip_map,GHC/List.v,False,add_err,Syntax error: '|' or ']' expected (in [or_and_intropattern]).
+EqLaws_bool,GHC/Base.v,True,,
+hs_coq_foldl_list,Data/Foldable.v,False,feedback,"In environment A : Type B : Type f : B -> A -> B z : B l : list A The term ""hs_coq_foldl_base"" has type  ""forall (f0 : ?B -> ?A -> ?B) (z0 : ?B) (l0 : list ?A),   Base.foldl f0 z0 l0 = fold_left f0 l0 z0"" while it is expected to have type  ""foldl f z l = fold_left f l z""."
+reverse_involutive,GHC/List.v,True,,
+map_append,GHC/Base.v,False,feedback,a is already used.
+EqLaws_option,GHC/Base.v,False,feedback,The reference x was not found in the current environment.
+EqLaws_unit,GHC/Base.v,False,feedback,The type of this term is a product while it is expected to be  ((x == y) = (y == x)).
+concat_map,GHC/Base.v,False,feedback,The LHS of map_app     (List.map _ (_ ++ _)) does not match any subterm of the goal
+length_cons,GHC/List.v,False,feedback,"Found no subterm matching ""lenAcc ?M2049 (?M2050 + ?M2051)%Z"" in the current goal."
+foldr_id,GHC/Base.v,True,,
+instance_FunctorLaws_option,GHC/Base.v,True,,
+flat_map_map,GHC/Base.v,True,,
+Foldable_elem_app,Data/Foldable.v,True,,
+EqExact_Down,Data/Ord.v,False,feedback,No product even after head-reduction.
+iter_plus_Z,GHC/Enum.v,False,feedback,The reference Z_of_nat_S was not found in the current environment.
+iterates_ext,GHC/Enum.v,True,,
+length_nil,GHC/List.v,True,,
+enumFromTo_Int_In,GHC/Enum.v,True,,
+eftInt_iterates',GHC/Enum.v,False,feedback,Wrong bullet -: Current bullet - is not finished.
+In_zip,GHC/List.v,True,,
+instance_MonoidLaws_option,GHC/Base.v,False,feedback,No such goal.
+eftInt_aux_In,GHC/Enum.v,False,feedback,Expects a disjunctive pattern with 2 branches.
+snd_unzip,GHC/List.v,False,feedback,"Found no subterm matching ""snd (unzip xs)"" in the current goal."
+N_double_succ,Data/Bits/Popcount.v,True,,
+Pos_popcount_1_Is_power,Data/Bits/Popcount.v,False,feedback,Omega can't solve this system
+hs_coq_tuple_snd,Data/Tuple.v,True,,
+In_zip_snd,GHC/List.v,False,feedback,"Unable to apply lemma of type  ""In (x, y) (zip xs (y' :: ys)) ->   forall zs : list C,   Datatypes.length xs = Datatypes.length zs ->   exists z : C, In (z, y) (zip zs (y' :: ys))"" on hypothesis of type  ""In (x, y) (zip xs ys)""."
+snd_pair,Data/Tuple.v,True,,
+Foldable_foldr_map,Data/Foldable.v,False,feedback,The reference List.map_nil was not found in the current environment.
+Foldable_foldl_cons,Data/Foldable.v,True,,
+hs_coq_lenAcc_add,GHC/List.v,False,feedback,"Found no subterm matching ""lenAcc xs (acc1 + acc2)%Z"" in the current goal."
+N_popcount_double,Data/Bits/Popcount.v,False,feedback,No such goal.
+EqLaws_Down,Data/Ord.v,False,feedback,"In environment a : Type H : Eq_ a H0 : EqLaws a x : a Unable to unify ""forall x0 : ?t, x0 == x0"" with  ""(Mk_Down x == Mk_Down x) = true""."
+EqLaws_Proxy,Data/Proxy.v,False,feedback,The reference x was not found in the current environment.
+elem_cons,Data/Foldable.v,True,,
+flat_map_cong,GHC/Base.v,False,feedback,"In environment a : Type b : Type f, g : a -> list b xs : list a H : f =1 g The term ""H"" has type ""f =1 g"" while it is expected to have type ""list ?a""."
+hs_coq_filter,GHC/List.v,True,,
+foldr_single,GHC/Base.v,True,,
+hs_coq_foldl_base,GHC/Base.v,False,feedback,The LHS of IH     (fold_right (fun (v : A) (fn : B -> B) (z : B) => fn (f z v))        Datatypes.id l' z) does not match any subterm of the goal
+EqExact_Int,GHC/Base.v,True,,
+Eq_is_true_m,GHC/Base.v,False,feedback,_tmp is used in conclusion.
+forM_cong,Data/Traversable.v,False,feedback,Not an inductive goal with 2 constructors.
+hs_coq_length_list,Data/Foldable.v,False,feedback,The LHS of hs_coq_lenAcc     (List.lenAcc _ _) does not match any subterm of the goal
+EqExact_option,GHC/Base.v,False,feedback,The reference Eq___option_op_zeze__ was not found in the current environment.
+Eq_reflI,GHC/Base.v,False,feedback,t is already used.
+eftInt_aux_iterates,GHC/Enum.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).

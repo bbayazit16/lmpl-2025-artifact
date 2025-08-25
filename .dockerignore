@@ -1,0 +1,17 @@
+.env
+logs-hs-to-coq
+logs-verdi
+hs-to-coq
+verdi
+*-logs
+*-sim
+base
+cheerios
+__pycache__
+.vscode
+.venv
+*.cache
+*.aux
+*.v
+*.vo
+*.glob

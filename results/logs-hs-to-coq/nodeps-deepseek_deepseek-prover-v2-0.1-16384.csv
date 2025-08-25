@@ -1,0 +1,188 @@
+name,file,result,error_type,error
+Eq_eq_bool,GHC/Base.v,False,feedback,"Anomaly ""Evar ?X722 was not declared."" Please report at http://coq.inria.fr/bugs/."
+iterates_In,GHC/Enum.v,False,feedback,Expects a disjunctive pattern with 2 branches.
+Foldable_length_cons,Data/Foldable.v,False,feedback,The LHS of hs_coq_length_list     (length _) does not match any subterm of the goal
+flat_map_nil,GHC/Base.v,True,,
+flat_map_unpack_cons_f,GHC/List.v,True,,
+Foldable_foldl'_cons,Data/Foldable.v,True,,
+instance_MonoidLaws_list,GHC/Base.v,False,add_err,"Anomaly ""Uncaught exception Option.IsNone."" Please report at http://coq.inria.fr/bugs/."
+enumFromTo_Int_iterates',GHC/Enum.v,False,feedback,The LHS of eftInt_iterates'     (eftInt _ _) does not match any subterm of the goal
+eftInt_aux_unroll,GHC/Enum.v,False,feedback,"In environment from : Int pf : (from <= from)%Z Unable to unify ""from :: nil"" with ""eftInt_aux from from pf""."
+eq_replace_r,GHC/Base.v,False,feedback,"In environment a : Type H : Eq_ a v1 : EqLaws a v2, v3, H0 : a The term ""v2"" has type ""a"" while it is expected to have type ""EqLaws a""."
+N_popcount_Nsucc_double,Data/Bits/Popcount.v,False,feedback,Wrong bullet -: No more subgoals.
+EqExact_Data_Either_Either,Data/Either.v,False,add_err,"Anomaly ""Uncaught exception Option.IsNone."" Please report at http://coq.inria.fr/bugs/."
+Pos_popcount_pow2,Data/Bits/Popcount.v,False,feedback,Expects a disjunctive pattern with 3 branches.
+Foldable_any_app,Data/Foldable.v,False,feedback,The LHS of IH     (any (fun y : A => v == y) (l1 ++ _)) does not match any subterm of the goal
+Eq_eq_Word,GHC/Base.v,True,,
+unzip_zip,GHC/List.v,False,feedback,Unexpected name (at most 1 introduction pattern was expected in the branch).
+iterates'_In,GHC/Enum.v,False,feedback,The reference seq_lt was not found in the current environment.
+Foldable_length_nil,Data/Foldable.v,True,,
+lines_def,Data/OldList.v,False,feedback,"In environment x : Char xs, l : list Char Hbreak : List.break (fun arg_4__ : Char => arg_4__ == newline) (x :: xs) =          (l, nil) Unable to unify  ""let   '(h, t) :=    let    '(l, s') :=     if x == newline     then (nil, x :: xs)     else      let      '(ys, zs) := List.break (fun arg_4__ : Char => arg_4__ == newline) xs in       (x :: ys, zs) in     (l,     match s' with     | nil => nil     | _ :: s'' =>         Wf.Fix_sub String (Wf.MR lt (fun recarg : String => length recarg))           OldList.lines_obligation_2 (fun _ : String => list String)           (fun (recarg : String)              (lines' : {recarg' : String | length recarg' < length recarg} ->                        list String) =>            if List.null recarg            then nil            else             (let              '(h, t) as anonymous' :=               (let                '(l0, s'0) as anonymous' :=                 List.break (fun arg_4__ : Char => arg_4__ == newline) recarg                 return                   (anonymous' =                    List.break (fun arg_4__ : Char => arg_4__ == newline)                      recarg -> list Char * list (list Char)) in                 fun                   Heq_anonymous : (l0, s'0) =                                   List.break                                     (fun arg_4__ : Char => arg_4__ == newline)                                     recarg =>                 (l0,                 match                   s'0 as s''0 return (s''0 = s'0 -> list (list Char))                 with                 | nil => fun _ : nil = s'0 => nil                 | wildcard' :: s''0 =>                     fun Heq_s' : wildcard' :: s''0 = s'0 =>                     lines'                       (exist                          (fun recarg' : String =>                           length recarg' < length recarg) s''0                          (OldList.lines_obligation_1 recarg l0 s'0                             Heq_anonymous wildcard' s''0 Heq_s'))                 end eq_refl)) eq_refl               return                 (anonymous' =                  (let                   '(l0, s'0) as anonymous'0 :=                    List.break (fun arg_4__ : Char => arg_4__ == newline)                      recarg                    return                      (anonymous'0 =                       List.break (fun arg_4__ : Char => arg_4__ == newline)                         recarg -> list Char * list (list Char)) in                    fun                      Heq_anonymous : (l0, s'0) =                                      List.break                                        (fun arg_4__ : Char =>                                         arg_4__ == newline) recarg =>                    (l0,                    match                      s'0 as s''0 return (s''0 = s'0 -> list (list Char))                    with                    | nil => fun _ : nil = s'0 => nil                    | wildcard' :: s''0 =>                        fun Heq_s' : wildcard' :: s''0 = s'0 =>                        lines'                          (exist                             (fun recarg' : String =>                              length recarg' < length recarg) s''0                             (OldList.lines_obligation_1 recarg l0 s'0                                Heq_anonymous wildcard' s''0 Heq_s'))                    end eq_refl)) eq_refl -> list (list Char)) in               fun                 _ : (h, t) =                     (let                      '(l0, s'0) as anonymous' :=                       List.break (fun arg_4__ : Char => arg_4__ == newline)                         recarg                       return                         (anonymous' =                          List.break                            (fun arg_4__ : Char => arg_4__ == newline) recarg ->                          list Char * list (list Char)) in                       fun                         Heq_anonymous : (l0, s'0) =                                         List.break                                           (fun arg_4__ : Char =>                                            arg_4__ == newline) recarg =>                       (l0,                       match                         s'0 as s''0 return (s''0 = s'0 -> list (list Char))                       with                       | nil => fun _ : nil = s'0 => nil                       | wildcard' :: s''0 =>                           fun Heq_s' : wildcard' :: s''0 = s'0 =>                           lines'                             (exist                                (fun recarg' : String =>                                 length recarg' < length recarg) s''0                                (OldList.lines_obligation_1 recarg l0 s'0                                   Heq_anonymous wildcard' s''0 Heq_s'))                       end eq_refl)) eq_refl => h :: t) eq_refl) s''     end) in h :: t"" with  ""Wf.Fix_sub String (Wf.MR lt (fun recarg : String => length recarg))     OldList.lines_obligation_2 (fun _ : String => list String)     (fun (recarg : String)        (lines' : {recarg' : String | length recarg' < length recarg} ->                  list String) =>      if List.null recarg      then nil      else       (let        '(h, t) as anonymous' :=         (let          '(l, s') as anonymous' :=           List.break (fun arg_4__ : Char => arg_4__ == newline) recarg           return             (anonymous' =              List.break (fun arg_4__ : Char => arg_4__ == newline) recarg ->              list Char * list (list Char)) in           fun             Heq_anonymous : (l, s') =                             List.break                               (fun arg_4__ : Char => arg_4__ == newline)                               recarg =>           (l,           match s' as s'' return (s'' = s' -> list (list Char)) with           | nil => fun _ : nil = s' => nil           | wildcard' :: s'' =>               fun Heq_s' : wildcard' :: s'' = s' =>               lines'                 (exist                    (fun recarg' : String => length recarg' < length recarg)                    s''                    (OldList.lines_obligation_1 recarg l s' Heq_anonymous                       wildcard' s'' Heq_s'))           end eq_refl)) eq_refl         return           (anonymous' =            (let             '(l, s') as anonymous'0 :=              List.break (fun arg_4__ : Char => arg_4__ == newline) recarg              return                (anonymous'0 =                 List.break (fun arg_4__ : Char => arg_4__ == newline) recarg ->                 list Char * list (list Char)) in              fun                Heq_anonymous : (l, s') =                                List.break                                  (fun arg_4__ : Char => arg_4__ == newline)                                  recarg =>              (l,              match s' as s'' return (s'' = s' -> list (list Char)) with              | nil => fun _ : nil = s' => nil              | wildcard' :: s'' =>                  fun Heq_s' : wildcard' :: s'' = s' =>                  lines'                    (exist                       (fun recarg' : String => length recarg' < length recarg)                       s''                       (OldList.lines_obligation_1 recarg l s' Heq_anonymous                          wildcard' s'' Heq_s'))              end eq_refl)) eq_refl -> list (list Char)) in         fun           _ : (h, t) =               (let                '(l, s') as anonymous' :=                 List.break (fun arg_4__ : Char => arg_4__ == newline) recarg                 return                   (anonymous' =                    List.break (fun arg_4__ : Char => arg_4__ == newline)                      recarg -> list Char * list (list Char)) in                 fun                   Heq_anonymous : (l, s') =                                   List.break                                     (fun arg_4__ : Char => arg_4__ == newline)                                     recarg =>                 (l,                 match s' as s'' return (s'' = s' -> list (list Char)) with                 | nil => fun _ : nil = s' => nil                 | wildcard' :: s'' =>                     fun Heq_s' : wildcard' :: s'' = s' =>                     lines'                       (exist                          (fun recarg' : String =>                           length recarg' < length recarg) s''                          (OldList.lines_obligation_1 recarg l s'                             Heq_anonymous wildcard' s'' Heq_s'))                 end eq_refl)) eq_refl => h :: t) eq_refl)      (x :: xs)""."
+eq_replace_l,GHC/Base.v,False,feedback,Cannot find a relation to rewrite.
+hs_coq_foldl'_list,Data/Foldable.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+instance_MonadLaws_Data_Either_Either,Data/Either.v,False,add_err,"Anomaly ""Uncaught exception Option.IsNone."" Please report at http://coq.inria.fr/bugs/."
+eftInt_aux_pf,../base/GHC/Enum.v,True,,
+parametric_eq_sym,GHC/Base.v,False,feedback,"In environment a : Type H : Eq_ a H0 : EqLaws a x, y : a H1 : x == y Unable to unify ""forall x0 y0 : ?t, (x0 == y0) = (y0 == x0)"" with  ""(y == x) = true""."
+foldr_initial,GHC/Base.v,True,,
+instance_SemigroupLaws_option,GHC/Base.v,False,add_err,"Anomaly ""Uncaught exception Option.IsNone."" Please report at http://coq.inria.fr/bugs/."
+Build_EqLaws_reflect,GHC/Base.v,False,feedback,No product even after head-reduction.
+N_popcount_diff,Data/Bits/Popcount.v,False,feedback,"Found no subterm matching ""(?M1697 + ?M1698)%N"" in the current goal."
+In_zip_swap,GHC/List.v,False,feedback,The reference in_zip was not found in the current environment.
+Eq_Symmetric,GHC/Base.v,False,feedback,Applied theorem does not have enough premises.
+List_foldl_foldr,GHC/List.v,True,,
+instance_SemigroupLaws_unit,GHC/Base.v,True,,
+dropWhile_cons_prop,../base/Data/OldList.v,True,,
+iterates'_length,GHC/Enum.v,False,add_err,Syntax error: illegal begin of vernac.
+hs_coq_reverse,GHC/List.v,False,feedback,"Found no subterm matching ""reverse xs"" in the current goal."
+instance_ApplicativeLaws_Data_Either_Either,Data/Either.v,False,add_err,"Anomaly ""Uncaught exception Option.IsNone."" Please report at http://coq.inria.fr/bugs/."
+fst_pair,Data/Tuple.v,True,,
+hs_coq_foldl_list',Data/Foldable.v,True,,
+instance_FunctorLaws_identity,Data/Functor/Identity.v,False,feedback,"In environment x : Type x0 : Identity x Unable to unify ""x0"" with ""Base.fmap (fun x : x => x) x0""."
+iter_plus_nat,GHC/Enum.v,True,,
+Foldable_foldr_cons,Data/Foldable.v,True,,
+lines_cons,Data/OldList.v,True,,
+Foldable_foldl'_app,Data/Foldable.v,True,,
+flat_map_cons_id,GHC/Base.v,True,,
+Eq_eq_Int,GHC/Base.v,False,feedback,"In environment x, y : Int H : (x ?= y)%Z = Eq Unable to unify ""reflect ?M2077 false"" with  ""reflect (x = y)     (Eq_Integer___ (Int -> Int -> bool)        (fun e : Eq___Dict Int => let (op_zeze____, _) := e in op_zeze____) x        y)""."
+mapAccumL_cons,Data/Traversable.v,False,feedback,"In environment a : Type b : Type c : Type x : b xs : list b f : a -> b -> a * c s, s' : a y : c H : f s x = (s', y) s'' : a ys : list c H' : foldr        (fun (x : b) (rest : a -> a * list c) (s : a) =>         let (s', y) := f s x in let (s'', ys) := rest s' in (s'', y :: ys))        (fun s : a => (s, nil)) xs s' = (s'', ys) Unable to unify  ""let   '(s'', ys) :=    Utils.runStateL      (foldr         (fun (x : b) (ys : Utils.StateL a (list c)) =>          liftA2 cons ((Utils.Mk_StateL ∘ flip f) x) ys)          (pure nil) xs) s' in (s'', y :: ys)"" with  ""Utils.runStateL     (liftA2 cons ((Utils.Mk_StateL ∘ flip f) x)        (foldr           (fun (x : b) (ys : Utils.StateL a (list c)) =>            liftA2 cons ((Utils.Mk_StateL ∘ flip f) x) ys)            (pure nil) xs)) s""."
+Eq_Equivalence,GHC/Base.v,False,feedback,"In environment a : Type H : Eq_ a H0 : EqLaws a x : ?t y : ?t Unable to unify ""(x == y) = (y == x)"" with  ""(fun x y : a => is_true (x == y)) x y ->   (fun x y : a => is_true (x == y)) y x""."
+break_length,../base/Data/OldList.v,False,feedback,The reference List.break_app was not found in the current environment.
+Neq_sym,GHC/Base.v,True,,
+mapAccumL_nil,Data/Traversable.v,True,,
+Eq_m,GHC/Base.v,False,feedback,"In environment x1 : Type x2 : Eq_ x1 Hx : EqLaws x1 y1, y2 : x1 Hy : y1 == y2 The term ""y1"" has type ""x1"" while it is expected to have type ""Type""."
+EqExact_Proxy,Data/Proxy.v,False,add_err,"Anomaly ""Uncaught exception Option.IsNone."" Please report at http://coq.inria.fr/bugs/."
+Neq_atrans,GHC/Base.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+reverse_unit,GHC/List.v,True,,
+hs_coq_partition,Data/OldList.v,False,feedback,"In environment A : Type p : A -> bool x : A l : list A IH : OldList.partition p l = partition p l Hp : p x = true Unable to unify ""let (g, d) := partition p l in (x :: g, d)"" with  ""select p x (partition p l)""."
+Eq_Reflexive,GHC/Base.v,True,,
+reverse_append,GHC/List.v,True,,
+N_popcount_1_pow2,Data/Bits/Popcount.v,False,feedback,"In environment H : N_popcount 0 = 1%N Unable to unify ""0%N"" with ""(2 ^ 0)%N""."
+iterates_length,GHC/Enum.v,False,add_err,Syntax error: illegal begin of vernac.
+Pop_popcount_diff,Data/Bits/Popcount.v,False,add_err,Syntax error: illegal begin of vernac.
+elem_eq,Data/Foldable.v,False,feedback,"In environment A : Type H : Eq_ A xs : EqLaws A a : list A b, H1 : A The term ""erefl xs"" has type ""xs = xs"" while it is expected to have type ""A""."
+length_zip,GHC/List.v,True,,
+In_zip_fst,GHC/List.v,False,feedback,"In environment A : Type B : Type x : A y : B x' : A xs : list A C : Type IH : forall ys : list B,      In (x, y) (zip xs ys) ->      forall zs : list C,      Datatypes.length ys = Datatypes.length zs ->      exists z : C, In (x, z) (zip xs zs) y' : B ys : list B H1 : In (x, y) (zip xs ys) z : C zs : list C H2 : Datatypes.length (y' :: ys) = Datatypes.length (z :: zs) The term ""f_equal (fun n : nat => _-_ n 1) H2"" has type  ""_-_ (Datatypes.length (y' :: ys)) 1 = _-_ (Datatypes.length (z :: zs)) 1"" while it is expected to have type  ""Datatypes.length ys = Datatypes.length ?zs""."
+instance_ApplicativeLaws_option,GHC/Base.v,True,,
+N_popcount_pow2,Data/Bits/Popcount.v,True,,
+snd_unzip_map,GHC/List.v,True,,
+words_cons,Data/OldList.v,False,feedback,"In environment c : Char s : list Char Hc : Unicode.isSpace c = true Unable to unify ""words s"" with  ""match List.dropWhile Unicode.isSpace s with   | nil => nil   | c :: l =>       let       '(w, s'') :=        if Unicode.isSpace c        then (nil, c :: l)        else let '(ys, zs) := List.break Unicode.isSpace l in (c :: ys, zs) in        w :: words s''   end""."
+dropWhile_cons_length,../base/Data/OldList.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+words_nil,Data/OldList.v,True,,
+forM_map,Data/Traversable.v,False,feedback,The reference foldr_map was not found in the current environment.
+flat_map_app,GHC/Base.v,False,feedback,The LHS of map_app     (List.map _ (_ ++ _)) does not match any subterm of the goal
+parametric_eq_trans,GHC/Base.v,True,,
+safeSubN_sub,../base/GHC/Num.v,False,feedback,"Found no subterm matching ""(?M1263 - ?M1262 + ?M1262)%N"" in the current goal."
+EqExact_pair,GHC/Base.v,False,add_err,"Anomaly ""Uncaught exception Option.IsNone."" Please report at http://coq.inria.fr/bugs/."
+hs_coq_map,GHC/Base.v,False,feedback,The reference functional_extensionality_dep was not found in the current environment.
+map_id,GHC/Base.v,True,,
+instance_SemigroupLaws_list,GHC/Base.v,False,add_err,"Anomaly ""Uncaught exception Option.IsNone."" Please report at http://coq.inria.fr/bugs/."
+instance_MonadLaws_option,GHC/Base.v,True,,
+iterates'_ext,GHC/Enum.v,False,feedback,"Unable to find an instance for the variable f2. Rule's type: (forall (f1 f2 : A -> A) (z : A),  f1 =1 f2 -> iterates' n f1 z = iterates' n f2 z)"
+Neq_neq,GHC/Base.v,False,feedback,H is already used.
+unzip_equal_length,GHC/List.v,False,feedback,Wrong bullet -: Current bullet - is not finished.
+elem_nil,Data/Foldable.v,True,,
+instance_ApplicativeLaws_identity,Data/Functor/Identity.v,False,add_err,"Anomaly ""Uncaught exception Option.IsNone."" Please report at http://coq.inria.fr/bugs/."
+hs_coq_length_list',Data/Foldable.v,True,,
+instance_SemigroupLaws_comparison,GHC/Base.v,False,feedback,Wrong bullet -: No more subgoals.
+EqExact_comparison,GHC/Base.v,False,add_err,"Anomaly ""Uncaught exception Option.IsNone."" Please report at http://coq.inria.fr/bugs/."
+simpl_list_nil_eq,GHC/Base.v,True,,
+Foldable_foldl'_nil,Data/Foldable.v,True,,
+Foldable_elem_proper,Data/Foldable.v,False,feedback,Expects a disjunctive pattern with 1 branch or a conjunctive pattern made of 0 patterns.
+simpl_option_some_eq,GHC/Base.v,True,,
+hs_coq_foldr_list',Data/Foldable.v,True,,
+instance_MonoidLaws_comparison,GHC/Base.v,True,,
+instance_ApplicativeLaws_list,GHC/Base.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+flat_map_concat_map,GHC/Base.v,False,feedback,The LHS of flat_map_concat_map     (flat_map _ _) does not match any subterm of the goal
+map_snd_zip,GHC/List.v,True,,
+iter_plus_N,GHC/Enum.v,False,feedback,Cannot recognize a statement based on N.
+EqLaws_Data_Either_Either,Data/Either.v,False,feedback,No product even after head-reduction.
+instance_MonoidLaws_unit,GHC/Base.v,False,add_err,"Anomaly ""Uncaught exception Option.IsNone."" Please report at http://coq.inria.fr/bugs/."
+Eq_Transitive,GHC/Base.v,False,feedback,"In environment a : Type H : Eq_ a x : EqLaws a y, z, Hxy : a Hyz : y == z The term ""Hxy"" has type ""a"" while it is expected to have type  ""is_true (?x == ?y)""."
+EqLaws_Int,GHC/Base.v,False,add_err,"Anomaly ""Uncaught exception Option.IsNone."" Please report at http://coq.inria.fr/bugs/."
+Neq_irrefl,GHC/Base.v,False,feedback,No product even after head-reduction.
+take_drop,GHC/List.v,False,feedback,(in proof take_drop): Attempt to save an incomplete proof
+Foldable_foldl_nil,Data/Foldable.v,True,,
+Foldable_foldr_nil,Data/Foldable.v,True,,
+hs_coq_lenAcc,GHC/List.v,True,,
+fmfm,GHC/Base.v,False,feedback,The RHS of flat_map_concat_map     (concat (map _ _)) does not match any subterm of the goal
+hs_coq_foldr_base,GHC/Base.v,True,,
+instance_FunctorLaws_list,GHC/Base.v,False,feedback,The LHS of IH     (fmap id xs) does not match any subterm of the goal
+hs_coq_tuple_fst,Data/Tuple.v,True,,
+instance_FunctorLaws_Data_Either_Either,Data/Either.v,False,add_err,"Anomaly ""Uncaught exception Option.IsNone."" Please report at http://coq.inria.fr/bugs/."
+eftInt_In,GHC/Enum.v,False,add_err,Syntax error: illegal begin of vernac.
+EqExact_list,GHC/Base.v,False,add_err,"Anomaly ""Uncaught exception Option.IsNone."" Please report at http://coq.inria.fr/bugs/."
+Foldable_any_cons,Data/Foldable.v,True,,
+Foldable_foldr_app,Data/Foldable.v,False,feedback,The LHS of IH     (foldr f s (xs ++ vs2)) does not match any subterm of the goal
+foldr_nil,GHC/Base.v,True,,
+map_map,GHC/Base.v,True,,
+instance_MonadLaws_identity,Data/Functor/Identity.v,False,add_err,"Anomaly ""Uncaught exception Option.IsNone."" Please report at http://coq.inria.fr/bugs/."
+Foldable_any_nil,Data/Foldable.v,False,feedback,The reference Foldable.any__ was not found in the current environment.
+simpl_option_none_eq,GHC/Base.v,True,,
+instance_MonadLaws_list,GHC/Base.v,False,feedback,The LHS of flat_map_cons_f     (flat_map (fun x : _ => _ x :: nil) _) does not match any subterm of the goal
+reverse_nil,GHC/List.v,True,,
+zip_unzip_map,GHC/List.v,False,feedback,"In environment a : Type b : Type c : Type f : b -> c x : a y : b xs : list (a * b) IH : zip (fst (unzip xs)) (Base.map f (snd (unzip xs))) =      map (fun '(x, y) => (x, f y)) xs Unable to unify ""(x, f y) :: map (fun '(x, y) => (x, f y)) xs"" with  ""zip (fst (let (as_, bs) := unzip xs in (x :: as_, y :: bs)))     (Base.map f (snd (let (as_, bs) := unzip xs in (x :: as_, y :: bs))))""."
+EqLaws_pair,GHC/Base.v,False,add_err,"Anomaly ""Uncaught exception Option.IsNone."" Please report at http://coq.inria.fr/bugs/."
+EqExact_unit,GHC/Base.v,False,add_err,"Anomaly ""Uncaught exception Option.IsNone."" Please report at http://coq.inria.fr/bugs/."
+EqExact_Word,GHC/Base.v,True,,
+length_app,GHC/List.v,False,feedback,The reference Zlength_app was not found in the current environment.
+Foldable_foldl_app,Data/Foldable.v,False,feedback,The LHS of hs_coq_foldl_base     (Base.foldl _ _ _) does not match any subterm of the goal
+hs_coq_list_length,GHC/List.v,False,feedback,"Found no subterm matching ""(Zlength ?M2049 + ?M2050)%Z"" in the current goal."
+iterates_map,GHC/Enum.v,False,add_err,Syntax error: illegal begin of vernac.
+N_popcount_Ndouble,Data/Bits/Popcount.v,False,feedback,"In environment n : N Unable to unify ""N_popcount n"" with  ""N_popcount match n with              | 0 => 0              | N.pos p => N.pos p~0              end""."
+EqExact_bool,GHC/Base.v,False,add_err,"Anomaly ""Uncaught exception Option.IsNone."" Please report at http://coq.inria.fr/bugs/."
+iterates'_map,GHC/Enum.v,True,,
+Neq_inv,GHC/Base.v,False,feedback,The RHS of Eq_inv     (~~ (_ /= _)) does not match any subterm of the goal
+map_cong,GHC/Base.v,True,,
+EqLaws_list,GHC/Base.v,False,add_err,"Anomaly ""Uncaught exception Option.IsNone."" Please report at http://coq.inria.fr/bugs/."
+hs_coq_foldr_list,Data/Foldable.v,False,feedback,The LHS of IHxs     (foldr f z xs) does not match any subterm of the goal
+EqLaws_comparison,GHC/Base.v,False,add_err,"Anomaly ""Uncaught exception Option.IsNone."" Please report at http://coq.inria.fr/bugs/."
+iterates_iterates',GHC/Enum.v,True,,
+simpl_list_cons_eq,GHC/Base.v,False,feedback,The reference Base.Eq___list_op_zeze__ was not found in the current environment.
+flat_map_cons_f,GHC/Base.v,True,,
+EqLaws_Word,GHC/Base.v,False,add_err,"Anomaly ""Uncaught exception Option.IsNone."" Please report at http://coq.inria.fr/bugs/."
+In_zip_map,GHC/List.v,True,,
+EqLaws_bool,GHC/Base.v,False,add_err,"Anomaly ""Uncaught exception Option.IsNone."" Please report at http://coq.inria.fr/bugs/."
+hs_coq_foldl_list,Data/Foldable.v,False,feedback,The LHS of IH     (foldl f _ l) does not match any subterm of the goal
+reverse_involutive,GHC/List.v,True,,
+map_append,GHC/Base.v,True,,
+EqLaws_option,GHC/Base.v,False,add_err,"Anomaly ""Uncaught exception Option.IsNone."" Please report at http://coq.inria.fr/bugs/."
+EqLaws_unit,GHC/Base.v,False,add_err,"Anomaly ""Uncaught exception Option.IsNone."" Please report at http://coq.inria.fr/bugs/."
+concat_map,GHC/Base.v,False,feedback,The LHS of map_app     (List.map _ (_ ++ _)) does not match any subterm of the goal
+length_cons,GHC/List.v,False,feedback,Tactic failure: Goal is not an equation (of expected equality).
+foldr_id,GHC/Base.v,True,,
+instance_FunctorLaws_option,GHC/Base.v,True,,
+flat_map_map,GHC/Base.v,True,,
+Foldable_elem_app,Data/Foldable.v,True,,
+EqExact_Down,Data/Ord.v,False,add_err,"Anomaly ""Uncaught exception Option.IsNone."" Please report at http://coq.inria.fr/bugs/."
+iter_plus_Z,GHC/Enum.v,False,feedback,The LHS of Nat2Z.inj_succ     (Z.of_nat (S _)) does not match any subterm of the goal
+iterates_ext,GHC/Enum.v,True,,
+length_nil,GHC/List.v,True,,
+enumFromTo_Int_In,GHC/Enum.v,True,,
+eftInt_iterates',GHC/Enum.v,False,add_err,Syntax error: 'rec' or 'fun' or 'eta' or 'unlockable' or 'the' expected after '[' (in [constr:operconstr]).
+In_zip,GHC/List.v,True,,
+instance_MonoidLaws_option,GHC/Base.v,False,feedback,No such goal. Focus next goal with bullet -.
+eftInt_aux_In,GHC/Enum.v,False,feedback,Expects a disjunctive pattern with 2 branches.
+snd_unzip,GHC/List.v,False,feedback,"Found no subterm matching ""snd (unzip xs)"" in the current goal."
+N_double_succ,Data/Bits/Popcount.v,False,feedback,"Found no subterm matching ""(?M1689 + 1)%positive"" in the current goal."
+Pos_popcount_1_Is_power,Data/Bits/Popcount.v,False,feedback,Unable to find an instance for the variable n.
+hs_coq_tuple_snd,Data/Tuple.v,True,,
+In_zip_snd,GHC/List.v,False,feedback,Wrong bullet -: Current bullet - is not finished.
+snd_pair,Data/Tuple.v,True,,
+Foldable_foldr_map,Data/Foldable.v,False,feedback,The LHS of IH     (foldr (g ∘ f) b0 xs) does not match any subterm of the goal
+Foldable_foldl_cons,Data/Foldable.v,True,,
+hs_coq_lenAcc_add,GHC/List.v,False,feedback,Omega can't solve this system
+N_popcount_double,Data/Bits/Popcount.v,False,feedback,"Found no subterm matching ""(?M1694 + ?M1695)%positive"" in the current goal."
+EqLaws_Down,Data/Ord.v,False,add_err,"Anomaly ""Uncaught exception Option.IsNone."" Please report at http://coq.inria.fr/bugs/."
+EqLaws_Proxy,Data/Proxy.v,False,add_err,"Anomaly ""Uncaught exception Option.IsNone."" Please report at http://coq.inria.fr/bugs/."
+elem_cons,Data/Foldable.v,True,,
+flat_map_cong,GHC/Base.v,False,feedback,"In environment a : Type b : Type f, g : a -> list b xs : list a Hfg : f =1 g Unable to unify ""map ?M2006 ?M2008 = map ?M2007 ?M2008"" with  ""concat (map f xs) = concat (map g xs)""."
+hs_coq_filter,GHC/List.v,False,add_err,Syntax error: illegal begin of vernac.
+foldr_single,GHC/Base.v,True,,
+hs_coq_foldl_base,GHC/Base.v,True,,
+EqExact_Int,GHC/Base.v,True,,
+Eq_is_true_m,GHC/Base.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+forM_cong,Data/Traversable.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+hs_coq_length_list,Data/Foldable.v,False,feedback,The LHS of IH     (length l) does not match any subterm of the goal
+EqExact_option,GHC/Base.v,False,add_err,"Anomaly ""Uncaught exception Option.IsNone."" Please report at http://coq.inria.fr/bugs/."
+Eq_reflI,GHC/Base.v,False,feedback,H is already used.
+eftInt_aux_iterates,GHC/Enum.v,False,add_err,Syntax error: illegal begin of vernac.

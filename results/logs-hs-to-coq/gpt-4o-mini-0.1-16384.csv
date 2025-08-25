@@ -1,0 +1,188 @@
+name,file,result,error_type,error
+Eq_eq_bool,GHC/Base.v,False,feedback,Cannot coerce reflect to an evaluable reference.
+iterates_In,GHC/Enum.v,False,feedback,The reference lia was not found in the current environment.
+Foldable_length_cons,Data/Foldable.v,False,feedback,The LHS of hs_coq_lenAcc_add     (List.lenAcc _ (_ + _)%Z) does not match any subterm of the goal
+flat_map_nil,GHC/Base.v,True,,
+flat_map_unpack_cons_f,GHC/List.v,True,,
+Foldable_foldl'_cons,Data/Foldable.v,False,feedback,The reference Foldable.foldl_nil was not found in the current environment.
+instance_MonoidLaws_list,GHC/Base.v,False,feedback,The reference Monoid__list_mempty was not found in the current environment.
+enumFromTo_Int_iterates',GHC/Enum.v,False,feedback,The LHS of eftInt_aux_iterates     (eftInt_aux _ _ _) does not match any subterm of the goal
+eftInt_aux_unroll,GHC/Enum.v,False,feedback,The reference Z.eq_dec_eq was not found in the current environment.
+eq_replace_r,GHC/Base.v,False,feedback,not a rewritable relation: a in rule H
+N_popcount_Nsucc_double,Data/Bits/Popcount.v,False,feedback,The reference Pos.Nsucc_double_eq was not found in the current environment.
+EqExact_Data_Either_Either,Data/Either.v,False,feedback,The reference Eq___Either_op_zeze__ was not found in the current environment.
+Pos_popcount_pow2,Data/Bits/Popcount.v,False,feedback,Expects a disjunctive pattern with 3 branches.
+Foldable_any_app,Data/Foldable.v,False,feedback,The LHS of fold_right_app     (fold_right _ _ (_ ++ _)) does not match any subterm of the goal
+Eq_eq_Word,GHC/Base.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+unzip_zip,GHC/List.v,False,feedback,Wrong bullet -: Current bullet - is not finished.
+iterates'_In,GHC/Enum.v,False,feedback,Not an inductive product.
+Foldable_length_nil,Data/Foldable.v,True,,
+lines_def,Data/OldList.v,False,feedback,The reference List.null_nil was not found in the current environment.
+eq_replace_l,GHC/Base.v,False,feedback,_tmp is used in conclusion.
+hs_coq_foldl'_list,Data/Foldable.v,False,feedback,not a rewritable relation: _ in rule id
+instance_MonadLaws_Data_Either_Either,Data/Either.v,False,feedback,a is already used.
+eftInt_aux_pf,../base/GHC/Enum.v,False,feedback,The reference Z.le_lt_eq_dec was not found in the current environment.
+parametric_eq_sym,GHC/Base.v,False,feedback,"Unable to apply lemma of type ""symmetric _==_"" on hypothesis of type  ""is_true (x == y)""."
+foldr_initial,GHC/Base.v,True,,
+instance_SemigroupLaws_option,GHC/Base.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+Build_EqLaws_reflect,GHC/Base.v,False,feedback,not a rewritable relation: _ in rule H
+N_popcount_diff,Data/Bits/Popcount.v,False,feedback,"Found no subterm matching ""N.ldiff ?M1703 0"" in the current goal."
+In_zip_swap,GHC/List.v,False,feedback,"In environment A : Type B : Type x : A y : B a : A xs' : list A b : B ys' : list B H1 : (a, b) = (x, y) IH : In (x, y) (zip xs' (b :: ys')) -> In (y, x) (zip (b :: ys') xs') Unable to unify ""(y, x)"" with ""(b, a)""."
+Eq_Symmetric,GHC/Base.v,False,feedback,"Unable to apply lemma of type ""symmetric _==_"" on hypothesis of type ""a""."
+List_foldl_foldr,GHC/List.v,False,feedback,"Found no subterm matching ""fold_left f ys x"" in the current goal."
+instance_SemigroupLaws_unit,GHC/Base.v,False,feedback,Cannot coerce SemigroupLaws to an evaluable reference.
+dropWhile_cons_prop,../base/Data/OldList.v,False,feedback,"Found no subterm matching ""c :: s'"" in the current goal."
+iterates'_length,GHC/Enum.v,False,feedback,The LHS of IH     (length (iterates' n f z)) does not match any subterm of the goal
+hs_coq_reverse,GHC/List.v,False,feedback,"Found no subterm matching ""reverse xs"" in the current goal."
+instance_ApplicativeLaws_Data_Either_Either,Data/Either.v,False,feedback,a is already used.
+fst_pair,Data/Tuple.v,True,,
+hs_coq_foldl_list',Data/Foldable.v,False,feedback,No such goal.
+instance_FunctorLaws_identity,Data/Functor/Identity.v,False,add_err,"Syntax error: ')' or ',' or '&' expected after [tactic:simple_intropattern] (in [or_and_intropattern])."
+iter_plus_nat,GHC/Enum.v,False,feedback,The LHS of Nat.add_0_r     (_ + 0)%nat does not match any subterm of the goal
+Foldable_foldr_cons,Data/Foldable.v,True,,
+lines_cons,Data/OldList.v,False,feedback,"Found no subterm matching ""List.null (c :: s)"" in the current goal."
+Foldable_foldl'_app,Data/Foldable.v,False,feedback,"Found no subterm matching ""fold_right                              (fun (x : ?a) (g : ?b -> ?b) (a : ?b) =>                               g (?M2049 a x)) Datatypes.id                               ?M2051 ?M2050"" in the current goal."
+flat_map_cons_id,GHC/Base.v,True,,
+Eq_eq_Int,GHC/Base.v,False,feedback,The reference eq_op was not found in the current environment.
+mapAccumL_cons,Data/Traversable.v,False,add_err,Syntax Error: Lexer: Undefined token
+Eq_Equivalence,GHC/Base.v,False,feedback,"In environment a : Type H : Eq_ a H0 : EqLaws a x, y : a H1 : x == y Unable to unify ""true"" with ""y == x""."
+break_length,../base/Data/OldList.v,False,feedback,"In environment A : Type p : A -> bool s, w, s'' : list A Unable to unify ""length s"" with ""length s''""."
+Neq_sym,GHC/Base.v,False,feedback,"Could not fill dependent hole in ""apply"""
+mapAccumL_nil,Data/Traversable.v,False,feedback,The reference runStateL was not found in the current environment.
+Eq_m,GHC/Base.v,False,feedback,_tmp is used in conclusion.
+EqExact_Proxy,Data/Proxy.v,False,feedback,"In environment k : Type a : k Unable to unify ""(?M2067 -> ?M2068 = true) /\ (?M2068 = true -> ?M2067)"" with  ""reflect (Mk_Proxy = Mk_Proxy) (Mk_Proxy == Mk_Proxy)""."
+Neq_atrans,GHC/Base.v,False,feedback,The reference orrP was not found in the current environment.
+reverse_unit,GHC/List.v,False,feedback,"Found no subterm matching ""?M2050 ++ []"" in the current goal."
+hs_coq_partition,Data/OldList.v,False,feedback,"Found no subterm matching ""p x"" in the current goal."
+Eq_Reflexive,GHC/Base.v,True,,
+reverse_append,GHC/List.v,False,feedback,The reference fixpoint_unfold was not found in the current environment.
+N_popcount_1_pow2,Data/Bits/Popcount.v,False,feedback,"Unable to apply lemma of type  ""forall n : positive, Pos_popcount (2 ^ n) = 1%positive"" on hypothesis of type ""N_popcount (N.pos p) = 1%N""."
+iterates_length,GHC/Enum.v,True,,
+Pop_popcount_diff,Data/Bits/Popcount.v,False,feedback,Expects a disjunctive pattern with 3 branches.
+elem_eq,Data/Foldable.v,False,feedback,Cannot find a relation to rewrite.
+length_zip,GHC/List.v,False,feedback,"Found no subterm matching ""Datatypes.length []"" in the current goal."
+In_zip_fst,GHC/List.v,False,feedback,Cannot find an homogeneous relation to rewrite.
+instance_ApplicativeLaws_option,GHC/Base.v,False,feedback,The reference x was not found in the current environment.
+N_popcount_pow2,Data/Bits/Popcount.v,False,feedback,The reference N.pow_eq was not found in the current environment.
+snd_unzip_map,GHC/List.v,False,feedback,"In environment a : Type b : Type c : Type f : a -> b g : a -> c x : a xs : list a Unable to unify ""g x :: map snd (map (fun x : a => (f x, g x)) xs)"" with  ""snd     (let (as_, bs) := unzip (map (fun x : a => (f x, g x)) xs) in      (f x :: as_, g x :: bs))""."
+words_cons,Data/OldList.v,False,feedback,"Found no subterm matching ""List.dropWhile Unicode.isSpace (c :: s)"" in the current goal."
+dropWhile_cons_length,../base/Data/OldList.v,False,feedback,Not a discriminable equality.
+words_nil,Data/OldList.v,True,,
+forM_map,Data/Traversable.v,False,feedback,The reference Base.hs_coq_mapM_map was not found in the current environment.
+flat_map_app,GHC/Base.v,False,feedback,"In environment A : Type B : Type f : A -> list B xs, ys : list A Unable to unify ""flat_map f xs ++ flat_map f ys"" with  ""concat (map f xs ++ map f ys)""."
+parametric_eq_trans,GHC/Base.v,True,,
+safeSubN_sub,../base/GHC/Num.v,False,feedback,"In environment a, b : N H : (b <= a)%N Unable to unify ""(?M1264 ?= ?M1266)%N = Lt"" with  ""(a <? b)%N = true -> False""."
+EqExact_pair,GHC/Base.v,False,feedback,The reference andb_and was not found in the current environment.
+hs_coq_map,GHC/Base.v,True,,
+map_id,GHC/Base.v,True,,
+instance_SemigroupLaws_list,GHC/Base.v,False,feedback,The LHS of app_nil_r     (_ ++ nil) does not match any subterm of the goal
+instance_MonadLaws_option,GHC/Base.v,False,feedback,The reference m was not found in the current environment.
+iterates'_ext,GHC/Enum.v,False,feedback,The reference iterates'_nil was not found in the current environment.
+Neq_neq,GHC/Base.v,False,feedback,"In environment t : Type H : Eq_ t H0 : EqLaws t H1 : EqExact t x, y : t Unable to unify ""involutive negb"" with ""x <> y <-> ~~ (x == y) = true""."
+unzip_equal_length,GHC/List.v,False,feedback,"Found no subterm matching ""Datatypes.length (b :: bs_)"" in the current goal."
+elem_nil,Data/Foldable.v,True,,
+instance_ApplicativeLaws_identity,Data/Functor/Identity.v,False,feedback,The reference v was not found in the current environment.
+hs_coq_length_list',Data/Foldable.v,True,,
+instance_SemigroupLaws_comparison,GHC/Base.v,False,feedback,Wrong bullet -: No more subgoals.
+EqExact_comparison,GHC/Base.v,False,feedback,(in proof EqExact_comparison): Attempt to save an incomplete proof
+simpl_list_nil_eq,GHC/Base.v,True,,
+Foldable_foldl'_nil,Data/Foldable.v,True,,
+Foldable_elem_proper,Data/Foldable.v,False,feedback,_tmp is used in conclusion.
+simpl_option_some_eq,GHC/Base.v,False,feedback,The reference Eq___option_op_zeze__ was not found in the current environment.
+hs_coq_foldr_list',Data/Foldable.v,True,,
+instance_MonoidLaws_comparison,GHC/Base.v,False,feedback,The reference Monoid__comparison_mappend was not found in the current environment.
+instance_ApplicativeLaws_list,GHC/Base.v,False,add_err,"Syntax error: ')' or ',' or '&' expected after [tactic:simple_intropattern] (in [or_and_intropattern])."
+flat_map_concat_map,GHC/Base.v,False,feedback,The LHS of concat_map     (map _ (concat _)) does not match any subterm of the goal
+map_snd_zip,GHC/List.v,False,feedback,"Found no subterm matching ""map snd (zip l1' (a :: l2'))"" in the current goal."
+iter_plus_N,GHC/Enum.v,False,feedback,The LHS of N.add_0_r     (_ + 0)%N does not match any subterm of the goal
+EqLaws_Data_Either_Either,Data/Either.v,False,add_err,Syntax error: ')' expected after [tactic:tactic_expr] (in [tactic:tactic_expr]).
+instance_MonoidLaws_unit,GHC/Base.v,False,feedback,The reference Monoid__unit_mappend was not found in the current environment.
+Eq_Transitive,GHC/Base.v,False,feedback,Applied theorem does not have enough premises.
+EqLaws_Int,GHC/Base.v,False,feedback,The LHS of Z.eqb_eq     ((_ =? _)%Z = true) does not match any subterm of the goal
+Neq_irrefl,GHC/Base.v,False,feedback,H is already used.
+take_drop,GHC/List.v,False,feedback,The reference List.take_nil was not found in the current environment.
+Foldable_foldl_nil,Data/Foldable.v,True,,
+Foldable_foldr_nil,Data/Foldable.v,True,,
+hs_coq_lenAcc,GHC/List.v,False,feedback,"Found no subterm matching ""Zlength []"" in the current goal."
+fmfm,GHC/Base.v,False,feedback,The LHS of flat_map_map     (flat_map _ (map _ _)) does not match any subterm of the goal
+hs_coq_foldr_base,GHC/Base.v,False,feedback,The reference functional_extensionality was not found in the current environment.
+instance_FunctorLaws_list,GHC/Base.v,False,feedback,The LHS of hs_coq_map     @map does not match any subterm of the goal
+hs_coq_tuple_fst,Data/Tuple.v,True,,
+instance_FunctorLaws_Data_Either_Either,Data/Either.v,False,feedback,a is already used.
+eftInt_In,GHC/Enum.v,False,feedback,"Unable to apply lemma of type  ""forall (n : nat) (f : ?A -> ?A) (z a0 : ?A),   In a0 (iterates n f z) <-> (exists2 i : nat, i <= n & a0 = Nat.iter i f z)"" on hypothesis of type  ""In a (iterates' (Z.to_nat (to - from + 1)) Z.succ from)""."
+EqExact_list,GHC/Base.v,False,feedback,The LHS of simpl_list_cons_eq     (_ :: _ == _ :: _) does not match any subterm of the goal
+Foldable_any_cons,Data/Foldable.v,False,feedback,The LHS of orb_comm     (_ || _) does not match any subterm of the goal
+Foldable_foldr_app,Data/Foldable.v,False,feedback,The LHS of Foldable_foldr_nil     (foldr _ _ nil) does not match any subterm of the goal
+foldr_nil,GHC/Base.v,True,,
+map_map,GHC/Base.v,True,,
+instance_MonadLaws_identity,Data/Functor/Identity.v,False,feedback,The reference m was not found in the current environment.
+Foldable_any_nil,Data/Foldable.v,False,feedback,The reference Foldable_foldMap_nil was not found in the current environment.
+simpl_option_none_eq,GHC/Base.v,True,,
+instance_MonadLaws_list,GHC/Base.v,False,feedback,Not an inductive product.
+reverse_nil,GHC/List.v,True,,
+zip_unzip_map,GHC/List.v,False,feedback,"Found no subterm matching ""snd (unzip ?M2063)"" in the current goal."
+EqLaws_pair,GHC/Base.v,False,feedback,The reference Eq_pair was not found in the current environment.
+EqExact_unit,GHC/Base.v,False,feedback,(in proof EqExact_unit): Attempt to save an incomplete proof
+EqExact_Word,GHC/Base.v,True,,
+length_app,GHC/List.v,False,feedback,"Found no subterm matching ""length []"" in the current goal."
+Foldable_foldl_app,Data/Foldable.v,False,feedback,The LHS of IH     (foldl f s (xs ++ vs2)) does not match any subterm of the goal
+hs_coq_list_length,GHC/List.v,False,feedback,"In environment A : Type l : list A Unable to unify ""lenAcc ?M2049 ?M2050 = (Zlength ?M2049 + ?M2050)%Z"" with  ""lenAcc l #0 = Zlength_aux 0 A l""."
+iterates_map,GHC/Enum.v,True,,
+N_popcount_Ndouble,Data/Bits/Popcount.v,False,feedback,The reference Pos_popcount_double was not found in the current environment.
+EqExact_bool,GHC/Base.v,True,,
+iterates'_map,GHC/Enum.v,False,feedback,not a rewritable relation: (list nat) in rule seq
+Neq_inv,GHC/Base.v,False,feedback,No such hypothesis: Eq_inv
+map_cong,GHC/Base.v,True,,
+EqLaws_list,GHC/Base.v,False,feedback,"In environment a : Type H : Eq_ a H0 : EqLaws a x : a xs : list a IH : xs == xs Unable to unify ""true"" with ""(x == x) && (xs == xs)""."
+hs_coq_foldr_list,Data/Foldable.v,False,feedback,The LHS of IH     (foldr f z ys) does not match any subterm of the goal
+EqLaws_comparison,GHC/Base.v,False,feedback,The reference x was not found in the current environment.
+iterates_iterates',GHC/Enum.v,False,feedback,The LHS of IH     (iterates n' f z) does not match any subterm of the goal
+simpl_list_cons_eq,GHC/Base.v,False,feedback,The reference Eq___list was not found in the current environment.
+flat_map_cons_f,GHC/Base.v,True,,
+EqLaws_Word,GHC/Base.v,False,feedback,The LHS of N.eqb_refl     (_ =? _)%N does not match any subterm of the goal
+In_zip_map,GHC/List.v,True,,
+EqLaws_bool,GHC/Base.v,False,feedback,The reference x was not found in the current environment.
+hs_coq_foldl_list,Data/Foldable.v,False,feedback,"The LHS of IH     (Foldable__list (forall b a : Type, (b -> a -> b) -> b -> list a -> b)        (foldl__ list) B A f _ l) does not match any subterm of the goal"
+reverse_involutive,GHC/List.v,False,feedback,"Found no subterm matching ""reverse (reverse xs)"" in the current goal."
+map_append,GHC/Base.v,False,feedback,The LHS of app_nil_r     (_ ++ nil) does not match any subterm of the goal
+EqLaws_option,GHC/Base.v,False,feedback,Wrong bullet -: Current bullet - is not finished.
+EqLaws_unit,GHC/Base.v,False,feedback,The reference Eq___unit was not found in the current environment.
+concat_map,GHC/Base.v,True,,
+length_cons,GHC/List.v,False,feedback,"In environment A : Type x : A xs : list A Unable to unify ""Z.succ (length xs)"" with ""length (x :: xs)""."
+foldr_id,GHC/Base.v,True,,
+instance_FunctorLaws_option,GHC/Base.v,True,,
+flat_map_map,GHC/Base.v,False,feedback,The LHS of flat_map_nil     (flat_map (fun=> nil) _) does not match any subterm of the goal
+Foldable_elem_app,Data/Foldable.v,False,feedback,The LHS of elem_nil     (elem _ nil) does not match any subterm of the goal
+EqExact_Down,Data/Ord.v,False,feedback,The reference Eq___Down_op_zeze__ was not found in the current environment.
+iter_plus_Z,GHC/Enum.v,False,feedback,The LHS of Z.add_0_r     (_ + 0)%Z does not match any subterm of the goal
+iterates_ext,GHC/Enum.v,True,,
+length_nil,GHC/List.v,True,,
+enumFromTo_Int_In,GHC/Enum.v,False,feedback,The LHS of eftInt_aux_In     (In _ (eftInt_aux _ _ _)) does not match any subterm of the goal
+eftInt_iterates',GHC/Enum.v,False,feedback,The LHS of Hgt     (from ?= to)%Z does not match any subterm of the goal
+In_zip,GHC/List.v,False,feedback,Expects a disjunctive pattern with 2 branches.
+instance_MonoidLaws_option,GHC/Base.v,False,feedback,Wrong bullet -: Current bullet - is not finished.
+eftInt_aux_In,GHC/Enum.v,False,feedback,"Unable to apply lemma of type  ""forall (n : nat) (f : ?A -> ?A) (z a0 : ?A),   In a0 (iterates' n f z) <-> (exists2 i : nat, i < n & a0 = Nat.iter i f z)"" on hypothesis of type ""In a (iterates (Z.to_nat (to - from)) Z.succ from)""."
+snd_unzip,GHC/List.v,False,feedback,a is already used.
+N_double_succ,Data/Bits/Popcount.v,False,feedback,The reference N.double_succ was not found in the current environment.
+Pos_popcount_1_Is_power,Data/Bits/Popcount.v,False,feedback,Expects a disjunctive pattern with 3 branches.
+hs_coq_tuple_snd,Data/Tuple.v,True,,
+In_zip_snd,GHC/List.v,False,add_err,"Syntax error: '|' or ',' or ')' expected after [constr:operconstr level 200] (in [constr:operconstr])."
+snd_pair,Data/Tuple.v,True,,
+Foldable_foldr_map,Data/Foldable.v,True,,
+Foldable_foldl_cons,Data/Foldable.v,True,,
+hs_coq_lenAcc_add,GHC/List.v,False,feedback,"Found no subterm matching ""lenAcc xs (acc1 + acc2)%Z"" in the current goal."
+N_popcount_double,Data/Bits/Popcount.v,False,feedback,The reference Pos_popcount_double was not found in the current environment.
+EqLaws_Down,Data/Ord.v,False,feedback,The reference x was not found in the current environment.
+EqLaws_Proxy,Data/Proxy.v,False,feedback,The reference x was not found in the current environment.
+elem_cons,Data/Foldable.v,False,feedback,The LHS of orb_comm     (_ || _) does not match any subterm of the goal
+flat_map_cong,GHC/Base.v,False,feedback,The LHS of flat_map_map     (flat_map _ (map _ _)) does not match any subterm of the goal
+hs_coq_filter,GHC/List.v,True,,
+foldr_single,GHC/Base.v,True,,
+hs_coq_foldl_base,GHC/Base.v,False,feedback,The LHS of IH     (foldl f z l') does not match any subterm of the goal
+EqExact_Int,GHC/Base.v,False,feedback,The LHS of Z.eqb_eq     ((_ =? _)%Z = true) does not match any subterm of the goal
+Eq_is_true_m,GHC/Base.v,False,feedback,"In environment a : Type H : Eq_ a x : EqLaws a y, H1 : a H2 : y == H1 x0, y0 : a H0 : x0 == y0 H3 : y == x0 Unable to unify ""a"" with ""is_true (H1 == y0)""."
+forM_cong,Data/Traversable.v,False,feedback,"Found no subterm matching ""forM ?M2056 (fun x : ?M2050 => ?M2057 (?M2058 x))"" in the current goal."
+hs_coq_length_list,Data/Foldable.v,False,feedback,The LHS of hs_coq_list_length     (List.length _) does not match any subterm of the goal
+EqExact_option,GHC/Base.v,False,feedback,"Anomaly ""Evar ?X787 was not declared."" Please report at http://coq.inria.fr/bugs/."
+Eq_reflI,GHC/Base.v,False,feedback,H is already used.
+eftInt_aux_iterates,GHC/Enum.v,False,feedback,The LHS of Nat.sub_0_le     (_ - _ = 0) does not match any subterm of the goal

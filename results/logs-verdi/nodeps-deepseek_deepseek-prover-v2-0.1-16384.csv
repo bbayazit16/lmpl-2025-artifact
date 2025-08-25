@@ -1,0 +1,580 @@
+name,file,result,error_type,error
+trace_outputs_backup,systems/Counter.v,True,,
+reachable_seen,systems/SeqNumCorrect.v,False,feedback,No matching clauses for match.
+refl_trans_1n_trace_trans,core/Net.v,False,feedback,No such assumption.
+last_holder'_neq_unlock_extend,systems/LiveLockServ.v,False,feedback,No such goal.
+locks_correct_locked_at_head,systems/LiveLockServ.v,False,feedback,The reference H_queue was not found in the current environment.
+trace_outputs_input,systems/Counter.v,True,,
+revertNetwork_In,systems/SeqNumCorrect.v,False,feedback,"In environment orig_base_params : BaseParams orig_multi_params : MultiParams orig_base_params net : network p : seq_num_packet H : In p (nwPackets net) H0 : ~      In (tmNum (pBody p))        (assoc_default name_eq_dec (tdSeen (nwState net (pDst p))) (pSrc p) []) Unable to unify  ""(In ?M1600 (filter ?M1599 ?M1601) ->    In ?M1600 ?M1601 /\ ?M1599 ?M1600 = true) /\   (In ?M1600 ?M1601 /\ ?M1599 ?M1600 = true ->    In ?M1600 (filter ?M1599 ?M1601))"" with  ""(fix In (a : orig_packet) (l : list orig_packet) {struct l} : Prop :=      match l with      | [] => False      | b :: m => b = a \/ In a m      end) (revertPacket p)     (map revertPacket        (filter           (fun p : seq_num_packet =>            if             member (tmNum (pBody p))               (assoc_default name_eq_dec (tdSeen (nwState net (pDst p)))                  (pSrc p) [])            then false            else true) (dedup pkt_eq_dec (nwPackets net))))""."
+reachable_intro,systems/LockServ.v,False,feedback,The reference rt_refl was not found in the current environment.
+locks_correct_update_true,systems/LiveLockServ.v,False,feedback,No such assumption.
+nwnw_locked_lock,systems/LiveLockServ.v,False,feedback,No such goal.
+LockServ_mutual_exclusion_trace,systems/LockServ.v,False,feedback,"In environment num_Clients : nat st : network tr : list (name * (input + list output)) H : step_async_star step_async_init st tr st0 : network tr0 : list (name * (input + list output)) n : Client_index The term ""Client n"" has type ""Name"" while it is expected to have type ""name""."
+inductive_invariant_true_in_reachable,core/Net.v,False,feedback,Wrong bullet -: No more subgoals.
+locks_correct_input_handlers,systems/LiveLockServ.v,False,feedback,No such goal.
+step_failure_pt_mapped_simulation_1,core/PartialMapSimulations.v,False,feedback,_failed_ is used in conclusion.
+in_tot_map_name,core/TotalMapSimulations.v,False,feedback,"In environment base_fst, base_snd : BaseParams multi_fst : MultiParams base_fst multi_snd : MultiParams base_snd base_map : BaseParamsTotalMap base_fst base_snd name_map : MultiParamsNameTotalMap multi_fst multi_snd msg_map : MultiParamsMsgTotalMap multi_fst multi_snd name_map_bijective : MultiParamsNameTotalMapBijective name_map multi_map_congr : MultiParamsTotalMapCongruency base_map name_map msg_map tot_map_output_injective : forall o o' : output,                            tot_map_output o = tot_map_output o' -> o = o' fail_fst : FailureParams multi_fst fail_snd : FailureParams multi_snd fail_map_congr : FailureParamsTotalMapCongruency fail_fst fail_snd base_map overlay_fst : NameOverlayParams multi_fst overlay_snd : NameOverlayParams multi_snd overlay_map_congr : NameOverlayParamsTotalMapCongruency overlay_fst                       overlay_snd name_map m : msg l : list (name * msg) n : name H_in : forall nm : name * msg, In nm l -> snd nm = m H_in_map : In (n, tot_map_msg m)              (map                 (fun nm : name * msg =>                  (tot_map_name (fst nm), tot_map_msg (snd nm))) l) The term ""n"" has type ""@name base_snd multi_snd"" while it is expected to have type ""@name base_fst multi_fst""."
+nodup_pt_map,core/PartialMapSimulations.v,False,feedback,The reference m' was not found in the current environment.
+at_head_of_queue_intro,systems/LockServ.v,True,,
+lb_step_ordered_failure_pt_mapped_simulation_1_non_silent,core/PartialMapExecutionSimulations.v,False,feedback,The reference p was not found in the current environment.
+mgv_reghost_deghost_partial_inverses,core/GhostSimulations.v,True,,
+snoc_at_head_of_queue_preserved,systems/LockServ.v,False,feedback,"In environment num_Clients : nat sigma : Name -> Data st' : Data x : Client_index H_queue : queue st' = queue (sigma Server) ++ [x] c : Client_index t : list Client_index H_at_head : queue (sigma Server) = c :: t Unable to unify ""c :: t"" with ""c :: t ++ [x]""."
+distinct_pairs_and_app,core/StatePacketPacketDecomposition.v,False,feedback,"In environment B : BaseParams M : MultiParams B d : Decomposition B M A : Type R : A -> A -> Prop x : A l1, l2 : list A H1 : forall y : A, In y l1 -> R x y H4 : distinct_pairs_and R l1 H2 : distinct_pairs_and R l2 H3 : forall x0 y : A, x = x0 \/ In x0 l1 -> In y l2 -> R x0 y IH : distinct_pairs_and R l1 ->      (forall x y : A, In x l1 -> In y l2 -> R x y) ->      distinct_pairs_and R (l1 ++ l2) The term ""H2"" has type ""distinct_pairs_and R l2"" while it is expected to have type  ""forall x y : A, In x l1 -> In y l2 -> R x y""."
+step_async_tot_mapped_simulation_2,core/TotalMapSimulations.v,False,feedback,The reference H_eq was not found in the current environment.
+Lock_delivered_MsgLock,systems/LiveLockServ.v,False,feedback,"Unable to apply lemma of type  ""forall (h : Name) (i : Msg) (st : Data) (l : Label)      (out : list Output) (st' : Data) (ms : list (Name * Msg)),   InputHandler h i st = (l, out, st', ms) ->   (exists c : Client_index,      h = Client c /\      (i = Lock /\       out = [] /\ st' = st /\ ms = [(Server, Lock)] /\ l = InputLock c \/       l = InputUnlock c /\       i = Unlock /\       out = [] /\       held st' = false /\       (held st = true /\ ms = [(Server, Unlock)] \/ st' = st /\ ms = []))) \/   out = [] /\ st' = st /\ ms = [] /\ l = Nop"" on hypothesis of type  ""nat""."
+locks_correct_locked_at_head_preserved,systems/LiveLockServ.v,True,,
+Unlock_in_network_eventually_MsgUnlock,systems/LiveLockServ.v,True,,
+nwnw_unlock_lock,systems/LiveLockServ.v,True,,
+disk_correct_reboot,systems/LogCorrect.v,False,feedback,"In environment orig_base_params : BaseParams orig_multi_params : MultiParams orig_base_params orig_failure_params : FailureParams orig_multi_params data_serializer : Serializer data name_serializer : Serializer name msg_serializer : Serializer msg input_serializer : Serializer input snapshot_interval : nat net : do_network h : name x : IOStreamWriter.t x0 : list entry x1 : data l : list entry d : data Heqo : channel_to_log (disk_to_channel (nwdoDisk net h)) = Some (l, d) H0 : nwdoDisk net h Count = Some (nat_serialize (length x0)) H : nwdoDisk net h Log = Some x H2 : nwdoDisk net h Snapshot = Some (serialize x1) H3 : log_num_entries (nwdoState net h) = length x0 H5 : apply_log h x1 x0 = log_data (nwdoState net h) H6 : IOStreamWriter.unwrap x =      IOStreamWriter.unwrap        (list_serialize_rec entry           (sum_Serializer input (name * msg) input_serializer              (pair_Serializer name msg name_serializer msg_serializer)) x0) Unable to unify ""Some (serialize x1)"" with  ""Some (serialize (reboot (apply_log h d l)))""."
+distinct_pairs_and_app_cons,core/StatePacketPacketDecomposition.v,True,,
+LockServ_nwnw_net_handlers_old_new,systems/LockServ.v,False,feedback,Wrong bullet -: Current bullet - is not finished.
+dup_drop_step_star_step_1,core/DupDropReordering.v,True,,
+pt_map_map_pair_eq,core/PartialMapSimulations.v,False,feedback,The reference NoDup_nodes was not found in the current environment.
+trace_mutual_exclusion'_extend_input,systems/LockServ.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+step_ordered_dynamic_failure_pt_mapped_simulation_star_1,core/PartialMapSimulations.v,False,feedback,The RHS of pt_init_handlers_fun_eq     (fun n : name => pt_map_data (init_handlers (tot_map_name_inv n))) does not match any subterm of the goal
+mgv_ghost_simulation_1,core/GhostSimulations.v,True,,
+true_in_reachable_mutual_exclusion,systems/LiveLockServ.v,False,feedback,The reference true_in_reachable_by_invariant was not found in the current environment.
+locks_correct_update_false,systems/LiveLockServ.v,False,feedback,"In environment num_Clients : nat sigma : name -> data st' : Data x : Client_index H_correct : forall n : Client_index,             held (sigma (Client n)) = true ->             exists t : list Client_index, queue (sigma Server) = n :: t H_held_false : held st' = false n : Client_index H_held : held (update name_eq_dec sigma (Client x) st' (Client n)) = true The term ""Client n"" has type ""Name"" while it is expected to have type ""name""."
+last_holder'_input_extend,systems/LiveLockServ.v,False,add_err,Syntax error: illegal begin of vernac.
+LockServ_nwnw_input_handlers_new_new,systems/LiveLockServ.v,False,feedback,No such goal.
+PrimaryNetHandler_no_msgs,systems/Counter.v,True,,
+log_input_handlers_spec,systems/LogCorrect.v,False,add_err,Syntax error: illegal begin of vernac.
+log_step_failure_star_simulation,systems/LogCorrect.v,False,feedback,"In environment orig_base_params : BaseParams orig_multi_params : MultiParams orig_base_params orig_failure_params : FailureParams orig_multi_params data_serializer : Serializer data name_serializer : Serializer name msg_serializer : Serializer msg input_serializer : Serializer input snapshot_interval : nat net : do_network failed : list do_name Unable to unify ""refl_trans_1n_trace ?M1614 ?M1615 ?M1617 (?M1618 ++ ?M1619)"" with  ""refl_trans_1n_trace step_failure step_failure_init     (failed, revertLogNetwork (snd (failed, net))) []""."
+step_ordered_failure_serialized_simulation_star,systems/SerializedMsgParamsCorrect.v,True,,
+tot_map_net_label_event_inf_often_occurred_conv,core/TotalMapExecutionSimulations.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+inputs_m_inr,systems/PrimaryBackup.v,False,feedback,"In environment base_params : BaseParams one_node_params : OneNodeParams base_params pb_params : PrimaryBackupParams base_params h : name t : list output tr : list (name * (input + list output)) Unable to unify ""inputs_m tr"" with ""inputs_m ((h, inr t) :: tr)""."
+Nth_app,systems/LiveLockServ.v,False,feedback,a is already used.
+pt_ext_init_handlers_fun_eq,core/PartialExtendedMapSimulations.v,False,add_err,Syntax error: illegal begin of vernac.
+nwnw_lock,systems/LiveLockServ.v,False,feedback,No such goal.
+locks_correct_net_handlers,systems/LiveLockServ.v,False,feedback,"Found no subterm matching ""update ?M2459 ?M2460 ?M2461 (?M2460 ?M2461)"" in the current goal."
+step_ordered_dynamic_failure_tot_one_mapped_simulation_star_1,core/SingleSimulations.v,False,feedback,The LHS of __top_assumption_     net does not match any subterm of the goal
+decomposition_invariant,core/StatePacketPacketDecomposition.v,False,add_err,Syntax error: illegal begin of vernac.
+map_id_tr,core/GhostSimulations.v,False,feedback,No applicable tactic.
+step_ordered_failure_tot_one_mapped_simulation_1,core/SingleSimulations.v,False,feedback,The reference h was not found in the current environment.
+step_ordered_pt_mapped_simulation_1,core/PartialMapSimulations.v,False,feedback,"Anomaly ""Evar ?X1175 was not declared."" Please report at http://coq.inria.fr/bugs/."
+step_ordered_failure_pt_mapped_simulation_1,core/PartialMapSimulations.v,False,feedback,"Anomaly ""Evar ?X1944 was not declared."" Please report at http://coq.inria.fr/bugs/."
+lb_step_ordered_dynamic_failure_pt_mapped_simulation_1_non_silent,core/PartialMapExecutionSimulations.v,False,feedback,The reference p was not found in the current environment.
+inputs_with_key_plus_key,systems/VarD.v,False,feedback,"Found no subterm matching ""?M2232 ++ []"" in the current goal."
+remove_neq_o,lib/FMapVeryWeak.v,True,,
+ack_in_flight_to_primary_backup,systems/Counter.v,False,add_err,Syntax error: illegal begin of vernac.
+step_1_star_trace_state_correct,systems/VarD.v,False,feedback,The reference refl_trans_1n_n1_trace_ind was not found in the current environment.
+LockServ_nwnw_net_handlers_old_new,systems/LiveLockServ.v,False,feedback,(in proof LockServ_nwnw_net_handlers_old_new): Attempt to save an incomplete proof
+not_in_map_not_in_failed,core/TotalMapSimulations.v,True,,
+pt_ext_map_update_eq,core/PartialExtendedMapSimulations.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+step_ordered_dynamic_star_lb_step_reachable,core/LabeledNet.v,False,feedback,_top_assumption_ is used in conclusion.
+pt_map_odnet_tot_map_label_event_strong_fairness,core/PartialMapExecutionSimulations.v,True,,
+step_1_star_singleton_trace,systems/PrimaryBackup.v,False,add_err,Syntax error: illegal begin of vernac.
+lb_step_ordered_failure_tot_mapped_simulation_1,core/TotalMapExecutionSimulations.v,False,feedback,The reference p was not found in the current environment.
+step_failure_serialize_simulation_star,systems/SerializedMsgParamsCorrect.v,False,feedback,At iteration 2: The LHS of map_id     (map (fun x : _ => x) _) does not match any subterm of the goal
+reachable_intro,systems/LiveLockServ.v,False,feedback,The reference rt_refl was not found in the current environment.
+refl_trans_n1_1n_trace,core/Net.v,True,,
+adjacent_to_irreflexive,core/NameOverlay.v,True,,
+lb_step_execution_lb_step_ordered_dynamic_failure_tot_map_odnet_infseq,core/TotalMapExecutionSimulations.v,True,,
+In_n_Nodes,systems/LockServ.v,False,feedback,"In environment num_Clients : nat c : Client_index Unable to unify  ""(In ?M1606 (map ?M1604 ?M1605) ->    exists x : ?M1602, ?M1604 x = ?M1606 /\ In x ?M1605) /\   ((exists x : ?M1602, ?M1604 x = ?M1606 /\ In x ?M1605) ->    In ?M1606 (map ?M1604 ?M1605))"" with  ""Server = Client c \/   (fix In (a : Name) (l : list Name) {struct l} : Prop :=      match l with      | [] => False      | b :: m => b = a \/ In a m      end) (Client c) (map Client (all_fin num_Clients))""."
+last_holder'_locked_some_eq,systems/LockServ.v,False,feedback,No matching clauses for match.
+locks_correct_unlock_true_to_false,systems/LockServ.v,False,feedback,congruence failed.
+tot_map_in_snd,core/TotalMapSimulations.v,True,,
+locks_correct_true_at_head_of_queue,systems/LiveLockServ.v,True,,
+dup_drop_step_star_step_n1,core/DupDropReordering.v,False,feedback,"In environment A : Type A_eq_dec : forall x y : A, {x = y} + {x <> y} l, l', l'' : list A H : clos_refl_trans (list A) dup_drop_step l l' H0 : dup_drop_step l' l'' Unable to unify ""clos_refl_trans ?M1615 ?M1616 ?M1617 ?M1618"" with  ""clos_refl_trans_n1 (list A) dup_drop_step l' l''""."
+locks_correct_invariant,systems/LiveLockServ.v,False,feedback,The reference H0 was not found in the current environment.
+locks_correct_unlock_at_head,systems/LiveLockServ.v,False,feedback,"In environment num_Clients : nat sigma : name -> data p : packet c : Client_index H : pSrc p = Client c H0 : pBody p = Unlock H1 : pBody p = Unlock ->      exists c : Client_index,        valid_unlock (queue (sigma Server)) (held (sigma (Client c))) c p The term ""eq_refl"" has type ""pBody p = pBody p"" while it is expected to have type ""pBody p = Unlock"" (cannot unify  ""pBody p"" and ""Unlock"")."
+network_eq,systems/SeqNumCorrect.v,False,add_err,Syntax error: illegal begin of vernac.
+locks_correct_locked_invariant,systems/LiveLockServ.v,False,feedback,Unable to find an instance for the variable tr.
+post_net_analyze_sent_packet,core/StatePacketPacketDecomposition.v,False,feedback,"Unable to apply lemma of type  ""forall (A : Type) (l m : list A) (a : A), In a (l ++ m) -> In a l \/ In a m"" on hypothesis of type  ""In p     (map        (fun m : name * msg => {| pSrc := h; pDst := fst m; pBody := snd m |})        ms)""."
+ZOOOPST_cons_intro,systems/PrimaryBackup.v,True,,
+Nth_tl,systems/LiveLockServ.v,False,feedback,"In environment num_Clients : nat A : Type x : A l : list A a : A n : nat H : Nth (x :: l) (S n) a IH : Nth l (S n) a -> Nth (List.tl l) n a H4 : Nth l n a Unable to unify ""Nth (?M1682 :: ?M1679) (S ?M1681) ?M1680"" with  ""Nth l n a""."
+NOABT_singleton_inl,systems/PrimaryBackup.v,False,feedback,No matching clauses for match.
+locks_correct_locked_at_head,systems/LockServ.v,False,feedback,(in proof locks_correct_locked_at_head): Attempt to save an incomplete proof
+pt_map_odnet_tot_map_labeled_event_state_continuously_enabled,core/PartialMapExecutionSimulations.v,False,feedback,"Unable to apply lemma of type  ""forall (A L trace : Type) (step : lb_step_relation A L trace)     (x : event A L trace) (s : infseq (event A L trace)),   lb_step_execution step (Cons x s) -> lb_step_execution step s"" on hypothesis of type  ""event (list lb_name * ordered_dynamic_network) label     (lb_name * (input + output))""."
+ZOOOPST_singleton_singleton,systems/PrimaryBackup.v,False,feedback,Wrong bullet -: Current bullet - is not finished.
+last_holder'_no_out_extend,systems/LiveLockServ.v,False,feedback,No such goal.
+pt_nodup_perm_map_map_pair_perm,core/PartialMapSimulations.v,False,feedback,The reference Permutation_remove_all was not found in the current environment.
+lb_step_ordered_dynamic_failure_pt_mapped_simulation_1_silent,core/PartialMapExecutionSimulations.v,False,feedback,The RHS of H5     (Some d) does not match any subterm of the goal
+in_failed_exclude,core/TotalMapSimulations.v,False,feedback,The reference not_in_remove was not found in the current environment.
+disk_correct_invariant,systems/LogCorrect.v,False,feedback,The reference init_data was not found in the current environment.
+collate_pt_map_update2_eq,core/PartialMapSimulations.v,True,,
+step_failure_pt_mapped_simulation_star_1,core/PartialMapSimulations.v,False,feedback,The LHS of H_init     x does not match any subterm of the goal
+correspond_preserved_primary_apply_entry,systems/PrimaryBackup.v,False,feedback,The reference d was not found in the current environment.
+reghost_deghost_partial_inverses,core/GhostSimulations.v,False,feedback,The LHS of map_map     (map _ (map _ _)) does not match any subterm of the goal
+LockServ_nwnw_input_handlers_old_new,systems/LiveLockServ.v,False,feedback,H2 is already used.
+step_async_pt_ext_mapped_simulation_star_1,core/PartialExtendedMapSimulations.v,False,feedback,The LHS of H_net     step_async_init does not match any subterm of the goal
+filterMap_pt_map_trace_ev_outputs_eq,core/PartialMapSimulations.v,False,feedback,No applicable tactic.
+locked_in_flight_all_clients_false,systems/LockServ.v,False,feedback,No matching clauses for match.
+locks_correct_invariant,systems/LockServ.v,True,,
+tot_map_odnet_hd_step_ordered_dynamic_failure_star_always,core/TotalMapExecutionSimulations.v,True,,
+last_holder_some_unlock_inv,systems/LiveLockServ.v,False,feedback,No such goal.
+in_map_pair_adjacent_to,core/TotalMapSimulations.v,False,feedback,No such hypothesis: H_in''
+NOABT_app,systems/PrimaryBackup.v,True,,
+revert_trace_app,systems/PrimaryBackup.v,False,feedback,"Found no subterm matching ""?M1621 ++ []"" in the current goal."
+locks_correct_unlock_sent_locked,systems/LiveLockServ.v,True,,
+map_eq_name_eq_eq,core/TotalMapSimulations.v,False,feedback,"Unable to apply lemma of type  ""forall n n' : name, tot_map_name n = tot_map_name n' -> n = n'"" on hypothesis of type ""map tot_map_name t = map tot_map_name t'""."
+last_holder'_input_inv,systems/LiveLockServ.v,False,feedback,congruence failed.
+snoc_at_head_of_queue_preserved,systems/LiveLockServ.v,False,feedback,"In environment num_Clients : nat sigma : Name -> Data st' : Data x : Client_index H_queue : queue st' = queue (sigma Server) ++ [x] c : Client_index t : list Client_index H_at_head : queue (sigma Server) = c :: t Unable to unify ""c :: t"" with ""c :: t ++ [x]""."
+post_input_analyze_sent_packet,core/StatePacketPacketDecomposition.v,True,,
+NOABT_singleton_inr_read_response,systems/PrimaryBackup.v,True,,
+InputHandler_lbcases,systems/LiveLockServ.v,False,feedback,No such goal.
+processPackets_ge_start,systems/SeqNumCorrect.v,False,feedback,Omega can't solve this system
+locked_in_flight_all_clients_false,systems/LiveLockServ.v,False,feedback,"In environment num_Clients : nat sigma : name -> data p : packet H_pBody : pBody p = Locked H_locks_correct_locked : locks_correct_locked sigma p H_locks_correct : locks_correct sigma c : Client_index H_held : held (sigma (Client c)) = true The term ""sigma"" has type ""name -> data"" while it is expected to have type  ""Client_index""."
+processInputs_cons_defn,systems/PrimaryBackup.v,True,,
+locks_correct_true_at_head_of_queue,systems/LockServ.v,True,,
+filterMap_pt_map_name_msg_empty_eq,core/PartialMapSimulations.v,False,feedback,"In environment base_fst, base_snd : BaseParams multi_fst : MultiParams base_fst multi_snd : MultiParams base_snd base_map : BaseParamsPartialMap base_fst base_snd name_map : MultiParamsNameTotalMap multi_fst multi_snd msg_map : MultiParamsMsgPartialMap multi_fst multi_snd name_map_bijective : MultiParamsNameTotalMapBijective name_map multi_map_congr : MultiParamsPartialMapCongruency base_map name_map msg_map n : name m : msg l : list (name * msg) dst : name H : match pt_map_name_msg (n, m) with     | Some y => y :: filterMap pt_map_name_msg l     | None => filterMap pt_map_name_msg l     end = [] IH : filterMap pt_map_name_msg l = [] ->      filterMap pt_map_packet        (map           (fun m0 : name * msg =>            {| pSrc := dst; pDst := fst m0; pBody := snd m0 |}) l) = [] m0, m1 : msg Hm' : pt_map_msg m = Some m1 Hm : Some m1 = Some m0 Unable to unify  ""filterMap pt_map_packet     (map        (fun m0 : name * msg =>         {| pSrc := dst; pDst := fst m0; pBody := snd m0 |}) l) = []"" with ""False""."
+all_Names_Nodes,systems/Counter.v,True,,
+outputs_1_on_nil,systems/PrimaryBackup.v,True,,
+ServerNetHandler_cases,systems/LockServ.v,False,add_err,Syntax error: [constr:operconstr level 200] expected after '(' (in [constr:operconstr]).
+processInputs_app,systems/PrimaryBackup.v,False,feedback,"Found no subterm matching ""processInputs ?M1623 (l1 ++ ?M1622)"" in the current goal."
+trace_mutex'_unlock_extend,systems/LiveLockServ.v,False,feedback,No such goal.
+ack_in_flight_to_primary_app,systems/Counter.v,True,,
+outputs_m_app,systems/PrimaryBackup.v,False,feedback,"Found no subterm matching ""?M1626 ++ ?M1627 ++ ?M1628"" in the current goal."
+inputs_m_inl_read_singleton,systems/PrimaryBackup.v,True,,
+trace_relations_work,core/TraceRelations.v,False,feedback,The reference l was not found in the current environment.
+locks_correct_locked_input_handlers_new,systems/LiveLockServ.v,False,feedback,The reference locks_correct_locked_true_to_false was not found in the current environment.
+pt_map_msg_update2,core/PartialMapSimulations.v,False,feedback,(in proof pt_map_msg_update2): Attempt to save an incomplete proof
+inputs_1_m_revert,systems/PrimaryBackup.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+tot_map_onet_hd_step_ordered_failure_star_always,core/TotalMapExecutionSimulations.v,True,,
+reboot_invariant,systems/LogCorrect.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+MsgLock_eventually_MsgLocked,systems/LiveLockServ.v,False,feedback,"In environment num_Clients : nat c : Client_index s : infseq (event network label (name * (input + list output))) H : event_step_star step_async step_async_init (hd s) H0 : lb_step_execution lb_step_async s H1 : weak_fairness lb_step_async label_silent s H2 : now (occurred (MsgLock c)) s Unable to unify ""lb_step_execution lb_step_async ?M1614"" with  ""event network Label (name * (input + list output))""."
+InputHandler_cases,systems/LockServ.v,False,feedback,Wrong bullet +: Current bullet + is not finished.
+step_async_deserialized_simulation,systems/SerializedMsgParamsCorrect.v,False,feedback,Tactic failure: tauto failed.
+ZOOOPST_cons_elim,systems/PrimaryBackup.v,True,,
+nwnw_unlock_lock,systems/LockServ.v,True,,
+pt_msg_in_map,core/PartialMapSimulations.v,False,add_err,Syntax error: [id_or_meta] expected after 'in' (in [in_hyp_as]).
+InputUnlock_held,systems/LiveLockServ.v,False,feedback,congruence failed.
+tot_map_net_label_event_inf_often_occurred,core/TotalMapExecutionSimulations.v,False,feedback,Cannot apply lemma (inf_often_map _ _ _ H_inf)
+network_invariant_inductive,systems/PrimaryBackup.v,False,feedback,No matching clauses for match.
+in_exclude_not_in_failed_map,core/TotalMapSimulations.v,False,feedback,"In environment base_fst, base_snd : BaseParams multi_fst : MultiParams base_fst multi_snd : MultiParams base_snd base_map : BaseParamsTotalMap base_fst base_snd name_map : MultiParamsNameTotalMap multi_fst multi_snd msg_map : MultiParamsMsgTotalMap multi_fst multi_snd name_map_bijective : MultiParamsNameTotalMapBijective name_map multi_map_congr : MultiParamsTotalMapCongruency base_map name_map msg_map tot_map_output_injective : forall o o' : output,                            tot_map_output o = tot_map_output o' -> o = o' fail_fst : FailureParams multi_fst fail_snd : FailureParams multi_snd fail_map_congr : FailureParamsTotalMapCongruency fail_fst fail_snd base_map overlay_fst : NameOverlayParams multi_fst overlay_snd : NameOverlayParams multi_snd overlay_map_congr : NameOverlayParamsTotalMapCongruency overlay_fst                       overlay_snd name_map ns : list name n : name failed : list name H_in : In n (remove_all name_eq_dec (map tot_map_name failed) ns) The term ""ns"" has type ""list (@name base_snd multi_snd)"" while it is expected to have type ""list (@name base_fst multi_fst)""."
+last_holder'_server_extend,systems/LockServ.v,False,feedback,Wrong bullet -: No more subgoals.
+tot_map_update_eq,core/TotalMapSimulations.v,False,feedback,The LHS of tot_map_name_inv_inverse     (tot_map_name_inv (tot_map_name _)) does not match any subterm of the goal
+step_async_star_lb_step_reachable,core/LabeledNet.v,False,feedback,The reference RT1nT_trans was not found in the current environment.
+cross_relation,systems/LockServ.v,False,feedback,The reference y was not found in the current environment.
+weak_fairness_invar,core/LabeledNet.v,False,feedback,Not enough constructors.
+InputHandler_Client_Unlock,systems/LiveLockServ.v,False,feedback,"Found no subterm matching ""held sigma"" in the current goal."
+last_holder'_neq_unlock_extend,systems/LockServ.v,False,feedback,Wrong bullet -: No more subgoals.
+pt_map_odnet_hd_step_ordered_dynamic_failure_star,core/PartialMapExecutionSimulations.v,True,,
+tot_map_name_injective,core/TotalMapSimulations.v,False,feedback,The LHS of H     (tot_map_name n) does not match any subterm of the goal
+inputs_m_inr_singleton,systems/PrimaryBackup.v,False,feedback,"In environment base_params : BaseParams one_node_params : OneNodeParams base_params pb_params : PrimaryBackupParams base_params h : name l : list output Unable to unify ""[]"" with  ""match match h with         | Primary | _ => None         end with   | Some y => [y]   | None => []   end""."
+step_ordered_dynamic_failure_pt_ext_mapped_simulation_star_1,core/PartialExtendedMapSimulations.v,False,feedback,The RHS of pt_ext_init_handlers_fun_eq     (fun n : name =>      pt_ext_map_data (init_handlers (tot_map_name_inv n))        (tot_map_name_inv n)) does not match any subterm of the goal
+revert_state_defn,systems/PrimaryBackup.v,True,,
+revertNetwork_deliver_step,systems/SeqNumCorrect.v,False,add_err,Syntax error: illegal begin of vernac.
+decomposition_reachable_nw_invariant,systems/LiveLockServ.v,False,feedback,The reference decomposition_reachable_nw_invariant was not found in the current environment.
+collate_ls_tot_map_update2_eq,core/TotalMapSimulations.v,True,,
+in_msg_filterMap_pt_map_msg,core/PartialMapSimulations.v,True,,
+inputs_m_backup_singleton,systems/PrimaryBackup.v,True,,
+PB_net_out_case,systems/PrimaryBackup.v,False,add_err,Syntax error: illegal begin of vernac.
+Locked_in_network_eventually_MsgLocked,systems/LiveLockServ.v,True,,
+dup_drop_Permutation,core/DupDropReordering.v,False,feedback,Wrong bullet -: Current bullet + is not finished.
+inputs_1_nil_outputs_1_nil,systems/PrimaryBackup.v,True,,
+processPackets_seq_eq,systems/SeqNumCorrect.v,False,add_err,Syntax error: [constr:operconstr] expected after '=' (in [constr:operconstr]).
+step_ordered_pt_ext_mapped_simulation_1,core/PartialExtendedMapSimulations.v,False,feedback,"In environment base_fst, base_snd : BaseParams multi_fst : MultiParams base_fst multi_snd : MultiParams base_snd name_map : MultiParamsNameTotalMap multi_fst multi_snd msg_map : MultiParamsMsgPartialMap multi_fst multi_snd multi_map : MultiParamsPartialExtendedMap multi_fst multi_snd name_map_bijective : MultiParamsNameTotalMapBijective name_map multi_map_congr : MultiParamsPartialExtendedMapCongruency name_map msg_map                     multi_map net, net' : ordered_network p : list (name * (input + output)) ms : msg ms' : list msg out : list output d : data l : list (name * msg) H_eq, H_hnd : name H_eq' : onwPackets net H_eq H_hnd = ms :: ms' The term ""p"" has type ""list (name * (input + output))"" while it is expected to have type ""packet""."
+pt_map_update_eq,core/PartialMapSimulations.v,False,add_err,Syntax error: illegal begin of vernac.
+step_failure_deserialized_simulation_star,systems/SerializedMsgParamsCorrect.v,False,feedback,No matching clauses for match.
+clients_move_way_up_in_queue,systems/LiveLockServ.v,False,feedback,"In environment num_Clients : nat c : Client_index s : infseq (event network label (name * (input + list output))) Hstar : event_step_star step_async step_async_init (hd s) Hexec : lb_step_execution lb_step_async s Hfair : weak_fairness lb_step_async label_silent s n : nat HNth : eventually          (fun s : infseq (event network label (name * (input + list output)))           =>           Nth (queue (nwState (evt_a (hd s)) Server)) n c /\           (n = 0 ->            In {| pSrc := Server; pDst := Client c; pBody := Locked |}              (nwPackets (evt_a (hd s))))) s Hcond : S n = 0 ->         In {| pSrc := Server; pDst := Client c; pBody := Locked |}           (nwPackets (evt_a (hd s))) H : forall m : nat,     m < n ->     Nth (queue (nwState (evt_a (hd s)) Server)) (S m) c ->     (S m = 0 ->      In {| pSrc := Server; pDst := Client c; pBody := Locked |}        (nwPackets (evt_a (hd s)))) ->     forall n' : nat,     n' <= m ->     eventually       (fun s : infseq (event network label (name * (input + list output))) =>        Nth (queue (nwState (evt_a (hd s)) Server)) n' c /\        (n' = 0 ->         In {| pSrc := Server; pDst := Client c; pBody := Locked |}           (nwPackets (evt_a (hd s))))) s n' : nat Hle, l : n' <= n s0 : infseq (event network ?L@{s0:=s} ?trace@{s0:=s}) The term ""Server"" has type ""Name"" while it is expected to have type ""name""."
+tot_init_handlers_fun_eq,core/TotalMapSimulations.v,False,feedback,The LHS of H''     (tot_map_name_inv (tot_map_name (tot_map_name_inv n))) does not match any subterm of the goal
+MsgLock_Locked,systems/LiveLockServ.v,False,feedback,"Unable to apply lemma of type  ""forall (n : nat) (c : Client_index)     (s : infseq (event network label (name * (input + list output)))),   event_step_star step_async step_async_init (hd s) ->   lb_step_execution lb_step_async s ->   weak_fairness lb_step_async label_silent s ->   Nth (queue (nwState (evt_a (hd s)) Server)) (S n) c ->   eventually     (fun s0 : infseq (event network label (name * (input + list output))) =>      In {| pSrc := Server; pDst := Client c; pBody := Locked |}        (nwPackets (evt_a (hd s0)))) s"" on hypothesis of type  ""nat""."
+step_ordered_failure_serialize_simulation,systems/SerializedMsgParamsCorrect.v,False,feedback,The pattern (fun _ : packet => _) did not match and has holes. Did you mean pose?
+packet_eta,core/Net.v,True,,
+processPackets_num_monotonic,systems/SeqNumCorrect.v,False,feedback,Omega can't solve this system
+locks_correct_locked_net_handlers_new,systems/LockServ.v,False,feedback,(in proof locks_correct_locked_net_handlers_new): Attempt to save an incomplete proof
+trace_mutex'_unlock_extend,systems/LockServ.v,False,feedback,Wrong bullet -: No more subgoals.
+in_pt_map_map_pair,core/PartialMapSimulations.v,False,feedback,The LHS of H_in_pt_map'     (snd _) does not match any subterm of the goal
+step_async_pt_mapped_simulation_1,core/PartialMapSimulations.v,False,feedback,The reference inp was not found in the current environment.
+last_holder'_no_out_inv,systems/LiveLockServ.v,False,feedback,No such goal.
+RTn1_step,core/Net.v,False,feedback,"In environment A : Type trace : Type step : step_relation x, y, z : A l, l' : list trace H_step : step x y l H_refl_trans : refl_trans_n1_trace step y z l' Unable to unify ""refl_trans_n1_trace ?M1568 ?M1569 ?M1569 []"" with  ""refl_trans_n1_trace step x y l""."
+at_head_of_nil,systems/LockServ.v,True,,
+lb_step_failure_tot_mapped_simulation_1,core/TotalMapExecutionSimulations.v,False,feedback,The reference step_failure_input was not found in the current environment.
+last_holder'_input_extend,systems/LockServ.v,False,feedback,Wrong bullet -: No more subgoals.
+Locked_delivered_MsgLocked,systems/LiveLockServ.v,True,,
+LockServ_mutual_exclusion_trace,systems/LiveLockServ.v,False,feedback,"In environment num_Clients : nat st : network tr : list (name * (input + list output)) H : step_async_star step_async_init st tr st0 : network tr0 : list (name * (input + list output)) n : Client_index The term ""Client n"" has type ""Name"" while it is expected to have type ""name""."
+Nth_snoc,systems/LiveLockServ.v,True,,
+locks_correct_unlock_at_head,systems/LockServ.v,False,feedback,(in proof locks_correct_unlock_at_head): Attempt to save an incomplete proof
+step_failure_tot_mapped_simulation_2,core/TotalMapSimulations.v,False,feedback,No such hypothesis: H_eq
+inputs_m_inl_read,systems/PrimaryBackup.v,False,feedback,Wrong bullet -: No more subgoals.
+tot_map_onet_label_event_inf_often_occurred_conv,core/TotalMapExecutionSimulations.v,True,,
+step_async_outputs_m,systems/PrimaryBackup.v,False,feedback,Wrong bullet +: Current bullet + is not finished.
+MsgLocked_held,systems/LiveLockServ.v,False,feedback,congruence failed.
+pt_init_handlers_fun_eq,core/PartialMapSimulations.v,False,feedback,The LHS of tot_map_name_inv_inverse     (tot_map_name_inv (tot_map_name _)) does not match any subterm of the goal
+NetHandler_trace_preserved,systems/Counter.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+lb_step_execution_extensional,core/LabeledNet.v,False,feedback,s2 is used in hypothesis H_eq.
+nw_empty_queue_lock,systems/LockServ.v,False,feedback,"In environment num_Clients : nat sigma : name -> data p : packet H_unlock : locks_correct_unlock sigma p H_locked : locks_correct_locked sigma p H_queue : queue (sigma Server) = [] H_pBody : pBody p = Unlock The term ""eq_refl"" has type ""pBody p = pBody p"" while it is expected to have type ""pBody p = Unlock"" (cannot unify  ""pBody p"" and ""Unlock"")."
+collate_ls_tot_map_eq,core/TotalMapSimulations.v,False,feedback,The LHS of H_eq     (fun src dst : name =>      map tot_map_msg        (collate name_eq_dec h           (fun src0 dst0 : name =>            f (tot_map_name_inv src0) (tot_map_name_inv dst0))           (map2snd m              (filter_rel adjacent_to_dec h (remove_all name_eq_dec [] ns)))           (tot_map_name_inv src) (tot_map_name_inv dst))) does not match any subterm of the goal
+ghost_invariant_lift,core/GhostSimulations.v,True,,
+msg_eq_dec,systems/PrimaryBackup.v,False,feedback,Wrong bullet -: No more subgoals.
+pt_map_onet_tot_map_label_event_strong_fairness,core/PartialMapExecutionSimulations.v,False,feedback,The reference always_map_ext was not found in the current environment.
+locks_correct_unlock_net_handlers_new,systems/LockServ.v,False,feedback,(in proof locks_correct_unlock_net_handlers_new): Attempt to save an incomplete proof
+pt_map_onet_tot_map_label_event_inf_often_occurred_conv,core/PartialMapExecutionSimulations.v,False,feedback,not a rewritable relation: (always _ (map _ _)) in rule always_map
+Lock_in_network_eventually_MsgLock,systems/LiveLockServ.v,False,feedback,No such goal.
+apply_log_app,systems/LogCorrect.v,False,feedback,"Found no subterm matching ""apply_log h d (entries ++ [e])"" in the current goal."
+log_step_failure_step,systems/LogCorrect.v,False,add_err,Syntax error: illegal begin of vernac.
+all_nodes_all,systems/PrimaryBackup.v,True,,
+locks_correct_locked_net_handlers_new,systems/LiveLockServ.v,False,feedback,(in proof locks_correct_locked_net_handlers_new): Attempt to save an incomplete proof
+inputs_with_key_plus_not_key,systems/VarD.v,False,feedback,(in proof inputs_with_key_plus_not_key): Attempt to save an incomplete proof
+correspond_preserved_snoc,systems/PrimaryBackup.v,False,feedback,"Found no subterm matching ""queue (sigma' Primary)"" in the current goal."
+log_net_handlers_spec,systems/LogCorrect.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+last_holder'_locked_extend,systems/LockServ.v,False,feedback,Wrong bullet -: No more subgoals.
+empty_queue_all_clients_false,systems/LockServ.v,False,feedback,"In environment num_Clients : nat sigma : name -> data c : Client_index H_held : held (sigma (Client c)) = true H_locks_correct : true = true ->                   exists t : list Client_index, queue (sigma Server) = c :: t H_queue_empty : queue (sigma Server) = [] The term ""H_held"" has type ""held (sigma (Client c)) = true"" while it is expected to have type ""true = true""."
+inputs_1_invert_app,systems/PrimaryBackup.v,False,feedback,"Found no subterm matching ""rev (map ?M1612 ?M1613)"" in H."
+pt_map_net_deserialize_net,systems/SerializedMsgParamsCorrect.v,False,feedback,The pattern (fun _ : packet => _) did not match and has holes. Did you mean pose?
+last_holder'_locked_extend,systems/LiveLockServ.v,False,feedback,No such goal.
+map_map_pair_eq,core/TotalMapSimulations.v,False,feedback,The reference failed was not found in the current environment.
+nwnw_sym,systems/LockServ.v,False,add_err,Syntax error: [tactic:binder_tactic] or [tactic:tactic_expr] or [tactic_then_locality] expected after ';' (in [tactic:tactic_expr]).
+processPackets_correct,systems/SeqNumCorrect.v,False,feedback,"In environment orig_base_params : BaseParams orig_multi_params : MultiParams orig_base_params n : nat l : list (name * msg) n' : nat l' : list (name * seq_num_msg) h1 : name h2 : msg t : list (name * msg) E : l = (h1, h2) :: t H : (let (n', pkts) :=        (fix         processPackets (seq_num : nat) (packets : list (name * msg)) {struct                        packets} : nat * list (name * seq_num_msg) :=           match packets with           | [] => (seq_num, [])           | p :: ps =>               let (n', pkts) := processPackets seq_num ps in               (S n', (fst p, {| tmNum := n'; tmMsg := snd p |}) :: pkts)           end) n t in      (S n', (fst (h1, h2), {| tmNum := n'; tmMsg := snd (h1, h2) |}) :: pkts)) =     (n', l') p : name * seq_num_msg H_in : In p l' The term ""h2"" has type ""msg"" while it is expected to have type ""seq_num_msg""."
+outputs_m_inl_singleton,systems/PrimaryBackup.v,False,feedback,Wrong bullet -: No more subgoals.
+NoDup_Nodes,systems/Counter.v,False,add_err,Syntax error: illegal begin of vernac.
+inputs_m_on_nil',systems/PrimaryBackup.v,True,,
+outputs_m_revert_trace,systems/PrimaryBackup.v,False,feedback,"In environment base_params : BaseParams one_node_params : OneNodeParams base_params pb_params : PrimaryBackupParams base_params h : name t : PB_input tr : list (name * (PB_input + list PB_output)) IHtr : no_output_at_backup_trace tr ->        outputs_m tr = outputs_1 (revert_trace tr) H_no_output : no_output_at_backup_trace ((h, inl t) :: tr) Unable to unify ""outputs_m tr = outputs_1 (revert_trace tr)"" with  ""match h with   | Primary | _ => outputs_m tr   end = outputs_1 (revert_trace tr)""."
+list_destruct_last,systems/PrimaryBackup.v,True,,
+dup_drop_step_star_trans,core/DupDropReordering.v,False,feedback,"Unable to apply lemma of type  ""forall (A : Type) (R : relation A) (x y : A),   clos_refl_trans A R x y -> clos_refl_trans_n1 A R x y"" on hypothesis of type ""dup_drop_step_star l l'""."
+inputs_m_primary_inl_request_singleton,systems/PrimaryBackup.v,True,,
+dup_drop_cons,core/DupDropReordering.v,False,add_err,Syntax error: illegal begin of vernac.
+InputHandler_trace_preserved,systems/Counter.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+lb_step_execution_lb_step_ordered_failure_pt_map_onet_infseq,core/PartialMapExecutionSimulations.v,False,add_err,Syntax error: [constr:operconstr] expected after '=' (in [constr:operconstr]).
+inputs_m_on_cons,systems/PrimaryBackup.v,True,,
+trace_mutex'_locked_extend,systems/LockServ.v,False,feedback,Wrong bullet -: Current bullet - is not finished.
+locks_correct_unlock_sent_lock,systems/LiveLockServ.v,True,,
+lb_step_execution_invar,core/LabeledNet.v,False,feedback,No such goal.
+outputs_m_inr_nil_singleton,systems/PrimaryBackup.v,False,feedback,"In environment base_params : BaseParams one_node_params : OneNodeParams base_params pb_params : PrimaryBackupParams base_params h : name Unable to unify ""[]"" with ""match h with                            | Primary | _ => []                            end""."
+reachable_revert,systems/SeqNumCorrect.v,False,feedback,"Unable to apply lemma of type  ""forall (net : network) (tr : list (name * (input + list output))),   step_dup_star step_async_init net tr ->   exists tr' : list (name * (input + list output)),     step_async_star step_async_init (revertNetwork net) tr' /\     filterMap trace_non_empty_out tr = filterMap trace_non_empty_out tr'"" on hypothesis of type ""BaseParams""."
+step_failure_star_lb_step_reachable,core/LabeledNet.v,False,feedback,The reference failed was not found in the current environment.
+map_msg_update2,core/TotalMapSimulations.v,False,feedback,"Found no subterm matching ""tot_map_name_inv (tot_map_name ?M1816)"" in base_fst."
+collate_tot_map_update2_eq,core/TotalMapSimulations.v,False,feedback,The LHS of H_eq'     (fun src dst : name =>      map tot_map_msg        (collate name_eq_dec (tot_map_name to)           (update2 name_eq_dec              (fun src0 dst0 : name =>               map tot_map_msg                 (f (tot_map_name_inv src0) (tot_map_name_inv dst0)))              (tot_map_name from) (tot_map_name to)               (map tot_map_msg ms)) (tot_map_name_msgs l)           (tot_map_name_inv src) (tot_map_name_inv dst))) does not match any subterm of the goal
+outputs_1_app,systems/PrimaryBackup.v,True,,
+NOABT_singleton_primary,systems/PrimaryBackup.v,True,,
+step_ordered_failure_pt_ext_mapped_simulation_1,core/PartialExtendedMapSimulations.v,False,feedback,"In environment base_fst, base_snd : BaseParams multi_fst : MultiParams base_fst multi_snd : MultiParams base_snd name_map : MultiParamsNameTotalMap multi_fst multi_snd msg_map : MultiParamsMsgPartialMap multi_fst multi_snd multi_map : MultiParamsPartialExtendedMap multi_fst multi_snd name_map_bijective : MultiParamsNameTotalMapBijective name_map multi_map_congr : MultiParamsPartialExtendedMapCongruency name_map msg_map                     multi_map overlay_fst : NameOverlayParams multi_fst overlay_snd : NameOverlayParams multi_snd overlay_map_congr : NameOverlayParamsTotalMapCongruency overlay_fst                       overlay_snd name_map fail_msg_fst : FailMsgParams multi_fst fail_msg_snd : FailMsgParams multi_snd fail_msg_map_congr : FailMsgParamsPartialMapCongruency fail_msg_fst                        fail_msg_snd msg_map net : ordered_network failed' : list name ms : list msg d : data l : list (name * msg) from, to : name out : list output H_step : step_ordered_failure (failed', net)            (failed',            {|            onwPackets := collate name_eq_dec to                            (update2 name_eq_dec (onwPackets net) from to ms)                            l;            onwState := update name_eq_dec (onwState net) to d |})            (map2fst to (map inr out)) m : msg H3 : onwPackets net from to = m :: ms H4 : ~ In to failed' H5 : net_handlers to from m (onwState net to) = (out, d, l) m0 : msg H_map_msg : pt_map_msg m = Some m0 out' : list output d' : data l0 : list (name * msg) H_net_handlers : net_handlers (tot_map_name to) (tot_map_name from) m0                    (pt_ext_map_data (onwState net to) to) =                   (out', d', l0) The term ""m0"" has type ""msg"" while it is expected to have type  ""onwPackets ?net ?from ?to = ?m :: ?ms""."
+trace_mutual_exclusion'_extend_input_server,systems/LockServ.v,False,feedback,Wrong bullet -: No more subgoals.
+in_in_adj_map_pair,core/TotalMapSimulations.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+LockServ_nwnw_net_handlers_new_new,systems/LiveLockServ.v,True,,
+count_occ_filterMap_pt_map_msg_eq,core/PartialMapSimulations.v,False,feedback,"Unable to satisfy the following constraints: In environment: base_fst, base_snd : BaseParams multi_fst : MultiParams base_fst multi_snd : MultiParams base_snd base_map : BaseParamsPartialMap base_fst base_snd name_map : MultiParamsNameTotalMap multi_fst multi_snd msg_map : MultiParamsMsgPartialMap multi_fst multi_snd name_map_bijective : MultiParamsNameTotalMapBijective name_map multi_map_congr : MultiParamsPartialMapCongruency base_map name_map msg_map fail_fst : FailureParams multi_fst fail_snd : FailureParams multi_snd fail_map_congr : FailureParamsPartialMapCongruency fail_fst fail_snd base_map overlay_fst : NameOverlayParams multi_fst overlay_snd : NameOverlayParams multi_snd overlay_map_congr : NameOverlayParamsTotalMapCongruency overlay_fst                       overlay_snd name_map fail_msg_fst : FailMsgParams multi_fst fail_msg_snd : FailMsgParams multi_snd fail_msg_map_congr : FailMsgParamsPartialMapCongruency fail_msg_fst                        fail_msg_snd msg_map new_msg_fst : NewMsgParams multi_fst new_msg_snd : NewMsgParams multi_snd new_msg_map_congr : NewMsgParamsPartialMapCongruency new_msg_fst new_msg_snd                       msg_map pt_map_msg_injective : forall m0 m1 m : msg,                        pt_map_msg m0 = Some m ->                        pt_map_msg m1 = Some m -> m0 = m1 m' : msg m0 : msg m : msg H_m0 : pt_map_msg m0 = Some m H_eq : Some m = Some m' H0 : m = m'  ?B1 : ""BaseParams""  ?P1 : ""MultiParams ?B1""  ?MultiParamsMsgPartialMap : ""MultiParamsMsgPartialMap multi_snd ?P1"""
+trace_mutex'_no_out_extend,systems/LiveLockServ.v,False,feedback,The reference c0 was not found in the current environment.
+reachable_sane,systems/SeqNumCorrect.v,False,add_err,Syntax error: '<-' or '->' or [constr_with_bindings_arg] expected after 'apply' (in [tactic:simple_tactic]).
+last_holder_unlock_none,systems/LockServ.v,True,,
+inputs_1_singleton,systems/PrimaryBackup.v,True,,
+locks_correct_locked_sent_lock,systems/LockServ.v,True,,
+inputs_1_app,systems/PrimaryBackup.v,False,feedback,Wrong bullet -: No more subgoals.
+adjacent_in_in_msg,core/TotalMapSimulations.v,False,feedback,No matching clauses for match.
+empty_o,lib/FMapVeryWeak.v,True,,
+locks_correct_locked_at_head_preserved,systems/LockServ.v,True,,
+locks_correct_unlock_at_head_preserved,systems/LockServ.v,False,feedback,Wrong bullet -: Current bullet - is not finished.
+PB_net_defn',systems/PrimaryBackup.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+inputs_m_app_inr_singleton,systems/PrimaryBackup.v,True,,
+strong_fairness_invar,core/LabeledNet.v,False,feedback,"In environment A : Type L : Type trace : Type step : lb_step_relation e : event silent : L s : infseq event H : strong_fairness step silent (Cons e s) l : L Hl : l <> silent Hinf : inf_enabled step l s Unable to unify ""strong_fairness step silent (Cons e s)"" with  ""inf_occurred l s""."
+Locked_enables_MsgLocked,systems/LiveLockServ.v,True,,
+inputs_m_app,systems/PrimaryBackup.v,False,feedback,"Found no subterm matching ""?M1606 ++ []"" in the current goal."
+mutual_exclusion_invariant,systems/LiveLockServ.v,True,,
+network_invariant_init,systems/PrimaryBackup.v,False,add_err,Syntax error: illegal begin of vernac.
+NOABT_tail,systems/PrimaryBackup.v,True,,
+mgv_ghost_invariant_lower,core/GhostSimulations.v,True,,
+pt_map_odnet_tot_map_label_event_inf_often_occurred,core/PartialMapExecutionSimulations.v,True,,
+revertNetwork_packets,systems/SeqNumCorrect.v,False,feedback,"Found no subterm matching ""nwPackets net"" in the current goal."
+ClientNetHandler_lbcases,systems/LiveLockServ.v,True,,
+last_holder'_no_out_inv,systems/LockServ.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+step_ordered_dynamic_failure_tot_mapped_simulation_star_1,core/TotalMapSimulations.v,False,feedback,The LHS of tot_init_handlers_fun_eq     init_handlers does not match any subterm of the goal
+inc_in_flight_to_backup_app,systems/Counter.v,True,,
+head_grant_state_unlock,systems/LiveLockServ.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+ghost_invariant_lower,core/GhostSimulations.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+outputs_m_inl_read_singleton,systems/PrimaryBackup.v,False,feedback,"In environment base_params : BaseParams one_node_params : OneNodeParams base_params pb_params : PrimaryBackupParams base_params h : name Unable to unify ""[]"" with ""match h with                            | Primary | _ => []                            end""."
+inc_in_flight_to_backup_cons_primary_dst,systems/Counter.v,False,feedback,Omega can't solve this system
+held_eventually_InputUnlock,systems/LiveLockServ.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+adjacent_to_symmetric,core/NameOverlay.v,False,feedback,The reference Fin.eq_to_nat was not found in the current environment.
+deserialize_serialize_onet_id,systems/SerializedMsgParamsCorrect.v,False,feedback,all matches of The LHS of H     (map (fun v : msg => serialize_top (serialize v)) _) are equal to the RHS
+pt_map_onet_hd_step_ordered_failure_star,core/PartialMapExecutionSimulations.v,False,feedback,The reference RTStep was not found in the current environment.
+unlock_in_flight_all_clients_false,systems/LockServ.v,False,feedback,Unexpected name (at most 2 introduction patterns were expected in the branch).
+root_unique,core/NameOverlay.v,False,feedback,The reference fin_to_nat_inj was not found in the current environment.
+dup_drop_swap,core/DupDropReordering.v,False,feedback,"In environment A : Type A_eq_dec : forall x y : A, {x = y} + {x <> y} l : list A x, y : A Unable to unify ""dup_drop_step ([y] ++ x :: y :: l) ([y] ++ y :: l)"" with  ""dup_drop_step (y :: x :: y :: l) (y :: x :: l)""."
+step_async_pt_ext_mapped_simulation_1,core/PartialExtendedMapSimulations.v,False,feedback,The reference h was not found in the current environment.
+trace_inputs_app,systems/Counter.v,True,,
+MsgLock_in_queue_or_Locked,systems/LiveLockServ.v,False,feedback,No matching clauses for match.
+pt_map_odnet_hd_step_ordered_dynamic_failure_star_always,core/PartialMapExecutionSimulations.v,True,,
+inputs_m_on_nil,systems/PrimaryBackup.v,True,,
+weak_fairness_extensional,core/LabeledNet.v,True,,
+ZOOOPST_singleton_inl,systems/PrimaryBackup.v,False,feedback,(in proof ZOOOPST_singleton_inl): Attempt to save an incomplete proof
+step_ordered_dynamic_failure_serialize_simulation_star,systems/SerializedMsgParamsCorrect.v,False,feedback,At iteration 2: The LHS of serialize_odnet_tot_map_odnet     (serialize_odnet _) does not match any subterm of the goal
+outputs_m_read_response_singleton,systems/PrimaryBackup.v,False,add_err,Syntax error: illegal begin of vernac.
+map_tot_map_trace_eq,core/TotalMapSimulations.v,False,feedback,The LHS of IH     (map tot_map_trace (map2fst _ (map inr out))) does not match any subterm of the goal
+transformer,systems/PrimaryBackup.v,False,feedback,Unable to find an instance for the variable st.
+InputLock_Lock,systems/LiveLockServ.v,False,feedback,No matching clauses for match.
+pt_map_in_snd,core/PartialMapSimulations.v,False,feedback,"In environment base_fst, base_snd : BaseParams multi_fst : MultiParams base_fst multi_snd : MultiParams base_snd base_map : BaseParamsPartialMap base_fst base_snd name_map : MultiParamsNameTotalMap multi_fst multi_snd msg_map : MultiParamsMsgPartialMap multi_fst multi_snd name_map_bijective : MultiParamsNameTotalMapBijective name_map multi_map_congr : MultiParamsPartialMapCongruency base_map name_map msg_map fail_fst : FailureParams multi_fst fail_snd : FailureParams multi_snd fail_map_congr : FailureParamsPartialMapCongruency fail_fst fail_snd base_map overlay_fst : NameOverlayParams multi_fst overlay_snd : NameOverlayParams multi_snd m : msg m' : msg h : name ns : list name nm : name * msg H_eq : pt_map_msg m' = Some m H_in : In nm          (filterMap pt_map_name_msg             (map2snd m' (filter_rel adjacent_to_dec h ns))) The term ""m'"" has type ""msg"" while it is expected to have type  ""list (name * msg)""."
+messages_trigger_labels,systems/LiveLockServ.v,False,feedback,Cannot coerce weak_until to an evaluable reference.
+NOABT_nil,systems/PrimaryBackup.v,True,,
+empty_queue_all_clients_false,systems/LiveLockServ.v,False,feedback,"In environment num_Clients : nat sigma : name -> data c : Client_index H_held : held (sigma (Client c)) = true H_locks_correct : true = true ->                   exists t : list Client_index, queue (sigma Server) = c :: t H_queue_empty : queue (sigma Server) = [] The term ""H_held"" has type ""held (sigma (Client c)) = true"" while it is expected to have type ""true = true""."
+true_in_reachable_elim,core/Net.v,False,feedback,(in proof true_in_reachable_elim): Attempt to save an incomplete proof
+eventually_Unlock,systems/LiveLockServ.v,False,feedback,"In environment num_Clients, n : nat c : Client_index s : infseq (event network label (name * (input + list output))) Hinit : event_step_star step_async step_async_init (hd s) Hexec : lb_step_execution lb_step_async s Hfair : weak_fairness lb_step_async label_silent s HNth : Nth (queue (nwState (evt_a (hd s)) Server)) (S n) c The term ""c"" has type ""fin num_Clients"" while it is expected to have type  ""name""."
+simulation,systems/PrimaryBackup.v,False,feedback,"In environment base_params : BaseParams one_node_params : OneNodeParams base_params pb_params : PrimaryBackupParams base_params x : network Unable to unify ""refl_trans_1n_trace ?M1621 ?M1622 ?M1624 (?M1625 ++ ?M1626)"" with ""refl_trans_1n_trace step_1 init (revert_state x) []""."
+step_star_lb_step_execution,core/LabeledNet.v,False,feedback,s is used in hypothesis c.
+InputLock_eventually_MsgLock,systems/LiveLockServ.v,False,feedback,"In environment num_Clients : nat c : Client_index s : infseq (event network label (name * (input + list output))) H_exec : lb_step_execution lb_step_async s H_fair : weak_fairness lb_step_async label_silent s H_now : now (occurred (InputLock c)) s s0 : infseq ?T The term ""Client c"" has type ""Name"" while it is expected to have type ""name""."
+true_in_reachable_transform,systems/SeqNumCorrect.v,True,,
+unlock_in_flight_all_clients_false,systems/LiveLockServ.v,False,feedback,"In environment num_Clients : nat sigma : name -> data p : packet H_unlock : pBody p = Unlock c' : Client_index H_src : pSrc p = Client c' t : list Client_index H_queue : queue (sigma Server) = c' :: t H_held_c' : held (sigma (Client c')) = false H_held : false = false H_locks_correct : false = true ->                   exists t0 : list Client_index, c' :: t = c' :: t0 c : Client_index H_held_c : held (sigma (Client c)) = true The term ""c"" has type ""Client_index"" while it is expected to have type  ""false = true""."
+processPackets_nums_unique,systems/SeqNumCorrect.v,False,feedback,Omega can't solve this system
+tot_map_trace_occ_in_inv,core/TotalMapSimulations.v,False,feedback,tr is already used.
+mgv_map_id_tr,core/GhostSimulations.v,True,,
+ghost_simulation_2,core/GhostSimulations.v,False,feedback,"Unable to find an instance for the variables fail_fst, mnet, mfailed, mfailed', mout."
+pt_ext_map_update_eq_some,core/PartialExtendedMapSimulations.v,False,feedback,The LHS of H_map     (pt_map_packet p) does not match any subterm of the goal
+dup_drop_in,core/DupDropReordering.v,False,feedback,Tactic failure: tauto failed.
+remove_eq_o,lib/FMapVeryWeak.v,True,,
+ZOOOPST_app,systems/PrimaryBackup.v,True,,
+tot_map_update_packet_eq,core/TotalMapSimulations.v,False,feedback,"In environment base_fst, base_snd : BaseParams multi_fst : MultiParams base_fst multi_snd : MultiParams base_snd base_map : BaseParamsTotalMap base_fst base_snd name_map : MultiParamsNameTotalMap multi_fst multi_snd msg_map : MultiParamsMsgTotalMap multi_fst multi_snd name_map_bijective : MultiParamsNameTotalMapBijective name_map multi_map_congr : MultiParamsTotalMapCongruency base_map name_map msg_map f : name -> data p : packet d : data Unable to unify  ""(fun n : name =>    tot_map_data      (update name_eq_dec ?M1602 ?M1604 ?M1603 (tot_map_name_inv n))) =   update name_eq_dec     (fun n : name => tot_map_data (?M1602 (tot_map_name_inv n)))     (tot_map_name ?M1604) (tot_map_data ?M1603)"" with  ""(fun n : name =>    tot_map_data      (update name_eq_dec f (let (_, pDst, _) := p in pDst) d         (tot_map_name_inv n))) =   update name_eq_dec (fun n : name => tot_map_data (f (tot_map_name_inv n)))     (let (_, pDst, _) :=        match p with        | {| pSrc := src; pDst := dst; pBody := m |} =>            {|            pSrc := tot_map_name src;            pDst := tot_map_name dst;            pBody := tot_map_msg m |}        end in      pDst) (tot_map_data d)""."
+locks_correct_unlock_net_handlers_old,systems/LiveLockServ.v,True,,
+step_ordered_dynamic_failure_tot_mapped_simulation_1,core/TotalMapSimulations.v,False,feedback,The reference to was not found in the current environment.
+step_async_star_lb_step_execution,core/LabeledNet.v,True,,
+processInputs_nil_defn,systems/PrimaryBackup.v,True,,
+LockServ_nwnw_net_handlers_new_new,systems/LockServ.v,False,feedback,Wrong bullet -: No more subgoals.
+Unlock_enables_MsgUnlock,systems/LiveLockServ.v,True,,
+not_in_failed_in_exclude,core/TotalMapSimulations.v,False,feedback,ns is used in hypothesis H_cn.
+lb_step_failure_pt_mapped_simulation_1_non_silent,core/PartialMapExecutionSimulations.v,False,feedback,The reference lb_step_failure_pt_mapped_simulation_1 was not found in the current environment.
+ServerNetHandler_cases,systems/LiveLockServ.v,False,feedback,Not an inductive goal with 2 constructors.
+strong_fairness_extensional,core/LabeledNet.v,False,feedback,The reference inf_often_extensional was not found in the current environment.
+trace_mutual_exclusion'_extend_input_server,systems/LiveLockServ.v,False,feedback,No such goal.
+step_ordered_dynamic_failure_serialize_simulation,systems/SerializedMsgParamsCorrect.v,True,,
+pt_map_in_in,core/PartialMapSimulations.v,False,feedback,"In environment base_fst, base_snd : BaseParams multi_fst : MultiParams base_fst multi_snd : MultiParams base_snd base_map : BaseParamsPartialMap base_fst base_snd name_map : MultiParamsNameTotalMap multi_fst multi_snd msg_map : MultiParamsMsgPartialMap multi_fst multi_snd name_map_bijective : MultiParamsNameTotalMapBijective name_map multi_map_congr : MultiParamsPartialMapCongruency base_map name_map msg_map fail_fst : FailureParams multi_fst fail_snd : FailureParams multi_snd fail_map_congr : FailureParamsPartialMapCongruency fail_fst fail_snd base_map m : msg m0 : msg n : name l : list (name * msg) H_in : forall nm : name * msg, In nm l -> snd nm = m H_not_in : ~ In (n, m) l H_in_map : In (tot_map_name n, m0) (filterMap pt_map_name_msg l) The term ""m"" has type ""msg"" while it is expected to have type  ""list (name * msg)""."
+trace_mutex'_locked_extend,systems/LiveLockServ.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+trace_mutex'_no_out_extend,systems/LockServ.v,False,feedback,The reference n1 was not found in the current environment.
+not_in_failed_not_in,core/TotalMapSimulations.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+last_holder'_input_inv_server,systems/LiveLockServ.v,True,,
+ordered_dynamic_state_not_initialized_not_failed,core/DynamicNetLemmas.v,False,feedback,The LHS of H_init     x does not match any subterm of the goal
+processPackets_NoDup,systems/SeqNumCorrect.v,False,feedback,No such hypothesis: Heqp0
+ClientNetHandler_cases,systems/LiveLockServ.v,False,feedback,Tactic failure: Classical tauto failed.
+nodup,systems/LockServ.v,False,feedback,Not an inductive product.
+RT1n_step,core/Net.v,False,feedback,The reference y was not found in the current environment.
+locks_correct_net_handlers,systems/LockServ.v,False,add_err,Syntax error: illegal begin of vernac.
+step_ordered_failure_pt_ext_mapped_simulation_star_1,core/PartialExtendedMapSimulations.v,False,feedback,The LHS of H_init     x does not match any subterm of the goal
+locks_correct_unlock_true_to_false,systems/LiveLockServ.v,False,feedback,No such assumption.
+input_handlers_InputHandlers,systems/Counter.v,True,,
+ordered_dynamic_uninitialized_state,core/DynamicNetLemmas.v,False,feedback,No applicable tactic.
+lb_step_ordered_dynamic_failure_tot_mapped_simulation_1,core/TotalMapExecutionSimulations.v,False,feedback,"In environment base_fst, base_snd : BaseParams labeled_multi_fst : LabeledMultiParams base_fst labeled_multi_snd : LabeledMultiParams base_snd base_map : BaseParamsTotalMap base_fst base_snd name_map : MultiParamsNameTotalMap unlabeled_multi_params              unlabeled_multi_params msg_map : MultiParamsMsgTotalMap unlabeled_multi_params             unlabeled_multi_params label_map : LabeledMultiParamsLabelTotalMap labeled_multi_fst               labeled_multi_snd name_map_bijective : MultiParamsNameTotalMapBijective name_map multi_map_congr : MultiParamsTotalMapCongruency base_map name_map msg_map multi_map_lb_congr : LabeledMultiParamsTotalMapCongruency base_map name_map                        msg_map label_map tot_map_label_injective : forall l l' : label,                           tot_map_label l = tot_map_label l' -> l = l' fail_fst : FailureParams unlabeled_multi_params fail_snd : FailureParams unlabeled_multi_params fail_map_congr : FailureParamsTotalMapCongruency fail_fst fail_snd base_map overlay_fst : NameOverlayParams unlabeled_multi_params overlay_snd : NameOverlayParams unlabeled_multi_params overlay_map_congr : NameOverlayParamsTotalMapCongruency overlay_fst                       overlay_snd name_map fail_msg_fst : FailMsgParams unlabeled_multi_params fail_msg_snd : FailMsgParams unlabeled_multi_params fail_msg_map_congr : FailMsgParamsTotalMapCongruency fail_msg_fst                        fail_msg_snd msg_map net : ordered_dynamic_network failed' : list lb_name lb : label out : list output to : lb_name ms : list lb_msg d' : data l : list (lb_name * lb_msg) from : lb_name m : lb_msg d : data H3 : ~ In to failed' H4 : In to (odnwNodes net) H5 : odnwState net to = Some d H6 : odnwPackets net from to = m :: ms H8 : lb_net_handlers to from m d = (lb, out, d', l) The term ""tot_map_name_msgs l"" has type ""list (name * msg)"" while it is expected to have type ""data""."
+last_holder_some_unlock_inv,systems/LockServ.v,False,feedback,Wrong bullet -: No more subgoals.
+pbj_NOABT,systems/PrimaryBackup.v,False,feedback,Wrong bullet +: Current bullet + is not finished.
+locks_correct_update_true,systems/LockServ.v,False,feedback,"In environment num_Clients : nat sigma : Name -> Data c : Client_index st' : Data H_held : held st' = true H_at_head : at_head_of_queue sigma c H_locks_correct : forall n : Client_index,                   held (sigma (Client n)) = true ->                   exists t : list Client_index, queue (sigma Server) = n :: t n : Client_index H_held_n : held st' = true H_eq : Client c = Client n Unable to unify ""at_head_of_queue sigma c"" with  ""exists t : list Client_index, queue (sigma Server) = n :: t""."
+refl_trans_1n_trace_n1_ind,core/Net.v,False,feedback,The reference refl_trans_1n_trace_ind_n1 was not found in the current environment.
+ordered_dynamic_nodes_no_dup,core/DynamicNetLemmas.v,False,feedback,No applicable tactic.
+serialize_odnet_tot_map_odnet,systems/SerializedMsgParamsCorrect.v,False,feedback,"In environment orig_base_params : BaseParams orig_multi_params : MultiParams orig_base_params orig_failure_params : FailureParams orig_multi_params orig_name_overlay_params : NameOverlayParams orig_multi_params orig_fail_msg_params : FailMsgParams orig_multi_params orig_new_msg_params : NewMsgParams orig_multi_params orig_msg_serializer : Serializer msg net : ordered_dynamic_network Unable to unify  ""map tot_map_name (let (odnwNodes, _, _) := net in odnwNodes)"" with ""let (odnwNodes, _, _) := net in odnwNodes""."
+locks_correct_locked_sent_unlock,systems/LiveLockServ.v,True,,
+deserialize_serialize_net_id,systems/SerializedMsgParamsCorrect.v,False,feedback,"In environment orig_base_params : BaseParams orig_multi_params : MultiParams orig_base_params orig_failure_params : FailureParams orig_multi_params orig_name_overlay_params : NameOverlayParams orig_multi_params orig_fail_msg_params : FailMsgParams orig_multi_params orig_new_msg_params : NewMsgParams orig_multi_params orig_msg_serializer : Serializer msg net : network p : packet The term ""serialize_top (serialize (pBody p))"" has type  ""IOStreamWriter.wire"" while it is expected to have type  ""msg""."
+pt_map_onet_tot_map_labeled_event_inf_often_enabled,core/PartialMapExecutionSimulations.v,False,timeout,Proof timed out
+step_ordered_dynamic_failure_tot_one_mapped_simulation_1,core/SingleSimulations.v,False,feedback,No applicable tactic.
+correspond_preserved_primary_same_no_outputs,systems/PrimaryBackup.v,False,feedback,H1 is already used.
+locks_correct_unlock_input_handlers_new,systems/LiveLockServ.v,False,feedback,No such goal.
+step_ordered_failure_pt_mapped_simulation_star_1,core/PartialMapSimulations.v,False,feedback,Cannot apply lemma H_trans
+tot_map_onet_label_event_inf_often_occurred,core/TotalMapExecutionSimulations.v,True,,
+mgv_ghost_invariant_lift,core/GhostSimulations.v,True,,
+true_in_reachable_reqs,core/Net.v,False,feedback,No such assumption.
+outputs_m_inr_primary_singleton,systems/PrimaryBackup.v,False,add_err,Syntax error: illegal begin of vernac.
+pt_map_odnet_deserialize_odnet,systems/SerializedMsgParamsCorrect.v,False,feedback,No applicable tactic.
+pt_map_onet_tot_map_labeled_event_state_continuously_enabled,core/PartialMapExecutionSimulations.v,False,feedback,The reference continuously_map_conv_ext was not found in the current environment.
+LockServ_nwnw_input_handlers_old_new,systems/LockServ.v,False,feedback,(in proof LockServ_nwnw_input_handlers_old_new): Attempt to save an incomplete proof
+step_ordered_failure_serialize_simulation_star,systems/SerializedMsgParamsCorrect.v,True,,
+clients_only_move_up_in_queue,systems/LiveLockServ.v,False,feedback,"Unable to apply lemma of type  ""forall (src : Name) (m : Msg) (st : Data) (l : Label)      (out : list Output) (st' : Data) (ms : list (Name * Msg)),   ServerNetHandler src m st = (l, out, st', ms) ->   out = [] /\   ((exists c : Client_index,       src = Client c /\       m = Lock /\       l = MsgLock c /\       queue st' = queue st ++ [c] /\       (queue st = [] /\ ms = [(Client c, Locked)] \/        queue st <> [] /\ ms = [])) \/    m = Unlock /\    l = MsgUnlock /\    queue st' = List.tl (queue st) /\    (queue st' = [] /\ ms = [] \/     (exists (next : Client_index) (t : list Client_index),        queue st' = next :: t /\ ms = [(Client next, Locked)])) \/    ms = [] /\ st' = st /\ l = Nop)"" on hypothesis of type  ""nat""."
+net_handlers_NetHandler,systems/Counter.v,False,feedback,(in proof net_handlers_NetHandler): Attempt to save an incomplete proof
+locks_correct_update_false,systems/LockServ.v,False,feedback,"In environment num_Clients : nat sigma : name -> data st' : Data x, n : Client_index H_correct : held (sigma (Client n)) = true ->             exists t : list Client_index, queue (sigma Server) = n :: t H_held : held st' = false H_held_n : held (update Name_eq_dec sigma (Client x) st' (Client n)) = true The term ""Client n"" has type ""Name"" while it is expected to have type ""name""."
+input_eq_dec,systems/VarD.v,True,,
+dup_drop_reorder,core/DupDropReordering.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+inputs_eq_outputs_plus_inc_plus_ack,systems/Counter.v,False,feedback,Nothing to rewrite.
+ZOOOPST_tail,systems/PrimaryBackup.v,True,,
+step_1_star_trace_correct',systems/VarD.v,False,feedback,No matching clauses for match.
+step_async_tot_mapped_simulation_star_1,core/TotalMapSimulations.v,False,feedback,"In environment base_fst, base_snd : BaseParams multi_fst : MultiParams base_fst multi_snd : MultiParams base_snd base_map : BaseParamsTotalMap base_fst base_snd name_map : MultiParamsNameTotalMap multi_fst multi_snd msg_map : MultiParamsMsgTotalMap multi_fst multi_snd name_map_bijective : MultiParamsNameTotalMapBijective name_map multi_map_congr : MultiParamsTotalMapCongruency base_map name_map msg_map net : network tr : list (name * (input + list output)) H_step : step_async_star step_async_init net tr Unable to unify ""?M1605 = ?M1606"" with  ""{|   nwPackets := [];   nwState := fun n : name =>              tot_map_data (init_handlers (tot_map_name_inv n)) |} =   {| nwPackets := []; nwState := init_handlers |}""."
+last_holder_unlock_none,systems/LiveLockServ.v,True,,
+locks_correct_implies_mutex,systems/LockServ.v,False,feedback,"Illegal application (Non-functional construction):  The expression ""H_locks_correct"" of type  ""exists t : list Client_index, queue (sigma Server) = m :: t"" cannot be applied to the term  ""n"" : ""Client_index"""
+outputs_m_on_nil,systems/PrimaryBackup.v,True,,
+tot_map_odnet_label_event_inf_often_occurred,core/TotalMapExecutionSimulations.v,True,,
+tot_map_odnet_label_event_inf_often_occurred_conv,core/TotalMapExecutionSimulations.v,True,,
+add_neq_o,lib/FMapVeryWeak.v,True,,
+nw_nw_distinct_pairs_and_elim,core/StatePacketPacketDecomposition.v,False,add_err,Syntax error: illegal begin of vernac.
+last_holder'_unlock_none,systems/LockServ.v,False,feedback,Wrong bullet -: No more subgoals.
+trace_correct'_trace_correct,systems/VarD.v,False,feedback,Wrong bullet +: Current bullet + is not finished.
+outputs_m_inr_nil,systems/PrimaryBackup.v,False,feedback,"In environment base_params : BaseParams one_node_params : OneNodeParams base_params pb_params : PrimaryBackupParams base_params h : name l : list (name * (input + list output)) Unable to unify ""outputs_m l"" with  ""match h with   | Primary | _ => outputs_m l   end""."
+step_async_pt_mapped_simulation_star_1,core/PartialMapSimulations.v,False,feedback,The reference refl_trans_1n_trace_n1 was not found in the current environment.
+locks_correct_locked_input_handlers_old,systems/LockServ.v,True,,
+transformed_correctness,systems/LockServSeqNum.v,False,feedback,The reference SeqNumCorrect.lock_serv_correctness was not found in the current environment.
+step_ordered_failure_star_lb_step_execution,core/LabeledNet.v,True,,
+locks_correct_locked_net_handlers_old,systems/LockServ.v,True,,
+step_1_star_trace_correct,systems/VarD.v,False,feedback,Unable to find an instance for the variable st'.
+inputs_ge_outputs,systems/Counter.v,True,,
+inputs_m_primary_inl,systems/PrimaryBackup.v,False,add_err,Syntax error: illegal begin of vernac.
+refl_trans_1n_n1_trace,core/Net.v,True,,
+step_async_deserialized_simulation_star,systems/SerializedMsgParamsCorrect.v,False,feedback,"In environment orig_base_params : BaseParams orig_multi_params : MultiParams orig_base_params orig_failure_params : FailureParams orig_multi_params orig_name_overlay_params : NameOverlayParams orig_multi_params orig_fail_msg_params : FailMsgParams orig_multi_params orig_new_msg_params : NewMsgParams orig_multi_params orig_msg_serializer : Serializer msg net : network tr : list (name * (input + list output)) H_st : step_async_star step_async_init net tr Unable to unify  ""exists tr' : list (name * (input + list output)),     step_async_star step_async_init (pt_map_net ?M1725) tr' /\     filterMap trace_non_empty_out (filterMap pt_map_trace_occ ?M1726) =     filterMap trace_non_empty_out tr'"" with  ""refl_trans_1n_trace step_async step_async_init (pt_map_net net)     (filterMap pt_map_trace_occ (filterMap pt_map_trace_occ tr))""."
+output_eq_dec,systems/VarD.v,False,feedback,The reference v0 was not found in the current environment.
+InputHandler_inc_in_flight_to_backup_preserved,systems/Counter.v,False,feedback,No matching clauses for match.
+step_failure_star_lb_step_execution,core/LabeledNet.v,True,,
+tot_map_trace_occ_inv,core/TotalMapSimulations.v,False,feedback,The LHS of map_app     (map _ (_ ++ _)) does not match any subterm of the goal
+Nth_something_at_head,systems/LiveLockServ.v,True,,
+step_ordered_dynamic_failure_star_lb_step_reachable,core/LabeledNet.v,False,feedback,The reference H1 was not found in the current environment.
+Unlock_delivered_MsgUnlock,systems/LiveLockServ.v,True,,
+ghost_simulation_1,core/GhostSimulations.v,False,feedback,The reference simulation_step_failure was not found in the current environment.
+message_labels_eventually_occur,systems/LiveLockServ.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+ServerNetHandler_lbcases,systems/LiveLockServ.v,True,,
+nodup_to_map_name,core/TotalMapSimulations.v,False,feedback,x is already used.
+last_holder'_locked_some_eq,systems/LiveLockServ.v,True,,
+mgv_ghost_simulation_2,core/GhostSimulations.v,True,,
+nwnw_lock,systems/LockServ.v,True,,
+locks_correct_locked_net_handlers_old,systems/LiveLockServ.v,True,,
+step_ordered_failure_star_lb_step_reachable,core/LabeledNet.v,False,add_err,"Syntax error: 'as' or 'in' or '|' or ',' or ')' expected after [constr:operconstr level 200] (in [constr:operconstr])."
+NetHandler_inc_in_flight_to_backup_preserved,systems/Counter.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+NOABT_contra,systems/PrimaryBackup.v,False,feedback,The reference d was not found in the current environment.
+step_ordered_pt_mapped_simulation_star_1,core/PartialMapSimulations.v,False,feedback,Cannot apply lemma H_trans
+held_eventually_Unlock,systems/LiveLockServ.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+inductive_simulation,systems/PrimaryBackup.v,False,add_err,Syntax error: illegal begin of vernac.
+pt_map_odnet_tot_map_labeled_event_inf_often_enabled,core/PartialMapExecutionSimulations.v,True,,
+decomposition_reachable_nw_invariant,systems/LockServ.v,False,feedback,The reference decomposition_reachable_nw_invariant' was not found in the current environment.
+at_head_of_queue_intro,systems/LiveLockServ.v,True,,
+step_async_serialize_simulation_star,systems/SerializedMsgParamsCorrect.v,False,feedback,The reference step_async_star_tot_mapped_simulation_1 was not found in the current environment.
+locks_correct_unlock_input_handlers_old,systems/LiveLockServ.v,False,feedback,"Unable to apply lemma of type ""Name -> Data"" on hypothesis of type ""nat""."
+index_inj,lib/FMapVeryWeak.v,False,feedback,"Unable to apply lemma of type  ""forall (l l' : list bool) (p p' : positive),   Datatypes.length l = Datatypes.length l' ->   positive_of_digits l p = positive_of_digits l' p' -> l = l' /\ p = p'"" on hypothesis of type ""ascii""."
+last_holder'_input_inv,systems/LockServ.v,False,feedback,congruence failed.
+step_ordered_failure_tot_mapped_simulation_1,core/TotalMapSimulations.v,False,feedback,The reference p was not found in the current environment.
+step_1_singleton_inversion,systems/PrimaryBackup.v,False,feedback,Wrong bullet +: No more subgoals.
+processPackets_dedup,systems/SeqNumCorrect.v,False,feedback,The reference NoDup_dedup_app was not found in the current environment.
+step_ordered_dynamic_failure_tot_one_mapped_simulation_1_init,core/SingleSimulations.v,False,feedback,The reference H_star was not found in the current environment.
+remove_In_elim,core/DupDropReordering.v,False,feedback,Tactic failure: tauto failed.
+nodup_tot_map,core/TotalMapSimulations.v,False,feedback,"In environment base_fst, base_snd : BaseParams multi_fst : MultiParams base_fst multi_snd : MultiParams base_snd base_map : BaseParamsTotalMap base_fst base_snd name_map : MultiParamsNameTotalMap multi_fst multi_snd msg_map : MultiParamsMsgTotalMap multi_fst multi_snd name_map_bijective : MultiParamsNameTotalMapBijective name_map multi_map_congr : MultiParamsTotalMapCongruency base_map name_map msg_map tot_map_output_injective : forall o o' : output,                            tot_map_output o = tot_map_output o' -> o = o' fail_fst : FailureParams multi_fst fail_snd : FailureParams multi_snd fail_map_congr : FailureParamsTotalMapCongruency fail_fst fail_snd base_map overlay_fst : NameOverlayParams multi_fst overlay_snd : NameOverlayParams multi_snd overlay_map_congr : NameOverlayParamsTotalMapCongruency overlay_fst                       overlay_snd name_map m : msg n : name m' : msg nms : list (name * msg) H_eq : forall nm : name * msg, In nm ((n, m') :: nms) -> snd nm = m H_nin : ~ In (n, m') nms H_nd : NoDup nms IH : (forall nm : name * msg, In nm nms -> snd nm = m) ->      NoDup        (map           (fun nm : name * msg =>            (tot_map_name (fst nm), tot_map_msg (snd nm))) nms) n' : name m'' : msg H_eq' : (tot_map_name n', tot_map_msg m'') = (tot_map_name n, tot_map_msg m') H_in : In (n', m'') nms H0 : tot_map_name n' = tot_map_name n H1 : tot_map_msg m'' = tot_map_msg m' Unable to unify ""?M1672 = ?M1673"" with  ""(fix In (a : name * msg) (l : list (name * msg)) {struct l} : Prop :=      match l with      | [] => False      | b :: m => b = a \/ In a m      end) (n, m') nms""."
+InputUnlock_continuously_enabled,systems/LiveLockServ.v,False,feedback,"Found no subterm matching ""Cons ?M1605 ?M1606"" in the current goal."
+add_eq_o,lib/FMapVeryWeak.v,False,feedback,"In environment A : Type m : t A x, y : E.t e : A H : E.eq x y Unable to unify ""E.eq x y"" with ""X.index x = X.index y""."
+locks_correct_locked_input_handlers_old,systems/LiveLockServ.v,True,,
+at_head_of_nil,systems/LiveLockServ.v,True,,
+step_ordered_dynamic_star_lb_step_execution,core/LabeledNet.v,True,,
+step_failure_serialize_simulation,systems/SerializedMsgParamsCorrect.v,False,feedback,No applicable tactic.
+filterMap_pt_map_packet_map_eq,core/PartialMapSimulations.v,False,feedback,"In environment base_fst, base_snd : BaseParams multi_fst : MultiParams base_fst multi_snd : MultiParams base_snd base_map : BaseParamsPartialMap base_fst base_snd name_map : MultiParamsNameTotalMap multi_fst multi_snd msg_map : MultiParamsMsgPartialMap multi_fst multi_snd name_map_bijective : MultiParamsNameTotalMapBijective name_map multi_map_congr : MultiParamsPartialMapCongruency base_map name_map msg_map n : name m : msg l : list (name * msg) IH : forall h : name,      filterMap pt_map_packet        (map           (fun m : name * msg =>            {| pSrc := h; pDst := fst m; pBody := snd m |}) l) =      map        (fun m : name * msg =>         {| pSrc := tot_map_name h; pDst := fst m; pBody := snd m |})        (filterMap pt_map_name_msg l) h : name m' : msg E : pt_map_msg m = Some m' Unable to unify  ""map     (fun m : name * msg =>      {| pSrc := tot_map_name h; pDst := fst m; pBody := snd m |})     match pt_map_name_msg (n, m) with     | Some y => y :: filterMap pt_map_name_msg l     | None => filterMap pt_map_name_msg l     end"" with  ""{| pSrc := tot_map_name h; pDst := tot_map_name n; pBody := m' |}   :: map        (fun m : name * msg =>         {| pSrc := tot_map_name h; pDst := fst m; pBody := snd m |})        (filterMap pt_map_name_msg l)""."
+locks_correct_init,systems/LockServ.v,True,,
+NOABT_cons,systems/PrimaryBackup.v,True,,
+ZOOOPST_nil,systems/PrimaryBackup.v,True,,
+locks_correct_locked_intro,systems/LockServ.v,True,,
+ZOOOPST_head,systems/PrimaryBackup.v,True,,
+nil_at_head_of_queue_preserved,systems/LockServ.v,True,,
+locks_correct_unlock_input_handlers_old,systems/LockServ.v,False,feedback,Wrong bullet +: Current bullet + is not finished.
+map_msg_fail_eq,core/TotalMapSimulations.v,False,feedback,"In environment base_fst, base_snd : BaseParams multi_fst : MultiParams base_fst multi_snd : MultiParams base_snd base_map : BaseParamsTotalMap base_fst base_snd name_map : MultiParamsNameTotalMap multi_fst multi_snd msg_map : MultiParamsMsgTotalMap multi_fst multi_snd name_map_bijective : MultiParamsNameTotalMapBijective name_map multi_map_congr : MultiParamsTotalMapCongruency base_map name_map msg_map tot_map_output_injective : forall o o' : output,                            tot_map_output o = tot_map_output o' -> o = o' fail_fst : FailureParams multi_fst fail_snd : FailureParams multi_snd fail_map_congr : FailureParamsTotalMapCongruency fail_fst fail_snd base_map overlay_fst : NameOverlayParams multi_fst overlay_snd : NameOverlayParams multi_snd overlay_map_congr : NameOverlayParamsTotalMapCongruency overlay_fst                       overlay_snd name_map fail_msg_fst : FailMsgParams multi_fst fail_msg_snd : FailMsgParams multi_snd fail_msg_map_congr : FailMsgParamsTotalMapCongruency fail_msg_fst                        fail_msg_snd msg_map Unable to unify ""NoDup ?M1604"" with  ""let (name, msg, _, _, nodes, _, _, _, _, _) := multi_fst in name""."
+correspond_reachable,systems/PrimaryBackup.v,False,feedback,"In environment base_params : BaseParams one_node_params : OneNodeParams base_params pb_params : PrimaryBackupParams base_params x : data tr_m : list (name * (PB_input + list PB_output)) Hinputs : [] = inputs_m tr_m net : network Hnet : step_async_star step_async_init net tr_m Unable to unify ""correspond init PB_init [] []"" with  ""correspond x (nwState net) [] tr_m""."
+held_until_Unlock,systems/LiveLockServ.v,False,feedback,"Unable to apply lemma of type  ""forall (T : Type) (J P : infseq T -> Prop) (s : infseq T),   weak_until J P s -> until J P s \/ always J s"" on hypothesis of type  ""held (nwState (evt_a (hd s)) (Client c)) = true""."
+nodup_perm_map_map_pair_perm,core/TotalMapSimulations.v,False,feedback,"In environment base_fst, base_snd : BaseParams multi_fst : MultiParams base_fst multi_snd : MultiParams base_snd base_map : BaseParamsTotalMap base_fst base_snd name_map : MultiParamsNameTotalMap multi_fst multi_snd msg_map : MultiParamsMsgTotalMap multi_fst multi_snd name_map_bijective : MultiParamsNameTotalMapBijective name_map multi_map_congr : MultiParamsTotalMapCongruency base_map name_map msg_map tot_map_output_injective : forall o o' : output,                            tot_map_output o = tot_map_output o' -> o = o' fail_fst : FailureParams multi_fst fail_snd : FailureParams multi_snd fail_map_congr : FailureParamsTotalMapCongruency fail_fst fail_snd base_map overlay_fst : NameOverlayParams multi_fst overlay_snd : NameOverlayParams multi_snd overlay_map_congr : NameOverlayParamsTotalMapCongruency overlay_fst                       overlay_snd name_map h : name m : msg failed, ns : list name ns' : list name Hnd : NoDup ns Hperm : Permutation (map tot_map_name ns) ns' H1 : forall n n' : name,      adjacent_to n n' <-> adjacent_to (tot_map_name n) (tot_map_name n') The term ""name_map_bijective"" has type  ""MultiParamsNameTotalMapBijective name_map"" while it is expected to have type ""name""."
+lifting_applied,systems/VarDPrimaryBackup.v,False,feedback,The reference trace_correct_lifting was not found in the current environment.
+step_ordered_dynamic_failure_pt_ext_mapped_simulation_1,core/PartialExtendedMapSimulations.v,False,feedback,The reference m was not found in the current environment.
+locks_correct_locked_sent_lock,systems/LiveLockServ.v,True,,
+clients_move_up_in_queue,systems/LiveLockServ.v,False,feedback,"In environment num_Clients, n : nat c : Client_index s : infseq (event network label (name * (input + list output))) Hstar : event_step_star step_async step_async_init (hd s) Hexec : lb_step_execution lb_step_async s Hfair : weak_fairness lb_step_async label_silent s HNth : Nth (queue (nwState (evt_a (hd s)) Server)) (S n) c x : event network label (name * (input + list output)) s0 : infseq (event network label (name * (input + list output))) H : (lb_step_execution lb_step_async /\_      weak_fairness lb_step_async label_silent) (Cons x s0) Unable to unify  ""match ?M1657 with   | Cons _ s =>       (fun s0 : infseq (event network label (name * (input + list output)))        =>        Nth (queue (nwState (evt_a (hd s0)) Server)) ?M1655 ?M1656 /\        (?M1655 = 0 ->         In {| pSrc := Server; pDst := Client ?M1656; pBody := Locked |}           (nwPackets (evt_a (hd s0))))) s   end"" with  ""lb_step_execution lb_step_async s0 /\   weak_fairness lb_step_async label_silent s0""."
+trace_state_correct_trace_correct,systems/VarD.v,False,feedback,"Found no subterm matching ""inputs_with_key (?M2726 ++ [(?M2728, ?M2729)])                              ?M2727"" in the current goal."
+positive_of_digits_inj,lib/FMapVeryWeak.v,False,feedback,(in proof positive_of_digits_inj): Attempt to save an incomplete proof
+msg_in_map,core/TotalMapSimulations.v,False,feedback,assumptions should be named explicitly
+cons_is_app,systems/Counter.v,True,,
+eventually_MsgUnlock,systems/LiveLockServ.v,False,feedback,"In environment num_Clients, n : nat c : Client_index s : infseq (event network label (name * (input + list output))) H : event_step_star step_async step_async_init (hd s) H0 : lb_step_execution lb_step_async s H1 : weak_fairness lb_step_async label_silent s H2 : Nth (queue (nwState (evt_a (hd s)) Server)) (S n) c c' : name H3 : eventually        (fun s : infseq (event network label (name * (input + list output)))         =>         In {| pSrc := c'; pDst := Server; pBody := Unlock |}           (nwPackets (evt_a (hd s)))) s Unable to unify ""infseq ?M1655"" with  ""event network Label (name * (input + list output))""."
+pt_map_update_eq_some,core/PartialMapSimulations.v,False,feedback,"Anomaly ""Evar ?X419 was not declared."" Please report at http://coq.inria.fr/bugs/."
+pt_map_odnet_tot_map_label_event_state_weak_fairness,core/PartialMapExecutionSimulations.v,True,,
+in_failed_in,core/TotalMapSimulations.v,True,,
+clients_get_lock_messages,systems/LiveLockServ.v,False,feedback,Omega can't solve this system
+cross_relation,systems/LiveLockServ.v,False,feedback,The reference tr was not found in the current environment.
+locks_correct_locked_input_handlers_new,systems/LockServ.v,False,feedback,The reference locks_correct_locked_true_to_false was not found in the current environment.
+locks_correct_unlock_sent_locked,systems/LockServ.v,True,,
+step_failure_dup_drop_step,core/DupDropReordering.v,False,feedback,"In environment P0 : BaseParams P : MultiParams P0 params : FailureParams P ps : list packet Sigma : name -> data f : list name Unable to unify ""clos_refl_trans_1n ?M1568 ?M1569 ?M1570 ?M1570"" with  ""refl_trans_1n_trace step_failure     (f, {| nwPackets := ps; nwState := Sigma |})     (f, {| nwPackets := ps; nwState := Sigma |}) []""."
+step_ordered_dynamic_failure_star_lb_step_execution,core/LabeledNet.v,True,,
+name_eq_dec,systems/PrimaryBackup.v,True,,
+true_in_reachable_mutual_exclusion,systems/LockServ.v,False,feedback,The reference true_in_reachable_by_invariant was not found in the current environment.
+nw_empty_queue_lock,systems/LiveLockServ.v,False,feedback,"In environment num_Clients : nat sigma : name -> data p : packet H_pBody : pBody p = Unlock H_unlock : Unlock = Unlock ->            exists c : Client_index,              valid_unlock (queue (sigma Server)) (held (sigma (Client c))) c                p H_locked : Unlock = Locked ->            exists c : Client_index,              valid_locked (queue (sigma Server)) (held (sigma (Client c))) c                p H_empty : queue (sigma Server) = [] Unable to unify ""Lock"" with ""Unlock""."
+remove_tot_map_eq,core/TotalMapSimulations.v,False,feedback,The LHS of IH     (map tot_map_name (remove name_eq_dec h l)) does not match any subterm of the goal
+lb_step_trace_execution_lb_step_failure_tot_map_net_infseq,core/TotalMapExecutionSimulations.v,False,feedback,The reference infseq_map was not found in the current environment.
+tot_map_net_hd_step_failure_star_always,core/TotalMapExecutionSimulations.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+nwnw_sym,systems/LiveLockServ.v,False,add_err,Syntax error: [tactic:tactic_expr] expected after '(' (in [tactic:tactic_expr]).
+in_tot_map_msg,core/TotalMapSimulations.v,True,,
+locks_correct_unlock_at_head_preserved,systems/LiveLockServ.v,False,feedback,(in proof locks_correct_unlock_at_head_preserved): Attempt to save an incomplete proof
+locking_clients_eventually_receive_lock_lb,systems/LiveLockServ.v,False,feedback,"In environment num_Clients : nat c : Client_index s : infseq (event network label (name * (input + list output))) Hss : event_step_star step_async step_async_init (hd s) Hlbs : lb_step_execution lb_step_async s Hfair : weak_fairness lb_step_async label_silent s Hinput : now (occurred (InputLock c)) s Unable to unify ""lb_step_execution lb_step_async ?M1614"" with  ""event network Label (name * (input + list output))""."
+in_all_before_pt_map_msg,core/PartialMapSimulations.v,False,feedback,The LHS of filterMap_app     (filterMap _ (_ ++ _)) does not match any subterm of the goal
+step_failure_tot_mapped_simulation_1,core/TotalMapSimulations.v,False,feedback,The reference failed was not found in the current environment.
+NOABT_singleton_inr_nil,systems/PrimaryBackup.v,False,feedback,Wrong bullet -: Current bullet - is not finished.
+lb_step_failure_pt_mapped_simulation_1_silent,core/PartialMapExecutionSimulations.v,False,feedback,Wrong argument name: multi_map_lb_congr.
+locks_correct_input_handlers,systems/LockServ.v,False,feedback,Wrong bullet +: No more subgoals.
+all_clients_false_locks_correct_server_update,systems/LockServ.v,True,,
+pt_map_onet_hd_step_ordered_failure_star_always,core/PartialMapExecutionSimulations.v,False,feedback,The reference always_now_step_star was not found in the current environment.
+pt_in_tot_map_name,core/PartialMapSimulations.v,False,add_err,Syntax error: [tactic:ssrbinder] expected after [tactic:ssrhpats_wtransp] (in [tactic:ssrhavefwdwbinders]).
+In_n_Nodes,systems/LiveLockServ.v,False,feedback,num_Clients is already used.
+nil_at_head_of_queue_preserved,systems/LiveLockServ.v,True,,
+step_ordered_failure_tot_one_mapped_simulation_star_1,core/SingleSimulations.v,False,feedback,The reference seq_event was not found in the current environment.
+last_holder'_input_inv_server,systems/LockServ.v,True,,
+last_holder'_unlock_none,systems/LiveLockServ.v,False,feedback,No such goal.
+dup_drop_step_star_remove_In,core/DupDropReordering.v,False,feedback,"In environment A : Type A_eq_dec : forall x y : A, {x = y} + {x <> y} l', l : list A a : A H : In a l' H0 : dup_drop_step_star l (remove A_eq_dec a l') Unable to unify ""Permutation (?M1579 :: ?M1578) (?M1578 ++ [?M1579])"" with  ""Permutation (a :: remove A_eq_dec a l') (a :: l')""."
+locks_correct_locked_invariant,systems/LockServ.v,False,feedback,"Unable to apply lemma of type  ""forall (st : network) (tr : list (name * (input + list output)))     (p : packet),   step_async_star step_async_init st tr ->   In p (nwPackets st) -> network_invariant (nwState st) p"" on hypothesis of type ""reachable step_async step_async_init st""."
+trace_well_formed,systems/VarD.v,False,feedback,The reference IHstep_1_star was not found in the current environment.
+locks_correct_locked_intro,systems/LiveLockServ.v,True,,
+NOABT_head,systems/PrimaryBackup.v,True,,
+in_filterMap_pt_map_msg_in_msg,core/PartialMapSimulations.v,False,feedback,Not an inductive goal with 2 constructors.
+ordered_dynamic_initialized_state,core/DynamicNetLemmas.v,False,feedback,Not an inductive goal with 2 constructors.
+mutual_exclusion_invariant,systems/LockServ.v,True,,
+locks_correct_unlock_input_handlers_new,systems/LockServ.v,False,feedback,congruence failed.
+pbj_0_or_1,systems/PrimaryBackup.v,False,feedback,Wrong bullet +: Current bullet + is not finished.
+locks_correct_locked_sent_unlock,systems/LockServ.v,True,,
+step_ordered_dynamic_failure_deserialized_simulation_star,systems/SerializedMsgParamsCorrect.v,True,,
+collate_tot_map_eq,core/TotalMapSimulations.v,False,feedback,The reference map_map2snd was not found in the current environment.
+reachable_equality,systems/SeqNumCorrect.v,False,feedback,No matching clauses for match.
+ClientNetHandler_cases,systems/LockServ.v,False,feedback,Wrong bullet -: Current bullet - is not finished.
+locking_clients_eventually_receive_lock_st,systems/LiveLockServ.v,False,feedback,"In environment num_Clients : nat c : Client_index s : infseq (event network label (name * (input + list output))) Hss : event_step_star step_async step_async_init (hd s) Hlbs : lb_step_execution lb_step_async s Hfair : weak_fairness lb_step_async label_silent s Hinput : now (occurred (InputLock c)) s Unable to unify ""lb_step_execution lb_step_async ?M1614"" with  ""event network label (name * (input + list output))""."
+lb_step_execution_lb_step_ordered_dynamic_failure_pt_map_odnet_infseq,core/PartialMapExecutionSimulations.v,True,,
+pt_map_onet_tot_map_label_event_state_weak_fairness,core/PartialMapExecutionSimulations.v,True,,
+collate_pt_map_eq,core/PartialMapSimulations.v,False,add_err,Syntax error: [tactic:ssrbinder] expected after [tactic:ssrhpats_wtransp] (in [tactic:ssrhavefwdwbinders]).
+step_1_snoc_inv,systems/PrimaryBackup.v,False,feedback,st is used in hypothesis H.
+inputs_1_nil_is_nil,systems/PrimaryBackup.v,True,,
+in_adjacent_exclude_in_exlude,core/TotalMapSimulations.v,False,feedback,The reference in_filter_rel_in was not found in the current environment.
+MsgUnlock_moves_client,systems/LiveLockServ.v,False,feedback,The reference weak_until_next was not found in the current environment.
+step_1_star_no_trace_no_step,systems/PrimaryBackup.v,False,feedback,Wrong bullet -: Current bullet - is not finished.
+dup_drop_dup_early,core/DupDropReordering.v,True,,
+trace_outputs_app,systems/Counter.v,True,,
+step_star_inductive,core/Net.v,False,feedback,"Unable to apply lemma of type ""inductive step P"" on hypothesis of type  ""refl_trans_1n_trace step x' x'' cs'""."
+nwnw_locked_lock,systems/LockServ.v,False,feedback,Wrong bullet -: No more subgoals.
+inverse_trace_relations_work,core/InverseTraceRelations.v,False,feedback,The reference s was not found in the current environment.
+primary_ge_backup,systems/Counter.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+dup_drop_step_star_step_1n,core/DupDropReordering.v,False,feedback,"In environment A : Type A_eq_dec : forall x y : A, {x = y} + {x <> y} l, l', l'' : list A H : dup_drop_step l l' H0 : clos_refl_trans (list A) dup_drop_step l' l'' Unable to unify ""clos_refl_trans ?M1607 ?M1608 ?M1609 ?M1610"" with  ""clos_refl_trans_n1 (list A) dup_drop_step l ?y""."
+PB_net_defn,systems/PrimaryBackup.v,False,feedback,The reference l was not found in the current environment.
+LockServ_nwnw_input_handlers_new_new,systems/LockServ.v,False,feedback,Wrong bullet -: No more subgoals.
+step_dup_star_revert_simulation,systems/SeqNumCorrect.v,False,feedback,"In environment orig_base_params : BaseParams orig_multi_params : MultiParams orig_base_params x : network Unable to unify ""refl_trans_1n_trace ?M1622 ?M1623 ?M1625 (?M1626 ++ ?M1627)"" with ""refl_trans_1n_trace step_async step_async_init (revertNetwork x) []""."
+In_split_not_In,systems/LiveLockServ.v,False,feedback,"Unable to apply lemma of type  ""forall (A : Type) (l m : list A) (a : A), In a (l ++ m) -> In a l \/ In a m"" on hypothesis of type ""~ In p (zs ++ xs ++ ys)""."
+tot_map_onet_event_map_unfold,core/TotalMapExecutionSimulations.v,True,,
+ZOOOPST_singleton_nil,systems/PrimaryBackup.v,False,feedback,Wrong bullet +: Expecting -.
+pt_map_onet_deserialize_onet,systems/SerializedMsgParamsCorrect.v,False,feedback,The pattern (fun _ _ : _ => filterMap _ _) did not match and has holes. Did you mean pose?
+locks_correct_at_head_preserved,systems/LockServ.v,False,feedback,"In environment num_Clients : nat sigma : name -> data st' : data H_locks_correct : forall n : Client_index,                   held (sigma (Client n)) = true ->                   exists t : list Client_index, queue (sigma Server) = n :: t H_at_head_preserved : forall c : Client_index,                       at_head_of_queue sigma c ->                       at_head_of_queue (update name_eq_dec sigma Server st')                         c n : Client_index H_held : held (update name_eq_dec sigma Server st' (Client n)) = true The term ""H_held"" has type  ""held (update name_eq_dec sigma Server st' (Client n)) = true"" while it is expected to have type ""held (sigma (Client n)) = true""."
+pt_map_odnet_event_Map_unfold,core/PartialMapExecutionSimulations.v,True,,
+Lock_enables_MsgLock,systems/LiveLockServ.v,False,add_err,Syntax error: illegal begin of vernac.
+tot_map_in_in,core/TotalMapSimulations.v,False,add_err,Syntax Error: Lexer: Undefined token
+deserialize_serialize_odnet_id,systems/SerializedMsgParamsCorrect.v,False,feedback,"In environment orig_base_params : BaseParams orig_multi_params : MultiParams orig_base_params orig_failure_params : FailureParams orig_multi_params orig_name_overlay_params : NameOverlayParams orig_multi_params orig_fail_msg_params : FailMsgParams orig_multi_params orig_new_msg_params : NewMsgParams orig_multi_params orig_msg_serializer : Serializer msg ps : list name s : name -> name -> list msg ps' := fun H H0 : name =>        filterMap          (fun m : IOStreamWriter.wire =>           match deserialize_top deserialize m with           | Some data => Some data           | None => None           end) (map (fun v : msg => serialize_top (serialize v)) (s H H0))  : name -> name -> list msg The term ""ps"" has type ""list name"" while it is expected to have type  ""name -> name -> list msg""."
+last_holder'_no_out_extend,systems/LockServ.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+all_clients_false_locks_correct_server_update,systems/LiveLockServ.v,True,,
+inc_in_flight_to_backup_nil,systems/Counter.v,True,,
+processPackets_preserves_messages,systems/SeqNumCorrect.v,False,add_err,Syntax error: illegal begin of vernac.
+pt_map_onet_tot_map_label_event_inf_often_occurred,core/PartialMapExecutionSimulations.v,False,feedback,Cannot apply lemma (inf_often_map H_inf)
+InputHandler_cases,systems/LiveLockServ.v,False,feedback,Not the right number of missing arguments (expected 0).
+tot_map_net_event_map_unfold,core/TotalMapExecutionSimulations.v,False,feedback,Expects a disjunctive pattern with 1 branch or a conjunctive pattern made of 2 patterns.
+tot_map_packet_map_eq,core/TotalMapSimulations.v,False,feedback,No applicable tactic.
+nodup,systems/LiveLockServ.v,False,feedback,The reference NoDup_map_iff was not found in the current environment.
+locks_correct_unlock_sent_lock,systems/LockServ.v,True,,
+permutation_nodes,core/TotalMapSimulations.v,False,feedback,The reference nodup_nodes was not found in the current environment.
+inputs_m_backup,systems/PrimaryBackup.v,True,,
+backup_plus_network_eq_primary,systems/Counter.v,False,feedback,"In environment x', x'' : network tr1, tr2 : list (Name * (Input + list Output)) H : refl_trans_1n_trace step_async step_async_init x' tr1 H0 : step_async x' x'' tr2 IHrefl_trans_1n_trace1 : step_async_init = step_async_init ->                          nwState x' backup +                          inc_in_flight_to_backup (nwPackets x') =                          nwState x' primary H1 : refl_trans_1n_trace step_async step_async_init x'' (tr1 ++ tr2) Unable to unify ""nwState x'' primary"" with  ""nwState x'' backup + inc_in_flight_to_backup (nwPackets x'')""."
+lb_step_ordered_failure_pt_mapped_simulation_1_silent,core/PartialMapExecutionSimulations.v,False,feedback,Not an inductive product.
+PB_input_handler_defn,systems/PrimaryBackup.v,False,add_err,Syntax error: ')' expected after [tactic:tactic_expr] (in [tactic:tactic_expr]).
+step_failure_deserialized_simulation,systems/SerializedMsgParamsCorrect.v,False,feedback,Cannot apply lemma H_st'
+correspond_Prefix,systems/PrimaryBackup.v,False,add_err,Syntax error: illegal begin of vernac.
+revertNetwork_input,systems/SeqNumCorrect.v,False,feedback,"Found no subterm matching ""map ?M1608 (?M1609 ++ ?M1610)"" in the current goal."
+step_ordered_failure_tot_mapped_simulation_star_1,core/TotalMapSimulations.v,False,feedback,The LHS of tot_init_handlers_fun_eq     init_handlers does not match any subterm of the goal
+filterMap_pt_map_packet_map_eq_some,core/PartialMapSimulations.v,False,feedback,No applicable tactic.
+locks_correct_unlock_net_handlers_old,systems/LockServ.v,False,feedback,No matching clauses for match.
+step_async_tot_mapped_simulation_1,core/TotalMapSimulations.v,False,feedback,The reference InputAsyncStep was not found in the current environment.
+remove_not_in_nop,core/DupDropReordering.v,True,,
+reachable_revert_step,systems/SeqNumCorrect.v,False,feedback,"Unable to apply lemma of type  ""true_in_reachable step_dup step_async_init sequence_seen"" on hypothesis of type ""BaseParams""."
+pt_map_onet_event_Map_unfold,core/PartialMapExecutionSimulations.v,False,feedback,Expects a disjunctive pattern with 1 branch or a conjunctive pattern made of 2 patterns.
+step_ordered_pt_ext_mapped_simulation_star_1,core/PartialExtendedMapSimulations.v,True,,
+lb_step_execution_lb_step_ordered_failure_tot_map_onet_infseq,core/TotalMapExecutionSimulations.v,True,,
+locks_correct_implies_mutex,systems/LiveLockServ.v,False,feedback,"Illegal application (Non-functional construction):  The expression ""H_locks_correct"" of type  ""exists t : list Client_index, queue (sigma Server) = m :: t"" cannot be applied to the term  ""n"" : ""Client_index"""
+step_async_serialize_simulation,systems/SerializedMsgParamsCorrect.v,False,feedback,assumptions should be named explicitly
+locks_correct_at_head_preserved,systems/LiveLockServ.v,False,feedback,"In environment num_Clients : nat sigma : name -> data st' : data H_locks_correct : forall n : Client_index,                   held (sigma (Client n)) = true ->                   exists t : list Client_index, queue (sigma Server) = n :: t H_at_head_preserved : forall c : Client_index,                       at_head_of_queue sigma c ->                       at_head_of_queue (update name_eq_dec sigma Server st')                         c n : Client_index H_held : held (update name_eq_dec sigma Server st' (Client n)) = true The term ""H_held"" has type  ""held (update name_eq_dec sigma Server st' (Client n)) = true"" while it is expected to have type ""held (sigma (Client n)) = true""."
+trace_inputs_output,systems/Counter.v,False,feedback,"In environment h : name os : list output Unable to unify ""0"" with  ""length     match match h with           | primary | _ => None           end with     | Some y => [y]     | None => []     end""."
+ordered_dynamic_no_outgoing_uninitialized,core/DynamicNetLemmas.v,False,feedback,"In environment base_params : BaseParams multi_params : MultiParams base_params overlay_params : NameOverlayParams multi_params new_msg_params : NewMsgParams multi_params fail_msg_params : FailMsgParams multi_params onet : ordered_dynamic_network failed : list name tr : list (name * (input + output)) H : step_ordered_dynamic_failure_star step_ordered_dynamic_failure_init       (failed, onet) tr n : name H_in : ~ In n (odnwNodes onet) n' : name The term ""H_in"" has type ""~ In n (odnwNodes onet)"" while it is expected to have type ""name""."
+NoDup_all_nodes,systems/PrimaryBackup.v,False,add_err,Syntax error: illegal begin of vernac.
+trace_mutual_exclusion'_extend_input,systems/LiveLockServ.v,False,feedback,No such goal.
+last_holder'_server_extend,systems/LiveLockServ.v,False,feedback,No such goal.
+correspond_inductive,systems/PrimaryBackup.v,False,feedback,Nothing to rewrite.
+collate_ls_pt_map_eq,core/PartialMapSimulations.v,False,add_err,Syntax error: illegal begin of vernac.
+InputHandler_backup_no_msgs,systems/Counter.v,False,add_err,Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+map_msg_fail_eq_nodup,core/TotalMapSimulations.v,False,feedback,"In environment base_fst, base_snd : BaseParams multi_fst : MultiParams base_fst multi_snd : MultiParams base_snd base_map : BaseParamsTotalMap base_fst base_snd name_map : MultiParamsNameTotalMap multi_fst multi_snd msg_map : MultiParamsMsgTotalMap multi_fst multi_snd name_map_bijective : MultiParamsNameTotalMapBijective name_map multi_map_congr : MultiParamsTotalMapCongruency base_map name_map msg_map tot_map_output_injective : forall o o' : output,                            tot_map_output o = tot_map_output o' -> o = o' fail_fst : FailureParams multi_fst fail_snd : FailureParams multi_snd fail_map_congr : FailureParamsTotalMapCongruency fail_fst fail_snd base_map overlay_fst : NameOverlayParams multi_fst overlay_snd : NameOverlayParams multi_snd overlay_map_congr : NameOverlayParamsTotalMapCongruency overlay_fst                       overlay_snd name_map fail_msg_fst : FailMsgParams multi_fst fail_msg_snd : FailMsgParams multi_snd fail_msg_map_congr : FailMsgParamsTotalMapCongruency fail_msg_fst                        fail_msg_snd msg_map h : name failed, ns : list name ns' : list name H_nd : NoDup ns H_pm : Permutation (map tot_map_name ns) ns' The term ""ns"" has type ""list name"" while it is expected to have type  ""NoDup ?ns""."
+step_ordered_dynamic_failure_deserialized_simulation,systems/SerializedMsgParamsCorrect.v,False,feedback,The reference H1 was not found in the current environment.
+correspond_init,systems/PrimaryBackup.v,True,,
+ordered_dynamic_failed_then_initialized,core/DynamicNetLemmas.v,False,feedback,No applicable tactic.
+locks_correct_init,systems/LiveLockServ.v,True,,
+InputUnlock_enabled,systems/LiveLockServ.v,False,feedback,No matching clauses for match.
+step_failure_tot_mapped_simulation_star_1,core/TotalMapSimulations.v,False,feedback,The LHS of H_init     x does not match any subterm of the goal
+locks_correct_unlock_net_handlers_new,systems/LiveLockServ.v,False,feedback,(in proof locks_correct_unlock_net_handlers_new): Attempt to save an incomplete proof
+tot_map_name_in,core/TotalMapSimulations.v,True,,
+hd_error_filterMap_pt_map_msg,core/PartialMapSimulations.v,False,feedback,The LHS of H_hd     a does not match any subterm of the goal
+pt_map_odnet_tot_map_label_event_inf_often_occurred_conv,core/PartialMapExecutionSimulations.v,True,,
+step_ordered_failure_deserialized_simulation,systems/SerializedMsgParamsCorrect.v,False,feedback,"In environment orig_base_params : BaseParams orig_multi_params : MultiParams orig_base_params orig_failure_params : FailureParams orig_multi_params orig_name_overlay_params : NameOverlayParams orig_multi_params orig_fail_msg_params : FailMsgParams orig_multi_params orig_new_msg_params : NewMsgParams orig_multi_params orig_msg_serializer : Serializer msg net, net' : ordered_network failed, failed' : list name tr : list (name * (input + output)) H_step : step_ordered_failure (failed, net) (failed', net') tr H_eq_n : failed = map tot_map_name failed H_eq_n' : failed' = map tot_map_name failed' The term ""tr"" has type ""list (name * (input + output))"" while it is expected to have type ""list (name * (input + list output))""."
+step_ordered_dynamic_failure_pt_mapped_simulation_1,core/PartialMapSimulations.v,False,feedback,The reference m was not found in the current environment.
+strong_fairness_weak,core/LabeledNet.v,True,,
+tot_map_odnet_event_map_unfold,core/TotalMapExecutionSimulations.v,True,,
